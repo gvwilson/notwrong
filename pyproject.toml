@@ -1,0 +1,49 @@
+[project]
+name = "notwrong"
+description = "how to not be wrong about AI"
+version = "0.1.0"
+requires-python = ">=3.12"
+dependencies = [
+    "bibtexparser>=1.4.4",
+    "mccole>=4.5.1",
+    "taskipy>=1.14.1",
+]
+
+[tool.taskipy.tasks.bib]
+help = "Check bibliography entries."
+cmd = "mccole bib"
+
+[tool.taskipy.tasks.clean]
+help = "Clean up generated and cache files."
+cmd = """
+    find . -type f -name '*~' -exec rm {} \\;
+"""
+
+[tool.taskipy.tasks.check]
+help = "Check code and project."
+cmd = """
+    mccole check --relaxed --src . --dst docs
+    typos *.md */*.md
+"""
+
+[tool.taskipy.tasks.serve]
+help = "Serve generated HTML."
+cmd = "python -m http.server -d docs"
+
+[tool.taskipy.tasks.site]
+help = "Build HTML."
+cmd = """
+    mccole build --src . --dst docs
+    touch docs/.nojekyll
+"""
+
+[tool.mccole]
+brand = "notwrong"
+repo = "https://github.com/gvwilson/notwrong"
+skips = [
+  "**/*~",
+  "docs/**",
+  "_extras/**",
+  "log/**",
+  "uv.lock"
+]
