@@ -50,6 +50,15 @@ because the data does not mean what you think it means.
     -   Pull requests are used differently across teams (some merge locally)
     -   Contributor counts overestimate team size
     -   Stars and forks measure visibility, not quality
+-   Munaiah et al. address the noise problem directly:
+    their tool classifies 1.8 million GitHub repositories
+    as engineered software versus personal or homework projects,
+    achieving 82% precision and 86% recall [%b Munaiah2017 %]
+-   MSR studies can also challenge received wisdom:
+    Tufano et al. studied the change history of 200 open-source projects
+    and found that most code smells are introduced when an artifact is first created,
+    not during later evolution, and that 80% survive indefinitely [%b Tufano2017 %]
+    -   A counterintuitive result that only becomes visible at scale
 
 ## Bias Types
 
@@ -125,6 +134,10 @@ because the data does not mean what you think it means.
     but only 16 met the pre-specified coding activity thresholds
     -   The 6:1 funnel was reported honestly and shaped interpretation of the results
         [%b Sadowski2019 %]
+-   Beller et al. tracked 416 developers over five months using IDE instrumentation [%b Beller2015 %]:
+    -   Developers reported spending about half their time on testing
+    -   Instrumentation showed the actual figure was closer to a quarter
+    -   The gap is exactly what field studies are designed to reveal
 
 ## Correlation and Causation
 
@@ -227,14 +240,6 @@ under the assumption that without the intervention,
 both teams would have changed similarly (the parallel trends assumption).
 
 </details>
-
-## Further Reading
-
--   [%b AlencarDaCosta2017 %]
--   [%b Aranda2009 %]
--   [%b Gold2020 %]
--   [%b Gote2022 %]
--   [%b Hemmati2013 %]
 
 ## Exercises
 

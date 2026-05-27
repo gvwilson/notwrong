@@ -1,8 +1,12 @@
 # How to Not Be Wrong About AI
 
-This tutorial is a short introduction to research methods for software engineers.
-Help is welcome,
-but please note that all contributors must abide by our [Code of Conduct](./CODE_OF_CONDUCT.md).
+This tutorial is a short introduction to research methods you can use
+to figure out whether AI-based programming tools are helping your team or not.
+Even if you don't do such studies yourself,
+we hope that understanding how they work will help you decide
+which claims about them to trust.
+[Help is welcome](@/contributing/),
+but please note that all contributors must abide by our [Code of Conduct](@/conduct/).
 
 <div class="row" markdown="1">
 <div class="col-6" markdown="1">
@@ -35,6 +39,7 @@ but please note that all contributors must abide by our [Code of Conduct](./CODE
 1.  [Contributing](@/contributing/)
 1.  [Bibliography](@/bibliography/)
 1.  [Glossary](@/glossary/)
+1.  [Further Reading](@/further/)
 1.  [Statistical Reference](@/stats/)
 
 </div>

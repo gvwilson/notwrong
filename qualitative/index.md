@@ -23,6 +23,15 @@ The result was a detailed map of where AI assistance actually helps
 and where it gets in the way—knowledge that would have been invisible
 to a study that only measured task completion times.
 
+A smaller but deeper example:
+Johnson et al. interviewed 20 developers to ask why static analysis tools
+are so rarely used despite being widely available [%b Johnson2013 %].
+Every participant believed the tools are beneficial,
+but false positives and poor warning presentation were the main barriers.
+Where Liang provides breadth (410 developers across industries),
+Johnson provides depth (20 developers with detailed follow-up),
+which illustrates the scale-versus-richness trade-off between surveys and interviews.
+
 ## When Qualitative Methods Are the Right Choice
 
 -   When you do not yet know what to measure
@@ -76,6 +85,9 @@ to a study that only measured task completion times.
     -   [%g stratified_sampling "Stratified samples" %]
         deliberately include proportional representation of subgroups
 -   Pilot your survey with 3-5 people and revise before distributing
+-   E.g., Bettenburg et al. surveyed Apache, Eclipse, and Mozilla developers and users
+    to find out what makes a good bug report [%b Bettenburg2008 %]
+    -   A concrete question, a targeted audience, and actionable results
 
 ## Thematic Analysis
 
@@ -158,7 +170,12 @@ to a study that only measured task completion times.
     -   Zieris and Prechelt recorded 60+ pair programming sessions at a dozen companies
         and identified the knowledge gap constellations
         that student experiments had controlled away
-        [%b Sadowski2019 %]
+        [%b Zieris2014 %]
+    -   Wessel et al. interviewed 21 open-source practitioners
+        about their experience with bots in pull requests
+        and developed a theory of how bot output becomes noise
+        that overwhelms and distracts developers
+        [%b Wessel2021 %]
 
 ## Ethical Considerations
 
@@ -296,13 +313,6 @@ A better version is,
 Can you give me a specific recent example?"
 
 </details>
-
-## Further Reading
-
--   [%b Davis2023 %]
--   [%b Newman2023 %]
--   [%b Storey2024 %]
--   [%b Treude2024 %]
 
 ## Exercises
 

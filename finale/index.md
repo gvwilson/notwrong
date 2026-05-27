@@ -54,6 +54,13 @@ You now have the tools to ask better questions.
 
 ## What We Know About AI and Developer Productivity
 
+-   A foundational finding underlies most AI code generation:
+    [%b Hindle2016 %] showed that code is statistically more repetitive and predictable
+    than natural language
+    -   This naturalness hypothesis explains why language models work well for code:
+        they exploit structural regularity that does not exist in general text
+    -   Understanding the finding separates the technical reality
+        from marketing claims about "intelligence"
 -   Controlled experiments show AI tools can speed up specific, well-defined tasks
     (e.g., code generation or writing tests)
     for individual developers

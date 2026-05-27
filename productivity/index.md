@@ -113,6 +113,10 @@ The metric penalized the improvement.
         time pressure, and dealing with bad code,
         and that unhappiness predicts lower cognitive performance, disrupted flow,
         and reduced code quality [%b Graziotin2018 %]
+    -   A lab study using biometric sensors found that developers' emotions
+        correlate with their perceived progress on change tasks [%b Muller2015 %],
+        raising the possibility of measuring productivity through affect
+        rather than output alone
 
 ## Reframing: Productivity as Waste Reduction
 
@@ -213,15 +217,6 @@ before and after the intervention,
 using a consistent defect definition.
 
 </details>
-
-## Further Reading
-
--   [%b ElEmam2001 %]
--   [%b Forsgren2021 %]
--   [%b Inozemtseva2014 %]
--   [%b Junior2009 %]
--   [%b SanchezRuiz2023 %]
--   [%b Tregubov2017 %]
 
 ## Exercises
 

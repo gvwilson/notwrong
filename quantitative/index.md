@@ -64,8 +64,7 @@ They are also expensive, difficult, and frequently misunderstood.
     -   It is not the probability that you will replicate
 -   p < 0.05 means that if there were no effect,
     you would see a result this extreme or more extreme less than 5% of the time by chance
--   The 0.05 threshold is a convention from the 1920s, not a law of nature
-    [%b Fisher1925 %]
+-   The 0.05 threshold is a convention from the 1920s, not a law of nature.
 
 ## Effect Size
 
@@ -161,7 +160,7 @@ They are also expensive, difficult, and frequently misunderstood.
     -   …none of which reflects how pair programming is used in industry
     -   A grounded theory study of 60+ recorded sessions from a dozen companies
         found that what matters is the specific knowledge gap between partners…
-    -   …which is the variable the experiments controlled away [%b Sadowski2019 %]
+    -   …which is the variable the experiments controlled away [%b Zieris2014 %]
 
 ## Ethical Considerations
 
@@ -251,16 +250,6 @@ A stronger design would compare against a control group,
 i.e., another team that did not receive the tool.
 
 </details>
-
-## Further Reading
-
--   [%b Anda2009 %]
--   [%b Basili1987 %]
--   [%b Fucci2013 %]
--   [%b Fucci2016 %]
--   [%b Fucci2017 %]
--   [%b Kohavi2008 %]
--   [%b Uyaguari2024 %]
 
 ## Exercises
 

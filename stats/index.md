@@ -124,12 +124,9 @@ or use it to check whether a study you are evaluating applied the right tool.
 | Paired t-test | Compare means within pairs (before/after) | Paired differences are normal |
 | Wilcoxon signed-rank | Paired comparison, non-parametric | Symmetric differences |
 | Chi-square | Compare frequencies or proportions | Expected count ≥ 5 per cell |
-| One-way ANOVA | Compare means across 3+ groups | Normality, equal variance |
-| Kruskal-Wallis | Non-parametric ANOVA | None |
 | Pearson correlation | Linear relationship between two continuous vars | Bivariate normality |
 | Spearman correlation | Monotone relationship; ordinal or skewed data | None |
 | Linear regression | Model continuous outcome from predictors | Linearity, normality of residuals, homoscedasticity |
-| Logistic regression | Model binary outcome | Logistic relationship |
 
 ## Correlation vs. Causation
 

@@ -41,9 +41,11 @@ cmd = """
 brand = "notwrong"
 repo = "https://github.com/gvwilson/notwrong"
 skips = [
-  "**/*~",
-  "docs/**",
-  "_extras/**",
-  "log/**",
+  "*~",
+  "docs",
+  "_extras",
+  "log",
+  "pdf",
+  "typos.toml",
   "uv.lock"
 ]

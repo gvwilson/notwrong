@@ -218,32 +218,6 @@ acceptance rate tells you nothing about whether the tool is producing better cod
 
 </details>
 
-## Further Reading
-
--   [%b Bano2025 %]:
-    GPT-4 and Copilot show gender/racial bias in SE recruitment scenarios (300 profiles each);
-    both prefer male/Caucasian profiles for senior roles;
-    generated images show lighter skin, slimmer, and younger bias.
--   [%b Brown2024 %]:
-    Novel software innovation measure based on OSS dependency growth across 350k releases from 33k packages;
-    semantic versioning signals drive adoption more than technical complexity;
-    measure must be weighted by ecosystem culture and maturity.
--   [%b ElHaji2024 %]:
-    GitHub Copilot generates passing tests only 45% of the time within existing test suites;
-    without existing tests, 92% fail or are empty;
-    test comments influence generation quality.
--   [%b Fu2024 %]:
-    Analysis of 733 AI-generated code snippets (Copilot, CodeWhisperer, Codeium):
-    29.5% Python and 24.2% JS snippets have security weaknesses across 43 CWEs;
-    Copilot Chat fixes up to 55.5% of issues.
--   [%b Miller2025 %]:
-    Paired interviews (54 developers, 27 teams) show generative AI adoption differences stem from
-    tool perception (collaborator vs. feature), engagement style, and persistence;
-    Productivity Pressure Paradox undermines widespread adoption.
--   [%b Vartziotis2025 %]: Overview of green coding and metrics for measuring LLM sustainability;
-    uses GitHub Copilot to auto-generate code in the automotive domain;
-    introduces embodied and operational carbon metrics for AI-generated code evaluation.
-
 ## Exercises
 
 <div class="exercise" markdown="1">

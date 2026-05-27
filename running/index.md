@@ -106,6 +106,13 @@ We created these lessons because you probably do too.
 -   If you cannot identify a metric for a question,
     either the question is not operationalizable (and should be addressed qualitatively)
     or the goal needs to be refined
+-   Careful qualitative work can produce taxonomies that guide GQM measurement:
+    -   [%b Sillito2008 %] analyzed programmers during change tasks
+        and produced a catalog of 44 question types that developers ask
+        when navigating an unfamiliar codebase
+    -   [%b Ko2007 %] observed 17 developers at a large software company
+        and identified 21 types of information need,
+        most commonly awareness about artifacts and unavailable coworkers
 
 ## Iterating Your Study Design
 
@@ -249,12 +256,6 @@ A responsible recommendation would specify the conditions under which adoption s
 and acknowledge the limitations of generalizing from a single internal study.
 
 </details>
-
-## Further Reading
-
--   [%b Baltes2025 %]
--   [%b Davis2023 %]
--   [%b Gold2020 %]
 
 ## Exercises
 

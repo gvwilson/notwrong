@@ -34,6 +34,6 @@ Why is this material free?
 :   Because if we all give a little, we all get a lot.
 
 [email]: mailto:gvwilson@third-bit.com
-[repo]: https://github.com/gvwilson/change
+[repo]: https://github.com/gvwilson/notwrong
 [uv]: https://github.com/astral-sh/uv
 [wilson-greg]: https://third-bit.com/

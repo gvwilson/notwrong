@@ -25,7 +25,12 @@ the paper treated productivity as an objective fact to be measured
 when it is actually a judgment about what matters,
 made by people with interests [%b Beck2023 %].
 
-This session gives you the tools to be that specialist.
+The gap between belief and evidence runs deep.
+[%b Devanbu2016 %] studied developers at Microsoft
+and found that beliefs are strong,
+but formed from personal experience rather than research,
+and do not reliably correspond to actual data from the projects those developers work on.
+This session gives you the critical reading skills needed to do better.
 
 ## How to Read a Research Paper
 
@@ -119,6 +124,14 @@ This session gives you the tools to be that specialist.
     -   Vague outcome definitions in the introduction that become very specific in the results
     -   Multiple outcome measures reported with emphasis on the most favorable one
     -   No pre-specified primary outcome
+-   The same trap appears in ML research:
+    Risse et al. found that 90% of machine learning vulnerability detection papers
+    define the problem as function-level binary classification,
+    yet context is almost always required to make a real vulnerability call [%b Risse2025 %]
+    -   High benchmark scores arise from spurious correlations in the data
+    -   The benchmark measures what is easy to operationalize,
+        not what practitioners actually need
+    -   This is the measurement-of-the-easy-half problem applied to an entire research subfield
 
 ## A Checklist for Evaluating an Empirical SE Study
 
@@ -247,14 +260,6 @@ Most SE experiments cannot support broad adoption recommendations
 because their external validity is limited.
 
 </details>
-
-## Further Reading
-
--   [%b Baltes2025 %]
--   [%b Bauer2019 %]
--   [%b Cosentino2016 %]
--   [%b FernandezPinto2023 %]
--   [%b Wyrich2023 %]
 
 ## Exercises
 
