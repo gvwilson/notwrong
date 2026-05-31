@@ -123,7 +123,7 @@ which illustrates the scale-versus-richness trade-off between surveys and interv
     -   A practical definition of "enough data"
 -   Code with a second researcher and measure
     [%g intercoder_reliability "intercoder reliability" %] to reduce individual bias
-    -   We'll discuss Cohen's kappa [later](@/experiments/)
+    -   We'll discuss Cohen's kappa [later](@/quantitative/)
 -   Keep an audit trail: document coding decisions so others can evaluate them
 
 ## Experience Sampling

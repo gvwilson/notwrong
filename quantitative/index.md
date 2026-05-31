@@ -127,7 +127,7 @@ They are also expensive, difficult, and frequently misunderstood.
 
 -   Validity threats fall into four categories [%b Campbell1963 Wohlin2000 %]
 -   Construct validity: does your measurement actually capture the concept you care about?
-    -   Discussed [earlier](@/performance/)
+    -   Discussed [earlier](@/productivity/)
 -   [%g conclusion_validity "Conclusion validity" %]:
     did you use the right statistical procedure,
     and was the study powerful enough to detect an effect if one exists?
@@ -138,7 +138,7 @@ They are also expensive, difficult, and frequently misunderstood.
     can you conclude that the treatment caused the outcome?
     -   Threats: confounding variables, selection bias, [%g maturation_effect "maturation effects" %]
     -   SE-specific behavioral threats, which arise because people are the experimental subjects:
-        -   Novelty effect (discussed [earlier](FIXME))
+        -   Novelty effect (discussed [earlier](@/wrong/))
         -   [%g learning_effect "Learning effect" %]:
             participants improve on a later task through practice,
             making the later condition look better regardless of which technique it used
