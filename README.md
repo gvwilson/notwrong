@@ -47,6 +47,14 @@ but please note that all contributors must abide by our [Code of Conduct](@/cond
 </div>
 </div>
 
+## Slides
+
+<div id="slides" markdown="1">
+
+1.  [How To Not Be Wrong About AI](@/lecture/slides.html)
+
+</div>
+
 <p class="center">
   <em>
     start where you are

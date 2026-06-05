@@ -804,6 +804,19 @@ for the papers themselves, please see the `pdf` directory in
     central problem; develops theory of annoying bot behavior as
     noise; recommendations for bot and platform designers.*
 
+<span id="Wicherts2011">Wicherts2011</span>
+:   J.M. Wicherts, M. Bakker, and D. Molenaar:
+    "Willingness to Share Research Data Is Related to the Strength of the Evidence and the Quality of Reporting of Statistical Results".
+    *PLoS ONE*,
+    6(11): e26828,
+    2011,
+    [10.1371/journal.pone.0026828](https://doi.org/10.1371/journal.pone.0026828).
+    <br>
+    Found that the reluctance to share data was associated with weaker
+    evidence and a higher prevalence of statistical errors. The
+    unwillingness to share data was particularly clear when reporting
+    errors had a bearing on statistical significance.
+
 <span id="Wohlin2000">Wohlin2000</span>
 :   Claes Wohlin, Per Runeson, Martin Höst, Magnus C. Ohlsson, Björn Regnell, and Anders Wesslén:
     *Experimentation in Software Engineering: An Introduction*.
