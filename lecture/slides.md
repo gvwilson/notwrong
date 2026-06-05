@@ -298,20 +298,6 @@ title: How to Not Be Wrong About AI
 </section>
 <section class="slide" markdown="1">
 
-## Running Studies in Your Organization
-
--   Most practitioners don't have the time or the skills to run a randomized controlled trial
--   Practical alternatives:
-    -   Retrospective analysis of data you already have
-    -   A/B testing
-    -   *Anonymized* internal surveys
--   Be honest about what design you actually have, not what you wish you had
--   Get legal and HR involved before you collect individual data
-    -   Having it done by someone outside your org makes honest answers a bit more likely
-
-</section>
-<section class="slide" markdown="1">
-
 ## Goal-Question-Metric
 
 -   **GQM** provides a structured path from intent to measurement [%b Basili1994 %]
@@ -324,13 +310,66 @@ title: How to Not Be Wrong About AI
 </section>
 <section class="slide" markdown="1">
 
-## Sharing Results Responsibly
+## Starting Cheaply
 
--   Every study has limitations; state them before stakeholders ask
--   Distinguish between "we found no effect" and "our study was not designed to detect that effect"
--   Present uncertainty:
-    confidence intervals and effect sizes belong in results presented to management
--   Negative results matter too
+-   A small, informal study produces better evidence than a meeting
+-   "Research is the process of finding out what you don't know" [%b Hall2019 %]
+-   The standard for "enough" depends on the decision you are trying to support
+    -   Deciding to run a larger study: five sessions may be enough
+    -   Deciding to mandate a tool for five hundred developers: nope
+-   Your goal is not to be rigorous
+-   It is to be better informed at minimal cost
+
+</section>
+<section class="slide" markdown="1">
+
+## Formative vs. Summative Evaluation
+
+-   **Formative evaluation**: studying something in order to improve it
+    -   Small samples, rapid iteration, qualitative focus
+    -   The question is "what is wrong?" not "how often is it wrong?"
+-   **Summative evaluation**: assessing if something works well enough to deploy
+    -   Requires more participants, controlled conditions, and quantitative metrics
+-   Most of what you can do without institutional support is formative
+-   Mislabeling formative evidence as summative kills credibility
+
+</section>
+<section class="slide" markdown="1">
+
+## Finding Participants Without a Budget
+
+-   Post in chat: "I need 45 minutes of your time to watch you do a code review"
+-   Ask colleagues in adjacent teams who are not on your project
+-   Aim for people who fit your target profile, not whoever responds first
+-   Avoid people you manage, who manage you, or who already know your hypothesis
+-   Five participants is typically enough to identify most problems in a specific workflow [%b Nielsen1993 %]
+    -   This does not apply to claims about "most developers"
+
+</section>
+<section class="slide" markdown="1">
+
+## Running a Think-Aloud Session
+
+-   Ask participants to verbalize their thoughts as they work: "say out loud whatever you are thinking"
+-   Give concrete, realistic tasks, not open exploration
+    -   "Given this pull request, use the AI assistant to write a one-paragraph summary of the changes"
+-   Observe where participants hesitate, backtrack, or state expectations that turn out to be wrong
+-   Do not help when they get stuck or explain what the tool was designed to do
+    -   You will not be there when real users encounter the same problems
+
+</section>
+<section class="slide" markdown="1">
+
+## The RITE Method and What You Can Claim
+
+-   [%b Medlock2002 %]: fix the most severe problem you observed before the next session
+    -   A session that reveals a new problem is more useful than one that confirms a known one
+-   What five-session informal studies *can* support:
+    -   "We observed developers getting stuck at this step"
+    -   "In most sessions, participants…"
+-   What they *cannot* support:
+    -   "X% of developers have this problem"
+    -   "Using this tool causes developers to write more bugs"
 
 </section>
 <section class="slide" markdown="1">
@@ -360,6 +399,18 @@ title: How to Not Be Wrong About AI
 
 </section>
 <section class="slide" markdown="1">
+
+## Sharing Results Responsibly
+
+-   Every study has limitations; state them before stakeholders ask
+-   Distinguish between "we found no effect" and "our study was not designed to detect that effect"
+-   Present uncertainty:
+    confidence intervals and effect sizes belong in results presented to management
+-   Negative results matter too
+
+</section>
+<section class="slide" markdown="1">
+
   <div class="center">
   <h2>Thank You</h2>
   </div>
@@ -376,4 +427,5 @@ title: How to Not Be Wrong About AI
   <div class="center">
   <p><em>start where you are &middot; use what you have &middot; help who you can</em></p>
   </div>
+
 </section>

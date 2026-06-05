@@ -23,6 +23,7 @@ but please note that all contributors must abide by our [Code of Conduct](@/cond
 1.  [Observational Studies and Natural Experiments](@/observational/)
 1.  [Reading Studies Critically](@/critical/)
 1.  [Running Studies in Your Organization](@/running/)
+1.  [Starting Cheap](@/cheaply/)
 1.  [Conclusion: What to Do Next](@/finale/)
 
 </div>

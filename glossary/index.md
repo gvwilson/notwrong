@@ -7,6 +7,11 @@
     assigned to one of two variants to measure which performs better on a
     defined metric.
 
+<span id="affinity_mapping">affinity mapping</span>
+:   An analysis technique in which individual observations are written on
+    separate notes and then grouped into clusters that share an underlying
+    cause or theme, with each cluster named as a claim rather than a label.
+
 <span id="agile_manifesto">agile manifesto</span>
 :   The 2001 statement of four values and twelve principles for agile
     software development, emphasizing individuals and interactions, working
@@ -153,6 +158,13 @@
 :   The tendency for null results to go unpublished, causing the published
     literature to overrepresent positive findings.
 
+<span id="formative_evaluation">formative evaluation</span>
+:   Evaluation conducted during development to identify problems and guide
+    improvement, as opposed to summative evaluation which assesses a
+    completed product. Formative studies typically use small samples and
+    qualitative methods; their goal is to find things to fix, not to
+    measure how often problems occur.
+
 <span id="funnel_plot">funnel plot</span>
 :   A scatter plot of effect size against sample size used in meta-analysis;
     asymmetry suggests publication bias.
@@ -178,6 +190,13 @@
 :   A qualitative research methodology in which theory is developed inductively
     from data through iterative coding and constant comparison, rather than
     testing a predetermined hypothesis.
+
+<span id="guerrilla_research">guerrilla research</span>
+:   Informal user research conducted without formal institutional support,
+    using convenience samples recruited opportunistically and methods that
+    prioritize speed and low cost over statistical rigor. Appropriate for
+    formative evaluation; not appropriate for making quantitative claims
+    about populations.
 
 ## H
 
@@ -375,6 +394,13 @@
 :   The random assignment of participants to experimental conditions,
     distributing known and unknown confounders evenly across groups.
 
+<span id="rite_method">Rapid Iterative Testing and Evaluation (RITE)</span>
+:   A usability testing method in which the most severe problem identified
+    in each session is addressed before the next session begins, enabling
+    rapid improvement with small participant pools. Appropriate for
+    formative evaluation; not appropriate for comparing product versions or
+    producing generalizable estimates of performance.
+
 <span id="retrospective_analysis">retrospective analysis</span>
 :   An analysis of data collected before the research question was
     formulated, such as examining historical logs, commit records, or past
@@ -432,15 +458,35 @@
 :   A systematic attempt to collect and analyze evidence in order to test a
     claim or answer a research question.
 
+<span id="summative_evaluation">summative evaluation</span>
+:   Evaluation conducted after development is complete to assess whether a
+    product meets its goals, as opposed to formative evaluation conducted
+    during development to guide improvement. Summative studies require
+    controlled conditions and sufficient sample sizes to support quantitative
+    claims.
+
 <span id="survivorship_bias">survivorship bias</span>
 :   Bias introduced by analyzing only cases that survived a selection process,
     ignoring cases that did not.
 
 ## T
 
+<span id="task_based_testing">task-based testing</span>
+:   A research method in which participants are given specific, realistic
+    tasks to complete with a product or system while the researcher observes
+    and records their behavior, as opposed to open-ended exploration that
+    produces impressions rather than observable actions.
+
 <span id="thematic_analysis">thematic analysis</span>
 :   A qualitative analysis method in which data is coded and grouped into
     themes through iterative passes.
+
+<span id="think_aloud_protocol">think-aloud protocol</span>
+:   A data collection technique in which participants verbalize their
+    thoughts, decisions, and reactions as they perform tasks, providing
+    access to real-time reasoning that retrospective reporting misses.
+    Commonly used in usability testing and qualitative studies of how
+    people interact with tools and interfaces.
 
 <span id="time_to_restore_service">time to restore service</span>
 :   The time it takes to recover normal operation after a failure in

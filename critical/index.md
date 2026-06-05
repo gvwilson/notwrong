@@ -97,6 +97,25 @@ This session gives you the critical reading skills needed to do better.
     (where journals commit to publish regardless of outcome)
     are partial remedies
 
+<div class="callout" markdown="1">
+
+From [%b Wicherts2011 %]:
+
+> We related the reluctance to share research data for reanalysis
+> to 1148 statistically significant results reported in 49 papers
+> published in two major psychology journals.
+> We found the reluctance to share data to be associated with weaker evidence…and
+> a higher prevalence of apparent errors in the reporting of statistical results.
+> The unwillingness to share data was particularly clear
+> when reporting errors had a bearing on statistical significance.
+
+In other words,
+if people aren't willing to make their data available for you to analyze,
+it's very likely that they're overstating their findings
+or have made a mistake in their analysis.
+
+</div>
+
 ## Conflicts of Interest
 
 -   Industry-funded studies in software engineering

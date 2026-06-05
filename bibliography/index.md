@@ -373,6 +373,18 @@ for the papers themselves, please see the `pdf` directory in
 
 ## H
 
+<span id="Hall2019">Hall2019</span>
+:   Erika Hall:
+    *Just Enough Research*.
+    A Book Apart,
+    2nd ed.,
+    2019,
+    [9781952616082](https://isbnsearch.org/isbn/9781952616082).
+    <br>
+    *Practical guide to user research for designers and product teams,
+    arguing that the goal of research is to reduce uncertainty enough to act wisely,
+    and that small, focused studies are almost always more useful than no research at all.*
+
 <span id="Harman2001">Harman2001</span>
 :   Mark Harman and Bryan F. Jones:
     "Search-Based Software Engineering."
@@ -516,6 +528,16 @@ for the papers themselves, please see the `pdf` directory in
     developer productivity. Somebody probably got promoted for writing
     it.*
 
+<span id="Medlock2002">Medlock2002</span>
+:   Michael C. Medlock, Dennis Wixon, Mark Terrano, Ramon Ruflair, and Darrell Vaughan:
+    "Using the RITE Method to Improve Products: A Definition and a Case Study."
+    *Proc. Usability Professionals Association Conference*,
+    2002.
+    <br>
+    *Introduces the Rapid Iterative Testing and Evaluation (RITE) method,
+    in which usability problems identified during a session are addressed before the next session,
+    enabling rapid iteration with small participant pools.*
+
 <span id="Meyer2017">Meyer2017</span>
 :   André N. Meyer, Laura E. Barton, Gail C. Murphy, Thomas Zimmermann, and Thomas Fritz:
     "The Work Life of Developers: Activities, Switches and Perceived Productivity."
@@ -581,6 +603,18 @@ for the papers themselves, please see the `pdf` directory in
     "From Organizations to Individuals: Psychoactive Substance Use By Professional Programmers."
     arXiv 2305.01056, 2023,
     [10.48550/arXiv.2305.01056](https://doi.org/10.48550/arXiv.2305.01056).
+
+<span id="Nielsen1993">Nielsen1993</span>
+:   Jakob Nielsen and Thomas K. Landauer:
+    "A Mathematical Model of the Finding of Usability Problems."
+    *Proc. INTERACT'93 and CHI'93*,
+    206-213,
+    1993,
+    [10.1145/169059.169166](https://doi.org/10.1145/169059.169166).
+    <br>
+    *Develops a mathematical model showing that approximately five participants
+    are sufficient to identify most major usability problems in a focused task set,
+    under the assumption of formative testing with a reasonably homogeneous user group.*
 
 ## O
 
