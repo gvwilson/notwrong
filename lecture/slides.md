@@ -271,11 +271,11 @@ title: How to Not Be Wrong About AI
 
 ## HARKing and p-Hacking
 
--   HARKing (Hypothesizing After Results are Known):
+-   **HARKing** (Hypothesizing After Results are Known):
     writing a paper as if a pattern found during analysis was predicted in advance
--   p-hacking: trying multiple analyses until you get p < 0.05, then reporting only that analysis
+-   **p-hacking**: trying multiple analyses until you get p < 0.05, then reporting only that analysis
     -   With 20 independent tests at p < 0.05, you expect one false positive by chance
--   Pre-registration commits hypotheses before data collection, making both problems visible
+-   **Pre-registration** commits hypotheses before data collection, making both problems visible
 -   And if authors haven't shared data, there's a good chance there's an error in their work [%b Wicherts2011 %]
 
 </section>
@@ -283,16 +283,16 @@ title: How to Not Be Wrong About AI
 
 ## A Checklist for Evaluating a Study
 
--   Conclusion validity:
+-   **Conclusion validity**:
     Was the sample large enough?
     Are effect sizes reported?
--   Internal validity:
+-   **Internal validity**:
     Was there a control group?
     Was assignment random?
     Could novelty or learning effects explain the result?
--   Construct validity:
+-   **Construct validity**:
     Does the measurement actually capture the claim?
--   External validity:
+-   **External validity**:
     Who are the subjects, and are they representative of the population the conclusions address?
 
 </section>
@@ -303,10 +303,10 @@ title: How to Not Be Wrong About AI
 -   Most practitioners don't have the time or the skills to run a randomized controlled trial
 -   Practical alternatives:
     -   Retrospective analysis of data you already have
-    -   Anonymized internal surveys
-    -   A/B testing (but *not* through volunteering)
+    -   A/B testing
+    -   *Anonymized* internal surveys
 -   Be honest about what design you actually have, not what you wish you had
--   Get legal and HR involved before you collect individual-level data
+-   Get legal and HR involved before you collect individual data
     -   Having it done by someone outside your org makes honest answers a bit more likely
 
 </section>
@@ -315,9 +315,9 @@ title: How to Not Be Wrong About AI
 ## Goal-Question-Metric
 
 -   **GQM** provides a structured path from intent to measurement [%b Basili1994 %]
--   Define the goal: what object, what property, from whose viewpoint, in what context?
--   Generate the questions whose answers would tell you whether the goal was achieved
--   Identify the specific, operationalized metric that answers each question
+-   Define the **goal**: what object, what property, from whose viewpoint, in what context?
+-   Generate the **questions** whose answers would tell you whether the goal was achieved
+-   Identify the specific, operationalized **metric** that answers each question
     -   And challenge whether the metric actually measures what you care about
     -   Again, it helps to do this with someone outside your org
 
@@ -327,10 +327,10 @@ title: How to Not Be Wrong About AI
 ## Sharing Results Responsibly
 
 -   Every study has limitations; state them before stakeholders ask
--   Distinguish between "we found no effect" and "our study was not designed to detect an effect"
+-   Distinguish between "we found no effect" and "our study was not designed to detect that effect"
 -   Present uncertainty:
-    confidence intervals and effect sizes belong in results presented to management, not just in appendices
--   A negative result reported honestly is more valuable than a positive result that cannot be replicated
+    confidence intervals and effect sizes belong in results presented to management
+-   Negative results matter too
 
 </section>
 <section class="slide" markdown="1">
