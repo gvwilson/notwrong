@@ -159,7 +159,7 @@ title: How to Not Be Wrong About AI
 ## Qualitative Methods: When and Why
 
 -   **Qualitative methods** are for when you do not yet know what to measure
--   They answer "why" and "what is happening here" rathr than "how much"
+-   They answer "why" and "what is happening here" rather than "how much"
 -   A survey of 410 developers about AI tools revealed
     where AI actually helps and where it gets in the way [%b Liang2024 %]
     -   Invisible to any study measuring only task completion times
