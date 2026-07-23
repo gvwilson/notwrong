@@ -614,7 +614,7 @@ for the papers themselves, please see the `pdf` directory in
     <br>
     *Develops a mathematical model showing that approximately five participants
     are sufficient to identify most major usability problems in a focused task set,
-    under the assumption of formative testing with a reasonably homogeneous user group.*
+    using formative testing with a reasonably homogeneous user group.*
 
 ## O
 

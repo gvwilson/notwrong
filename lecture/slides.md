@@ -7,7 +7,7 @@ title: How to Not Be Wrong About AI
 <br>
 <br>
 <p>Greg Wilson</p>
-<p>June 2026</p>
+<p>July 2026</p>
 <p><a href="http://third-bit.com/notwrong/">http://third-bit.com/notwrong/</a></p>
 </div>
 </section>
@@ -18,7 +18,7 @@ title: How to Not Be Wrong About AI
 -   AI coding tools are everywhere, and so are claims about what they do
 -   In 2023, GitHub announced their tools made developers 55% faster
 -   That number appeared in every executive presentation for a year
--   This workshop teaches you how to tell if you should believe it or not
+-   This workshop teaches you how to tell if you should believe it
 
 </section>
 <section class="slide" markdown="1">
@@ -47,7 +47,7 @@ title: How to Not Be Wrong About AI
 </section>
 <section class="slide" markdown="1">
 
-## The Question You Actually Need to Answer
+## The Real Question
 
 -   "Is AI helping my team?" sounds simple
 -   But it requires answering:
@@ -66,7 +66,7 @@ title: How to Not Be Wrong About AI
     and found completion times ranged from 0.6 to 63 hours (i.e., 105X) [%b Prechelt2000 %]
 -   After controlling for programming language the ratio shrank to 17X
 -   With a careful definition of "more productive" it shrank further to 5X
--   The answer depends a lot on exactly what question is asked
+-   The answer depends on exactly what question is asked
 
 </section>
 <section class="slide" markdown="1">
@@ -76,19 +76,19 @@ title: How to Not Be Wrong About AI
 -   A **claim** is an assertion: "AI tools make programmers more productive"
 -   A **study** is a systematic attempt to test a claim
 -   **Evidence** is what a study produces, and it varies in quality
--   One study with a nice headline can change hiring practices and university curricula
-    before anyone checks whether it replicates
+-   One study with a catchy headline can change curricula and hiring practices
+    before anyone double-checks it
 
 </section>
 <section class="slide" markdown="1">
 
 ## Why "Productivity" Is Hard to Define
 
+-   [%b Sadowski2019 %] is an entire book devoted to "this is difficult"
 -   Manufacturing productivity means widgets per hour: both terms are measurable
 -   Software output is not homogeneous: a ten-line bugfix may be worth more than a thousand-line feature
 -   Much of software work is invisible: reading, reviewing, helping colleagues
     -   A field study found developers only spend 25% of their day actually writing code [%b Meyer2017 %]
--   [%b Sadowski2019 %] is an entire book devoted to "this is really hard"
 
 </section>
 <section class="slide" markdown="1">
@@ -96,10 +96,10 @@ title: How to Not Be Wrong About AI
 ## Construct Validity and Proxy Metrics
 
 -   **Construct validity** is the degree to which a measurement captures the concept it is meant to represent
--   Lines of code written per day has low construct validity as a productivity measure
-    -   You can write more lines by making code worse
 -   A **proxy metric** stands in for something harder to measure directly
     -   Common proxies: lines of code, commit frequency, story points, pull requests merged
+-   Lines of code written per day has low construct validity as a productivity measure
+    -   You can make code worse by writing more of it
 -   **Goodhart's Law**: when a measure becomes a target, it ceases to be a good measure
     -   Particularly when people feel their jobs are threatened…
 
@@ -151,15 +151,15 @@ title: How to Not Be Wrong About AI
 -   Treating suggestion acceptance rate as a quality signal
     -   Developers under pressure accept more suggestions, including insecure ones [%b Pearce2022 %]
 -   Comparing AI to nothing
-    -   the relevant question is whether AI outperforms the alternatives developers already have
+    -   The real question is whether AI outperforms the alternatives developers already have
 
 </section>
 <section class="slide" markdown="1">
 
 ## Qualitative Methods: When and Why
 
--   **Qualitative methods** are for when you do not yet know what to measure
--   They answer "why" and "what is happening here" rathr than "how much"
+-   Use **qualitative methods** when you do not yet know what to measure
+-   They answer "what is happening" and "why" rather than "how much"
 -   A survey of 410 developers about AI tools revealed
     where AI actually helps and where it gets in the way [%b Liang2024 %]
     -   Invisible to any study measuring only task completion times
@@ -171,8 +171,8 @@ title: How to Not Be Wrong About AI
 ## Designing Good Interviews and Surveys
 
 -   **Semi-structured interviews** have a guide but allow follow-up
-    -   Consistent enough to compare, flexible enough to surface surprises
--   **Open questions** invite narrative; **closed questions** invite classification
+    -   Consistent enough to compare, flexible enough to surprise
+-   **Open questions** invite narrative, while **closed questions** invite classification
 -   Avoid **leading questions**: "Don't you find it faster?" assumes the answer
 -   Pilot your survey with 3–5 people before distributing it
 
@@ -184,7 +184,7 @@ title: How to Not Be Wrong About AI
 -   **Open coding**: read through the data and tag segments with descriptive labels
 -   Use **gerund coding**: "avoiding AI for security tasks" rather than "AI distrust"
     -   This preserves what participants are actually doing
--   A theme is a claim you could write as a sentence, not a bucket for related quotes
+-   A **theme** is a claim you could write as a sentence, not a bucket for related quotes
 -   Stop collecting data when new interviews stop introducing new codes [%b Braun2019 %]
 
 </section>
@@ -196,14 +196,14 @@ title: How to Not Be Wrong About AI
 -   **Randomization** assigns participants to conditions randomly, distributing unknown **confounders** evenly
     -   This is the mechanism that makes **causal claims** defensible
 -   **Full blinding** is rarely possible in software engineering:
-    -   you cannot hide from a developer that they are using TDD
+    -   The developer is going to know if they're using TDD or not…
 
 </section>
 <section class="slide" markdown="1">
 
 ## p-Values: What They Are and Are Not
 
--   A p-value is the probability of observing data at least as extreme as yours
+-   A **p-value** is the probability of observing data at least as extreme as yours
     if nothing was actually happening
 -   It is not the probability that the null hypothesis is true
 -   It is not the probability that you will replicate
@@ -218,24 +218,25 @@ title: How to Not Be Wrong About AI
 -   **Effect size** tells you how large it is
 -   A study with thousands of participants can find statistically significant effects
     that are  too small to matter in practice
--   Always report effect size alongside p-values; one without the other is incomplete
-    -   Equally, if a study doesn't report both, it probably has other flaws as well
+-   Always report effect size alongside p-values
+    -   Either is incomplete on its own
+    -   If a study doesn't report both, it probably has other flaws as well
 
 </section>
 <section class="slide" markdown="1">
 
-## Most SE Experiments Are Underpowered
+## Underpowered Experiments
 
 -   **Statistical power** is the probability of detecting an effect if one exists
 -   Studies with 20–30 participants can only detect very large effects [%b Kampenes2007 %]
--   Most software engineering experiments fall far below this threshold
+-   Most ESE experiments fall far below this threshold
 -   The effects you do detect in underpowered studies are inflated
-    —   The **winner's curse** (reluctance to publish negative results)
+    -   The **winner's curse**: reluctance to publish negative results
 
 </section>
 <section class="slide" markdown="1">
 
-## Observational Studies: Watching the World
+## Observational Studies
 
 -   **Observational studies** measure the world as it is, without manipulating variables
 -   Advantages: real-world behavior, large datasets, no ethical concerns about withholding interventions
@@ -248,8 +249,7 @@ title: How to Not Be Wrong About AI
 ## Looking Where the Light Is
 
 -   GitHub data is not a representative sample of software development
--   Inactive repositories, class assignments, personal experiments, and mirrors
-    all appear alongside production software
+    -   Inactive repositories, class assignments, personal experiments, etc.
 -   **Survivorship bias**: you only see projects that still exist
 -   Example: projects with more tests also tend to have more experienced developers
     —   You cannot attribute lower defect rates to testing alone
@@ -261,10 +261,10 @@ title: How to Not Be Wrong About AI
 
 -   Start with the abstract: what claim is being made?
 -   Jump to the methods before reading the results
-    -   Given this design, what can this study actually establish?
+    -   What can this study design actually establish?
 -   Read the limitations section
     -   What do the authors say they *cannot* conclude?
-    -   If this feels flimsy, the rest of the paper probably is as well
+    -   If this feels flimsy, the rest of the paper probably is too
 
 </section>
 <section class="slide" markdown="1">
@@ -304,8 +304,8 @@ title: How to Not Be Wrong About AI
 -   Define the **goal**: what object, what property, from whose viewpoint, in what context?
 -   Generate the **questions** whose answers would tell you whether the goal was achieved
 -   Identify the specific, operationalized **metric** that answers each question
-    -   And challenge whether the metric actually measures what you care about
-    -   Again, it helps to do this with someone outside your org
+    -   Challenge whether the metric actually measures what you care about
+    -   It helps to do this with someone outside your org
 
 </section>
 <section class="slide" markdown="1">
@@ -315,7 +315,7 @@ title: How to Not Be Wrong About AI
 -   A small, informal study produces better evidence than a meeting
 -   "Research is the process of finding out what you don't know" [%b Hall2019 %]
 -   The standard for "enough" depends on the decision you are trying to support
-    -   Deciding to run a larger study: five sessions may be enough
+    -   Deciding to run a larger study: five sessions is fine
     -   Deciding to mandate a tool for five hundred developers: nope
 -   Your goal is not to be rigorous
 -   It is to be better informed at minimal cost
@@ -343,7 +343,7 @@ title: How to Not Be Wrong About AI
 -   Aim for people who fit your target profile, not whoever responds first
 -   Avoid people you manage, who manage you, or who already know your hypothesis
 -   Five participants is typically enough to identify most problems in a specific workflow [%b Nielsen1993 %]
-    -   This does not apply to claims about "most developers"
+    -   *Not* to make claims about "most developers"
 
 </section>
 <section class="slide" markdown="1">
@@ -360,7 +360,7 @@ title: How to Not Be Wrong About AI
 </section>
 <section class="slide" markdown="1">
 
-## The RITE Method and What You Can Claim
+## The RITE Method
 
 -   [%b Medlock2002 %]: fix the most severe problem you observed before the next session
     -   A session that reveals a new problem is more useful than one that confirms a known one
@@ -379,7 +379,7 @@ title: How to Not Be Wrong About AI
 -   Code is statistically more repetitive and predictable than natural language [%b Hindle2016 %]
     -   This is why language models work well for it
 -   Nearly all studies are short-term, use narrow tasks, and rely on volunteers
-    -   External validity to professional development is largely assumed
+    -   Lack external validity to professional development
 -   Controlled experiments show AI tools can speed up specific, well-defined tasks for individual developers
 -   Effects on end-to-end delivery (defect rates, lead time) are much less clear
 
