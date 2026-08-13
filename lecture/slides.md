@@ -1,5 +1,6 @@
 ---
 title: How to Not Be Wrong About AI
+format: slides-html
 ---
 <section class="slide" markdown="1">
 <div class="center">

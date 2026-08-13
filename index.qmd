@@ -1,0 +1,13 @@
+This tutorial is a short introduction to research methods you can use
+to figure out whether AI-based programming tools are helping your team or not.
+Even if you don't do such studies yourself,
+we hope that understanding how they work will help you decide
+which claims about them to trust.
+[Help is welcome](contributing/index.qmd),
+but please note that all contributors must abide by our [Code of Conduct](conduct/index.qmd).
+
+[*Greg Wilson*](@wilson-greg) is a programmer, author, and educator based in Toronto.
+He was the co-founder and first Executive Director of Software Carpentry
+and received ACM SIGSOFT's Influential Educator Award in 2020.
+
+> start where you are · use what you have · help who you can

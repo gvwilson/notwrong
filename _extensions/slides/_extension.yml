@@ -1,0 +1,11 @@
+title: Shower Slides
+author: Greg Wilson
+version: 1.0.0
+contributes:
+  formats:
+    html:
+      template: template.html
+      minimal: true
+      format-resources:
+        - shower.js
+        - slides.js

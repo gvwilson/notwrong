@@ -1,0 +1,45 @@
+project:
+  type: book
+  output-dir: docs
+
+book:
+  title: "How to Not Be Wrong About AI"
+  author: "Greg Wilson"
+  repo-url: "https://github.com/gvwilson/notwrong"
+  repo-actions: [edit, source, issue]
+  chapters:
+    - index.qmd
+    - intro/index.qmd
+    - productivity/index.qmd
+    - wrong/index.qmd
+    - qualitative/index.qmd
+    - quantitative/index.qmd
+    - observational/index.qmd
+    - critical/index.qmd
+    - running/index.qmd
+    - cheaply/index.qmd
+    - finale/index.qmd
+  appendices:
+    - license/index.qmd
+    - conduct/index.qmd
+    - contributing/index.qmd
+    - bibliography/index.qmd
+    - glossary/index.qmd
+    - further/index.qmd
+    - stats/index.qmd
+
+bibliography: bibliography/references.bib
+csl: bibliography/apa.csl
+
+filters:
+  - bin/links.lua
+
+shortcodes:
+  - bin/g.lua
+  - bin/inc-noh1.lua
+
+format:
+  html:
+    theme: cosmo
+    toc: true
+
