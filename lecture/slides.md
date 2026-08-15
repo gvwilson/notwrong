@@ -1,8 +1,6 @@
 ---
 title: How to Not Be Wrong About AI
-format:
-  html:
-    template: ../_templates/slides.html
+format: revealjs
 ---
 <section class="slide" markdown="1">
 <div class="center">

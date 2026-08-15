@@ -1,25 +1,18 @@
----
-title: "How to Not Be Wrong About AI"
----
+# Overview {.unnumbered}
+
 This tutorial is a short introduction to research methods you can use
 to figure out whether AI-based programming tools are helping your team or not.
 Even if you don't do such studies yourself,
 we hope that understanding how they work will help you decide
 which claims about them to trust.
-All of the material is available under an open license,
+All of the material is available under an [open license](license/index.qmd),
 and contributions through our [repository](@repo) are welcome.
-All participants are required to respect our Code of Conduct.
+All participants are required to respect our [Code of Conduct](conduct/index.qmd).
 
-[*Greg Wilson*](@wilson-greg) is a programmer, author, and educator based in Toronto.
+[Greg Wilson](@wilson-greg) is a programmer, author, and educator based in Toronto.
 He was the co-founder and first Executive Director of Software Carpentry
 and received ACM SIGSOFT's Influential Educator Award in 2020.
 
-<p class="center">
-  <em>
-    start where you are
-    &middot;
-    use what you have
-    &middot;
-    help who you can
-  </em>
-</p>
+::: {.center}
+*start where you are &middot; use what you have &middot; help who you can*
+:::
