@@ -4,7 +4,6 @@ project:
 
 book:
   title: "How to Not Be Wrong About AI"
-  author: "Greg Wilson"
   repo-url: "https://github.com/gvwilson/notwrong"
   repo-actions: [edit, source, issue]
   chapters:
