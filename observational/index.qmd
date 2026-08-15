@@ -25,7 +25,7 @@ because the data does not mean what you think it means.
 
 ## What Observational Studies Are
 
--   An {{< g observational_study "observational study" >}} measures the world as it is,
+-   An {{<g observational_study "observational study" >}} measures the world as it is,
     without manipulating any variables
 -   You observe what people do,
     what code looks like,
@@ -39,7 +39,7 @@ because the data does not mean what you think it means.
 
 ## Mining Software Repositories
 
--   {{< g msr "Mining software repositories" >}} (MSR) extracts data
+-   {{<g msr "Mining software repositories" >}} (MSR) extracts data
     from version control systems, issue trackers, code review tools, and CI/CD logs
 -   GitHub, GitLab, and similar platforms expose APIs
     that make large-scale data collection straightforward
@@ -65,7 +65,7 @@ because the data does not mean what you think it means.
 -   Selection bias: open-source projects on GitHub are not representative
     of all software projects
 -   Developers who share their code publicly differ from those who do not
--   {{< g survivorship_bias "Survivorship bias" >}}:
+-   {{<g survivorship_bias "Survivorship bias" >}}:
     you only see projects that still exist
     -   Failed or abandoned projects leave incomplete records
 -   Confounding:
@@ -84,7 +84,7 @@ because the data does not mean what you think it means.
 -   Observational studies maximize external validity
     -   You are watching real developers on real work
     -   The cost is that confounding variables cannot be ruled out
--   {{< g quasi_experimental_design "Quasi-experimental designs" >}} sit in between:
+-   {{<g quasi_experimental_design "Quasi-experimental designs" >}} sit in between:
     -   They use real-world interventions but without full randomization
     -   Accept some ambiguity about causation in exchange for greater realism
 -   No single design is always better
@@ -97,12 +97,12 @@ because the data does not mean what you think it means.
 
 ## Quasi-Experimental Designs
 
--   {{< g difference_in_differences "Difference-in-differences" >}} (DiD)
+-   {{<g difference_in_differences "Difference-in-differences" >}} (DiD)
     compares the change in outcome for a treated group
     against the change for a control group over the same period
     -   Requires a "parallel trends" assumption:
         the two groups would have changed similarly if neither had been treated
--   {{< g interrupted_time_series "Interrupted time series" >}} (ITS)
+-   {{<g interrupted_time_series "Interrupted time series" >}} (ITS)
     looks for a change in trend at the point when an intervention was introduced
     -   Requires enough data before and after the intervention to estimate the trend
     -   Example:
@@ -111,7 +111,7 @@ because the data does not mean what you think it means.
 
 ## Natural Experiments
 
--   A {{< g natural_experiment "natural experiment" >}} uses real-world variation
+-   A {{<g natural_experiment "natural experiment" >}} uses real-world variation
     that was not created by the researcher but that approximates random assignment
 -   Examples in software engineering:
     -   A policy change that applies to some teams but not others at the same time
@@ -122,7 +122,7 @@ because the data does not mean what you think it means.
 
 ## Field Study Design
 
--   {{< g longitudinal_study "Longitudinal field studies" >}}
+-   {{<g longitudinal_study "Longitudinal field studies" >}}
     observe participants over weeks or months in their actual work environment,
     bridging the gap between lab experiments and pure observational analysis
 -   Define acceptance criteria before you begin:

@@ -19,7 +19,7 @@ The paper was not obviously fraudulent—it was something more insidious:
 confident,
 plausible,
 and wrong in ways that non-specialists could not easily detect.
-Kent Beck, one of the authors of the {{< g agile_manifesto "Agile Manifesto" >}},
+Kent Beck, one of the authors of the {{<g agile_manifesto "Agile Manifesto" >}},
 wrote a pointed response:
 the paper treated productivity as an objective fact to be measured
 when it is actually a judgment about what matters,
@@ -50,14 +50,14 @@ This session gives you the critical reading skills needed to do better.
 
 ## HARKing
 
--   {{< g harking "HARKing" >}} stands for Hypothesizing After Results are Known
+-   {{<g harking "HARKing" >}} stands for Hypothesizing After Results are Known
 -   A researcher runs an analysis,
     finds an interesting pattern,
     and then writes the paper as if that pattern was predicted in advance
 -   HARKing inflates false positive rates because
-    {{< g exploratory_analysis "exploratory analysis" >}} is presented as
-    {{< g confirmatory_analysis "confirmatory analysis" >}}
--   {{< g preregistration "Pre-registration" >}} commits hypotheses and analysis plans
+    {{<g exploratory_analysis "exploratory analysis" >}} is presented as
+    {{<g confirmatory_analysis "confirmatory analysis" >}}
+-   {{<g preregistration "Pre-registration" >}} commits hypotheses and analysis plans
     before data collection, making HARKing visible
 -   Signs of HARKing
     -   Vague hypotheses in the introduction that are suddenly very specific in the results
@@ -66,7 +66,7 @@ This session gives you the critical reading skills needed to do better.
 
 ## p-Hacking
 
--   {{< g p_hacking "p-hacking" >}} means trying multiple analyses until you get p < 0.05,
+-   {{<g p_hacking "p-hacking" >}} means trying multiple analyses until you get p < 0.05,
     then reporting only that analysis
     -   Also called "data dredging," "specification searching,"
         or "researcher degrees of freedom"
@@ -84,15 +84,15 @@ This session gives you the critical reading skills needed to do better.
 
 ## Publication Bias
 
--   {{< g publication_bias "Publication bias" >}}:
+-   {{<g publication_bias "Publication bias" >}}:
     journals publish positive results (significant effects)
     more often than null results
--   Researchers internalize this and are less likely to submit {{< g null_result "null results" >}}
-    (the {{< g file_drawer_problem "file drawer problem" >}})
+-   Researchers internalize this and are less likely to submit {{<g null_result "null results" >}}
+    (the {{<g file_drawer_problem "file drawer problem" >}})
 -   Consequence: the published literature overestimates effect sizes
     and overstates how often phenomena replicate
--   {{< g meta_analysis "Meta-analysis" >}} tries to combine results across studies
--   {{< g funnel_plot "Funnel plots" >}} can reveal asymmetry suggesting publication bias
+-   {{<g meta_analysis "Meta-analysis" >}} tries to combine results across studies
+-   {{<g funnel_plot "Funnel plots" >}} can reveal asymmetry suggesting publication bias
 -   Pre-registration and registered reports
     (where journals commit to publish regardless of outcome)
     are partial remedies
@@ -245,7 +245,7 @@ A single significant result from 12 comparisons is entirely consistent with chan
 and with p = 0.04 (just barely significant),
 it is especially suspicious.
 The appropriate response is to apply a multiple comparisons correction
-(such as {{< g bonferroni_correction "Bonferroni" >}}, which would require p < 0.004 for any individual test)
+(such as {{<g bonferroni_correction "Bonferroni" >}}, which would require p < 0.004 for any individual test)
 and treat the result as preliminary until replicated.
 
 </details>

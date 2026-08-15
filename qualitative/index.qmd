@@ -47,10 +47,10 @@ which illustrates the scale-versus-richness trade-off between surveys and interv
 ## Designing Interviews
 
 -   Three types of interviews
-    -   {{< g structured_interview "Structured interviews" >}} use a fixed script
-    -   {{< g semi_structured_interview "Semi-structured interviews" >}} have a guide
+    -   {{<g structured_interview "Structured interviews" >}} use a fixed script
+    -   {{<g semi_structured_interview "Semi-structured interviews" >}} have a guide
         but allow follow-up
-    -   {{< g unstructured_interview "Unstructured interviews" >}} follow the participant's lead
+    -   {{<g unstructured_interview "Unstructured interviews" >}} follow the participant's lead
     -   Semi-structured is the most common in software engineering research:
         consistent enough to compare across participants,
         flexible enough to surface surprises
@@ -60,7 +60,7 @@ which illustrates the scale-versus-richness trade-off between surveys and interv
     "On a scale of 1 to 5, how often do you accept AI suggestions without reading them?"
 -   Probing follows up on what a participant says:
     "You mentioned you don't trust it for security-related code—can you say more about that?"
--   Avoid {{< g leading_question "leading questions" >}}:
+-   Avoid {{<g leading_question "leading questions" >}}:
     "Don't you find it faster?" assumes the answer
 -   Avoid hypothetical questions:
     "Would you use X if Y?"
@@ -70,7 +70,7 @@ which illustrates the scale-versus-richness trade-off between surveys and interv
 
 -   Surveys trade depth for breadth:
     you can reach many more people but get shallower data from each
--   {{< g likert_scale "Likert scales" >}}
+-   {{<g likert_scale "Likert scales" >}}
     ("Strongly agree" to "Strongly disagree") are common but have known problems:
     -   People cluster toward the middle or toward the extremes
     -   The same label means different things to different people
@@ -78,11 +78,11 @@ which illustrates the scale-versus-richness trade-off between surveys and interv
 -   Response bias:
     people answer differently depending on question order, framing,
     and what they think the researcher wants to hear
--   {{< g sampling_strategy "Sampling strategy" >}} determines who you can generalize to
-    -   {{< g convenience_sampling "Convenience samples" >}}
+-   {{<g sampling_strategy "Sampling strategy" >}} determines who you can generalize to
+    -   {{<g convenience_sampling "Convenience samples" >}}
         (whoever responds to a social media post)
         are common and usually biased toward engaged, technical users
-    -   {{< g stratified_sampling "Stratified samples" >}}
+    -   {{<g stratified_sampling "Stratified samples" >}}
         deliberately include proportional representation of subgroups
 -   Pilot your survey with 3-5 people and revise before distributing
 -   E.g., Bettenburg et al. surveyed Apache, Eclipse, and Mozilla developers and users
@@ -91,12 +91,12 @@ which illustrates the scale-versus-richness trade-off between surveys and interv
 
 ## Thematic Analysis
 
--   {{< g thematic_analysis "Thematic analysis" >}} is the standard approach
+-   {{<g thematic_analysis "Thematic analysis" >}} is the standard approach
     for analyzing qualitative data
--   {{< g open_coding "Open coding" >}}:
+-   {{<g open_coding "Open coding" >}}:
     read through the data and tag segments with descriptive labels
     (e.g., "trust in AI suggestions," "time saved on boilerplate")
-    -   Use {{< g gerund_coding "gerund coding" >}}:
+    -   Use {{<g gerund_coding "gerund coding" >}}:
         frame codes as actions rather than nouns,
         so "avoiding AI for security tasks" rather than "AI distrust"
     -   This preserves the temporal and causal structure
@@ -107,7 +107,7 @@ which illustrates the scale-versus-richness trade-off between surveys and interv
     -   Strong themes name tensions as well as patterns:
         "trusting the output while suspicious of the process"
         is more informative than "attitudes toward AI"
--   {{< g axial_coding "Axial coding" >}}:
+-   {{<g axial_coding "Axial coding" >}}:
     group codes into higher-level themes and examine relationships between them
     -   Ask which themes co-occur across participants, and why
     -   Look for conditions, contexts, and consequences:
@@ -118,17 +118,17 @@ which illustrates the scale-versus-richness trade-off between surveys and interv
     -   Separate participants' hypotheses and actions from their emotions and evaluations
         -   "I think AI will replace junior devs" is a claim
         -   "I hate how deskilled it makes me feel" is an affect
--   {{< g saturation "Saturation" >}}:
+-   {{<g saturation "Saturation" >}}:
     stop collecting data when new interviews or responses stop introducing new codes
     -   A practical definition of "enough data"
 -   Code with a second researcher and measure
-    {{< g intercoder_reliability "intercoder reliability" >}} to reduce individual bias
+    {{<g intercoder_reliability "intercoder reliability" >}} to reduce individual bias
     -   We'll discuss Cohen's kappa [later](../quantitative/index.qmd)
 -   Keep an audit trail: document coding decisions so others can evaluate them
 
 ## Experience Sampling
 
--   {{< g experience_sampling "Experience sampling" >}}
+-   {{<g experience_sampling "Experience sampling" >}}
     prompts participants at random or scheduled intervals during their workday
     to report their current task, perceived state, or productivity
 -   It captures in-the-moment data that retrospective surveys miss
@@ -145,7 +145,7 @@ which illustrates the scale-versus-richness trade-off between surveys and interv
 
 ## Triangulation
 
--   {{< g triangulation "Triangulation" >}} means combining multiple data sources or methods
+-   {{<g triangulation "Triangulation" >}} means combining multiple data sources or methods
     to increase confidence in a finding
 -   If interviews, survey, and observations all point to the same conclusion,
     that conclusion is more credible
@@ -156,7 +156,7 @@ which illustrates the scale-versus-richness trade-off between surveys and interv
 
 ## Grounded Theory
 
--   {{< g grounded_theory "Grounded theory" >}} is a qualitative methodology
+-   {{<g grounded_theory "Grounded theory" >}} is a qualitative methodology
     in which theory develops inductively from data through iterative coding,
     rather than testing a predetermined hypothesis
 -   A researcher records observations or interviews, codes them, identifies patterns,
@@ -181,7 +181,7 @@ which illustrates the scale-versus-richness trade-off between surveys and interv
 
 -   Even internal research on colleagues requires ethical care
     -   Which is often ignored
--   {{< g informed_consent "Informed consent" >}}:
+-   {{<g informed_consent "Informed consent" >}}:
     participants must know what data is being collected and how it will be used
 -   Privacy:
     interview and survey data can reveal individual performance,
@@ -210,12 +210,12 @@ Surveying your own team or users is sufficient for internal research.
     the results will confirm your assumptions.
 
 You can stop analyzing data once you have enough to support your hypothesis.
-:   {{< g confirmation_bias "Confirmation bias" >}} pushes researchers to stop analysis
+:   {{<g confirmation_bias "Confirmation bias" >}} pushes researchers to stop analysis
     when the data supports their expectations.
     Rigorous qualitative work continues until saturation.
 
 A study of 20 developers at one company can describe "what developers think."
-:   {{< g overgeneralization "Overgeneralization" >}} turns findings from a specific sample
+:   {{<g overgeneralization "Overgeneralization" >}} turns findings from a specific sample
     into claims about a broader population.
     "Developers find AI tools frustrating" from a study of 20 junior developers at one company
     is overgeneralized.
@@ -224,7 +224,7 @@ A study of 20 developers at one company can describe "what developers think."
 A low response rate doesn't matter if you have enough responses.
 :   If only 10% of people surveyed respond,
     the 90% who did not may have very different views.
-    {{< g non_response_bias "Non-response bias" >}} can be larger than sampling error,
+    {{<g non_response_bias "Non-response bias" >}} can be larger than sampling error,
     and a high absolute number of responses does not correct for it.
 
 Qualitative research is just asking people what they think.

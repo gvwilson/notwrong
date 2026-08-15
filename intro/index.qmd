@@ -28,7 +28,7 @@ This workshop is about how to do those studies better.
 
 ## What Empirical Software Engineering Is
 
--   {{< g empirical_software_engineering "Empirical software engineering" >}}
+-   {{<g empirical_software_engineering "Empirical software engineering" >}}
     (ESE) uses observation and experiment to study how software is built,
     and what practices actually work
     -   ESE is distinct from building better tools: its goal is knowledge, not artifacts
@@ -49,7 +49,7 @@ This workshop is about how to do those studies better.
     and abstracts rarely report limitations
 -   Press releases are written by communications teams whose job is to generate coverage,
     not accuracy
--   {{< g preprint "Preprints" >}} circulate as freely as peer-reviewed papers,
+-   {{<g preprint "Preprints" >}} circulate as freely as peer-reviewed papers,
     with no visible distinction to non-specialists
 -   Conflict of interest is common
     -   A large fraction of AI productivity studies are funded by
@@ -59,9 +59,9 @@ This workshop is about how to do those studies better.
 
 ## Claims, Studies, and Evidence
 
--   A {{< g claim "claim" >}} is an assertion: "AI tools make programmers more productive"
--   A {{< g study "study" >}} is a systematic attempt to test a claim
--   {{< g evidence "Evidence" >}} is what a study produces, and varies in quality
+-   A {{<g claim "claim" >}} is an assertion: "AI tools make programmers more productive"
+-   A {{<g study "study" >}} is a systematic attempt to test a claim
+-   {{<g evidence "Evidence" >}} is what a study produces, and varies in quality
 -   The chain from claim to policy is often much shorter than it should be
     -   One study with a nice headline can change hiring practices, procurement decisions,
          and university curricula
@@ -69,11 +69,11 @@ This workshop is about how to do those studies better.
 
 ## Qualitative vs. Quantitative
 
--   {{< g quantitative_methods "Quantitative methods" >}} measure things:
+-   {{<g quantitative_methods "Quantitative methods" >}} measure things:
     task completion time, defect rate, commit frequency
     -   Good for "how much" and "is there a difference"
     -   Requires that you can define and measure what you care about
--   {{< g qualitative_methods "Qualitative methods" >}} describe things:
+-   {{<g qualitative_methods "Qualitative methods" >}} describe things:
      what developers think about a tool,
     how teams decide what to build,
     why a particular practice was adopted

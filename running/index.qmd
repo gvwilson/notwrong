@@ -42,14 +42,14 @@ We created these lessons because you probably do too.
 -   Most practitioners cannot run a randomized controlled trial:
     no random assignment, no control group, limited time, limited budget
 -   Practical alternatives:
-    -   {{< g retrospective_analysis "Retrospective analysis" >}}:
+    -   {{<g retrospective_analysis "Retrospective analysis" >}}:
         study what already happened using data you already have
         (commit logs, ticket history, review comments)
     -   Interrupted time series:
         use a policy or tool change as a natural experiment
-    -   {{< g internal_survey "Internal survey" >}}:
+    -   {{<g internal_survey "Internal survey" >}}:
         structured survey of your own team, with clear scope and honest limitations
-    -   {{< g ab_testing "A/B testing" >}}:
+    -   {{<g ab_testing "A/B testing" >}}:
         if you are deploying software, random assignment of
         users to conditions is often feasible and already part of your infrastructure
 -   Be honest with yourself about what design you actually have,
@@ -84,7 +84,7 @@ We created these lessons because you probably do too.
 
 -   Knowing you want to study "productivity" is not enough:
     you need a specific, defensible measurement before you collect any data
--   The {{< g gqm "Goal-Question-Metric (GQM)" >}} approach
+-   The {{<g gqm "Goal-Question-Metric (GQM)" >}} approach
     provides a structured path from intent to measurement [@Basili1994]
     -   Define the goal:
         what object are you studying, what property of that object,

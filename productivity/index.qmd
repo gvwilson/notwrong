@@ -44,7 +44,7 @@ If you only measure what is easy to count, you will optimize for the wrong thing
 
 ## Construct Validity
 
--   {{< g construct_validity "Construct validity" >}} is the degree to which
+-   {{<g construct_validity "Construct validity" >}} is the degree to which
     a measurement actually captures the concept it is supposed to capture
 -   A metric has construct validity if changes in the metric
     reliably reflect changes in the underlying concept
@@ -62,7 +62,7 @@ If you only measure what is easy to count, you will optimize for the wrong thing
     -   Story points completed: incentivizes inflation of estimates
     -   Pull requests merged: incentivizes trivial PRs; discourages complex work
     -   Bugs closed: incentivizes closing without fixing
--   {{< g goodharts_law "Goodhart's Law" >}}: when a measure becomes a target,
+-   {{<g goodharts_law "Goodhart's Law" >}}: when a measure becomes a target,
     it ceases to be a good measure [@Goodhart1984]
 
 ::: {.callout-note}
@@ -80,15 +80,15 @@ The metric penalized the improvement.
 
 -   The DevOps Research and Assessment (DORA) program identified four
     metrics that correlate with organizational performance [@Forsgren2018]:
-    -   {{< g deployment_frequency "Deployment frequency" >}}:
+    -   {{<g deployment_frequency "Deployment frequency" >}}:
         how often code is deployed to production
-    -   {{< g lead_time_for_change "Lead time for changes" >}}:
+    -   {{<g lead_time_for_change "Lead time for changes" >}}:
         time from commit to production
-    -   {{< g change_failure_rate "Change failure rate" >}}:
+    -   {{<g change_failure_rate "Change failure rate" >}}:
         proportion of deployments causing failures
-    -   {{< g time_to_restore_service "Time to restore service" >}}:
+    -   {{<g time_to_restore_service "Time to restore service" >}}:
         time to recover from failures
--   These are {{< g operationalization "operationalizations" >}}:
+-   These are {{<g operationalization "operationalizations" >}}:
     specific, measurable definitions of abstract concepts
 -   DORA metrics have better construct validity than raw activity counts
     because they are tied to customer outcomes

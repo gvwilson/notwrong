@@ -24,7 +24,7 @@ or your employer is doing right now.
 
 ## Counting Lines of Code Generated
 
--   {{< g proxy_metric "Proxy metrics" >}} stand in for concepts that are hard to measure directly;
+-   {{<g proxy_metric "Proxy metrics" >}} stand in for concepts that are hard to measure directly;
     lines of code is one of the oldest
 -   AI assistants generate more code, not necessarily better outcomes.
     A team that sees a 40% increase in lines of code per developer after adopting AI
@@ -76,7 +76,7 @@ or your employer is doing right now.
 -   Without a group that did not receive the tools,
     you cannot separate the AI effect from any of the other changes
     that happened at the same time
--   {{< g internal_validity "Internal validity" >}} requires a credible counterfactual,
+-   {{<g internal_validity "Internal validity" >}} requires a credible counterfactual,
     i.e., some way of knowing what would have happened otherwise
 
 ## Asking Developers If They Feel More Productive
@@ -84,12 +84,12 @@ or your employer is doing right now.
 -   Survey results like "87% of developers report feeling more productive with AI tools"
     are regularly cited as evidence that the tools work [@Liang2024]
 -   Three things make self-report systematically misleading here:
-    -   The {{< g hawthorne_effect "Hawthorne effect" >}}:
+    -   The {{<g hawthorne_effect "Hawthorne effect" >}}:
         people work differently when they know they are being observed and evaluated
-    -   The {{< g novelty_effect "novelty effect" >}}:
+    -   The {{<g novelty_effect "novelty effect" >}}:
         new tools feel faster because they are novel,
         but the effect typically fades within weeks
-    -   {{< g social_desirability_bias "Social desirability bias" >}}:
+    -   {{<g social_desirability_bias "Social desirability bias" >}}:
         respondents tend to say what they believe the survey wants to hear,
         especially when management chose the tool
 -   Feeling more productive is not the same as being more productive,
@@ -134,7 +134,7 @@ or your employer is doing right now.
     -   They are more motivated to experiment
     -   More comfortable with new tooling
     -   More likely to already be high performers
--   {{< g selection_bias "Selection bias" >}} means that
+-   {{<g selection_bias "Selection bias" >}} means that
     any observed difference between the groups may be a property of the person
     rather than the tool
 -   This is the most common design flaw in industry AI productivity reports
@@ -211,7 +211,7 @@ not whether the accepted code was correct, secure, or maintainable.
 A rise in acceptance rate can reflect better suggestions,
 but it can equally reflect increased time pressure,
 a shift toward simpler tasks where AI does better,
-or {{< g habituation "habituation" >}} (developers becoming less critical over time).
+or {{<g habituation "habituation" >}} (developers becoming less critical over time).
 Without a separate measure of the quality of accepted suggestions,
 such as defect rates or code review rejection rates,
 acceptance rate tells you nothing about whether the tool is producing better code.

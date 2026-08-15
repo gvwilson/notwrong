@@ -24,29 +24,29 @@ They are also expensive, difficult, and frequently misunderstood.
 
 ## Experimental Design
 
--   A {{< g controlled_experiment "controlled experiment" >}} manipulates
-    one or more {{< g independent_variables "independent variables" >}}
-    and measures their effect on one or more {{< g dependent_variables "dependent variables" >}}
+-   A {{<g controlled_experiment "controlled experiment" >}} manipulates
+    one or more {{<g independent_variables "independent variables" >}}
+    and measures their effect on one or more {{<g dependent_variables "dependent variables" >}}
     while holding other factors constant
--   The {{< g treatment_group "treatment group" >}} receives the intervention being tested;
-    the {{< g control_group "control group" >}} does not
--   {{< g randomization "Randomization" >}} assigns participants to conditions randomly,
+-   The {{<g treatment_group "treatment group" >}} receives the intervention being tested;
+    the {{<g control_group "control group" >}} does not
+-   {{<g randomization "Randomization" >}} assigns participants to conditions randomly,
     which distributes unknown confounding variables evenly across groups
     -   The mechanism that makes causal claims defensible
--   {{< g blinding "Blinding" >}}
-    -   In a {{< g single_blind_study "single-blind study" >}},
+-   {{<g blinding "Blinding" >}}
+    -   In a {{<g single_blind_study "single-blind study" >}},
         participants do not know which condition they are in
-    -   In a {{< g double_blind_study "double-blind study" >}},
+    -   In a {{<g double_blind_study "double-blind study" >}},
         neither participants nor experimenters know until analysis
     -   Full blinding is rarely possible in software engineering studies:
         you cannot hide from a developer that they are using TDD
 
 ## The Null Hypothesis
 
--   The {{< g null_hypothesis "null hypothesis" >}} (H₀) is
+-   The {{<g null_hypothesis "null hypothesis" >}} (H₀) is
     the assumption that there is no effect,
     i.e., that the treatment makes no difference
--   The {{< g alternative_hypothesis "alternative hypothesis" >}} (H₁) is
+-   The {{<g alternative_hypothesis "alternative hypothesis" >}} (H₁) is
     that there is an effect
 -   You never prove H₁:
     you either reject H₀ (when your data is inconsistent with "no effect")
@@ -56,7 +56,7 @@ They are also expensive, difficult, and frequently misunderstood.
 
 ## p-Values
 
--   A {{< g p_value "p-value" >}} is the probability of observing data
+-   A {{<g p_value "p-value" >}} is the probability of observing data
     at least as extreme as what you observed
     if the null hypothesis were true
     -   It is not the probability that the null hypothesis is true
@@ -68,10 +68,10 @@ They are also expensive, difficult, and frequently misunderstood.
 
 ## Effect Size
 
--   {{< g statistical_significance "Statistical significance" >}}
+-   {{<g statistical_significance "Statistical significance" >}}
     tells you whether an effect is likely to be real
--   {{< g effect_size "Effect size" >}} tells you how large it is
--   {{< g cohens_d "Cohen's d" >}} measures the difference between two means
+-   {{<g effect_size "Effect size" >}} tells you how large it is
+-   {{<g cohens_d "Cohen's d" >}} measures the difference between two means
     in standard deviation units:
     -   d = 0.2: small effect
     -   d = 0.5: medium effect
@@ -84,7 +84,7 @@ They are also expensive, difficult, and frequently misunderstood.
 
 ## Statistical Power and Sample Size
 
--   {{< g statistical_power "Statistical power" >}} is the probability that
+-   {{<g statistical_power "Statistical power" >}} is the probability that
     your study will detect an effect if one actually exists
 -   Power depends on sample size, effect size, and the significance threshold (alpha)
 -   A typical target is 80% power:
@@ -94,15 +94,15 @@ They are also expensive, difficult, and frequently misunderstood.
 -   The consequences of underpowering
     -   You miss real effects
     -   The effects you do detect are inflated
-        (the {{< g winners_curse "winner's curse" >}})
+        (the {{<g winners_curse "winner's curse" >}})
 -   Calculate required sample size before running the study, not after
 
 ## Blocking Variables
 
--   {{< g blocking_variable "Blocking" >}} controls a known {{< g nuisance_variable "nuisance variable" >}}
+-   {{<g blocking_variable "Blocking" >}} controls a known {{<g nuisance_variable "nuisance variable" >}}
     by grouping experimental units before randomization,
     guaranteeing that its effect is distributed evenly across conditions
--   Randomization distributes unknown {{< g confounding_variable "confounding_variables" >}}
+-   Randomization distributes unknown {{<g confounding_variable "confounding_variables" >}}
     (or "confounders")
     -   Blocking handles known ones explicitly
 -   Example: developer experience
@@ -112,11 +112,11 @@ They are also expensive, difficult, and frequently misunderstood.
 -   Benefit:
     removing the nuisance factor's variance from the error term
     increases statistical power without adding participants
--   In a {{< g within_subjects_design "within-subjects design" >}},
+-   In a {{<g within_subjects_design "within-subjects design" >}},
     each participant applies both treatments to different tasks,
     acting as their own control
     -   Advantage: eliminates between-person variation entirely
-    -   Disadvantage: vulnerable to {{< g order_effects "order effects" >}}
+    -   Disadvantage: vulnerable to {{<g order_effects "order effects" >}}
         -   Doing a task second is different from doing it first,
             regardless of technique
 -   Whether and how the blocks were analyzed matters for interpreting the results
@@ -128,7 +128,7 @@ They are also expensive, difficult, and frequently misunderstood.
 -   Validity threats fall into four categories [@Campbell1963; @Wohlin2000]
 -   Construct validity: does your measurement actually capture the concept you care about?
     -   Discussed [earlier](../productivity/index.qmd)
--   {{< g conclusion_validity "Conclusion validity" >}}:
+-   {{<g conclusion_validity "Conclusion validity" >}}:
     did you use the right statistical procedure,
     and was the study powerful enough to detect an effect if one exists?
     -   Threats: underpowered design,
@@ -136,18 +136,18 @@ They are also expensive, difficult, and frequently misunderstood.
         multiple comparisons without correction
 -   Internal validity:
     can you conclude that the treatment caused the outcome?
-    -   Threats: confounding variables, selection bias, {{< g maturation_effect "maturation effects" >}}
+    -   Threats: confounding variables, selection bias, {{<g maturation_effect "maturation effects" >}}
     -   SE-specific behavioral threats, which arise because people are the experimental subjects:
         -   Novelty effect (discussed [earlier](../wrong/index.qmd))
-        -   {{< g learning_effect "Learning effect" >}}:
+        -   {{<g learning_effect "Learning effect" >}}:
             participants improve on a later task through practice,
             making the later condition look better regardless of which technique it used
-        -   {{< g boredom_effect "Boredom effect" >}}:
+        -   {{<g boredom_effect "Boredom effect" >}}:
             performance declines as the experiment drags on; conditions applied later look worse
-        -   {{< g unconscious_formalization "Unconscious formalization" >}}:
+        -   {{<g unconscious_formalization "Unconscious formalization" >}}:
             participants apply methods more carefully than usual
             because they know they are being observed
--   {{< g external_validity "External validity" >}}: do your findings generalize
+-   {{<g external_validity "External validity" >}}: do your findings generalize
     beyond your sample and setting?
     -   Threats: students are not professional developers; a 90-minute task
         is not a six-month project; one programming language is not all

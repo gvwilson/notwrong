@@ -30,7 +30,7 @@ If participant one demonstrates a serious problem,
 address it before participant two arrives.
 The remaining participants can then find different problems
 instead of re-enacting the first one.
-This is the {{< g rite_method "Rapid Iterative Testing and Evaluation (RITE) method" >}},
+This is the {{<g rite_method "Rapid Iterative Testing and Evaluation (RITE) method" >}},
 and it illustrates the argument of this appendix.
 The goal of research is to learn things that improve decisions.
 Elaborate protocols can get in the way of that goal
@@ -47,8 +47,8 @@ just as surely as doing nothing.
 -   The standard for "enough" depends on the decision you are trying to support
     -   Deciding whether to run a larger study: five sessions may be sufficient
     -   Deciding whether to mandate a tool across five hundred developers: it is not
--   {{< g formative_evaluation "Formative evaluation" >}}
-    differs from {{< g summative_evaluation "summative evaluation" >}}
+-   {{<g formative_evaluation "Formative evaluation" >}}
+    differs from {{<g summative_evaluation "summative evaluation" >}}
     -   Formative: you are studying something in order to improve it
         -   Small samples, rapid iteration, qualitative focus
         -   The question is "what is wrong?" not "how often is it wrong?"
@@ -64,7 +64,7 @@ just as surely as doing nothing.
 
 ## Finding Participants Without a Budget
 
--   Most {{< g guerrilla_research "guerrilla research" >}} uses whoever is available and willing
+-   Most {{<g guerrilla_research "guerrilla research" >}} uses whoever is available and willing
     -   This is convenience sampling with all the limitations that implies
         (see [earlier discussion](../qualitative/index.qmd))
     -   That is acceptable for formative evaluation,
@@ -90,7 +90,7 @@ just as surely as doing nothing.
 
 ## Running a Think-Aloud Session
 
--   A {{< g think_aloud_protocol "think-aloud protocol" >}} asks participants
+-   A {{<g think_aloud_protocol "think-aloud protocol" >}} asks participants
     to verbalize their thoughts as they work through tasks
     -   "Please say out loud whatever you are thinking while you do this"
     -   This gives you access to reasoning that would otherwise be invisible:
@@ -100,7 +100,7 @@ just as surely as doing nothing.
     -   A screen recorder is useful but optional
     -   You rarely need to transcribe a recording;
         what matters is what you noted during or immediately after the session
--   {{< g task_based_testing "Task-based testing" >}}
+-   {{<g task_based_testing "Task-based testing" >}}
     gives participants concrete, realistic goals rather than open-ended exploration
     -   Open exploration ("just try the tool") produces impressions, not observations
     -   Concrete tasks produce observable behavior:
@@ -162,7 +162,7 @@ They are not doing it correctly or incorrectly: they are showing you what actual
 -   Take notes during or immediately after each session, not the next day
     -   Memory for specific behavioral moments degrades within hours,
         especially the ones that seemed minor at the time and turned out to matter
--   {{< g affinity_mapping "Affinity mapping" >}} is a simple analysis technique suitable for small studies:
+-   {{<g affinity_mapping "Affinity mapping" >}} is a simple analysis technique suitable for small studies:
     -   Write each distinct observation on a separate sticky note
     -   Cluster observations that seem related to the same underlying problem
     -   Name each cluster with a sentence that makes a claim:
