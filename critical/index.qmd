@@ -245,7 +245,8 @@ A single significant result from 12 comparisons is entirely consistent with chan
 and with p = 0.04 (just barely significant),
 it is especially suspicious.
 The appropriate response is to apply a multiple comparisons correction
-(such as {{<g bonferroni_correction "Bonferroni" >}}, which would require p < 0.004 for any individual test)
+(such as Bonferroni correction,
+which would require p < 0.004 for any individual test)
 and treat the result as preliminary until replicated.
 
 </details>

@@ -49,7 +49,14 @@
     attention degrades over time due to fatigue or disengagement, rather
     than any effect of the treatment.
 
+<span id="box_plot">box plot</span>
+:   A plot showing the median, quartiles, and outliers of a distribution.
+
 ## C
+
+<span id="central_limit_theorem">central limit theorem</span>
+:   The theorem that the average of many independent random variables tends
+    toward a normal distribution regardless of the original distribution.
 
 <span id="change_failure_rate">change failure rate</span>
 :   The proportion of deployments that result in degraded service or
@@ -70,6 +77,10 @@
     adequately powered to detect the effect it reports; threatened by
     underpowered designs, violated test assumptions, and uncorrected
     multiple comparisons.
+
+<span id="confidence_interval">confidence interval</span>
+:   A range of values, computed from data, that is likely to contain the
+    true population value.
 
 <span id="confirmation_bias">confirmation bias</span>
 :   The tendency to search for, interpret, and recall information in ways
@@ -153,6 +164,10 @@
     setting, and task studied.
 
 ## F
+
+<span id="false_discovery_rate">false discovery rate</span>
+:   The expected proportion of false positives among rejected hypotheses;
+    controlled by the Benjamini-Hochberg procedure.
 
 <span id="file_drawer_problem">file drawer problem</span>
 :   The tendency for null results to go unpublished, causing the published
@@ -240,6 +255,10 @@
 :   The degree to which a study can support the conclusion that the treatment
     caused the observed outcome, as opposed to some other explanation.
 
+<span id="interquartile_range">interquartile range</span>
+:   The distance between the 25th and 75th percentiles; a robust measure
+    of spread.
+
 <span id="interrupted_time_series">interrupted time series</span>
 :   A quasi-experimental design that looks for a change in trend at the point
     when an intervention occurred, using data from before and after.
@@ -280,6 +299,13 @@
     over the course of a study (e.g., growing older, more tired, or more
     experienced) independently of the treatment.
 
+<span id="mean">mean</span>
+:   The arithmetic average of a set of values, found by dividing the sum by
+    the count.
+
+<span id="median">median</span>
+:   The middle value in a sorted set of values; robust to outliers.
+
 <span id="meta_analysis">meta-analysis</span>
 :   A statistical technique for combining results from multiple independent
     studies of the same question to estimate an overall effect size.
@@ -287,6 +313,9 @@
 <span id="msr">mining software repositories (MSR)</span>
 :   A research approach that extracts and analyzes data from version control
     systems, issue trackers, code review tools, and related sources.
+
+<span id="mode">mode</span>
+:   The most frequently occurring value in a set of values.
 
 ## N
 
@@ -298,6 +327,10 @@
 :   A bias that arises when researchers analyze only survey respondents
     without accounting for those who did not reply, which can skew results
     if non-respondents differ systematically from respondents.
+
+<span id="normal_distribution">normal distribution</span>
+:   A symmetric, bell-shaped distribution defined by its mean and standard
+    deviation.
 
 <span id="novelty_effect">novelty effect</span>
 :   A threat to internal validity in which any new tool, method, or process
@@ -322,6 +355,10 @@
 <span id="observational_study">observational study</span>
 :   A study in which the researcher measures variables as they naturally
     occur, without manipulating any conditions.
+
+<span id="odds_ratio">odds ratio</span>
+:   For binary outcomes, the ratio of the odds of an event in one group to
+    the odds in another.
 
 <span id="open_coding">open coding</span>
 :   The initial stage in qualitative data analysis in which the researcher
@@ -355,6 +392,14 @@
     data, assuming the null hypothesis is true. Not the probability that the
     null hypothesis is true.
 
+<span id="pearsons_r">Pearson's r</span>
+:   A measure of linear correlation between two continuous variables,
+    ranging from −1 to 1.
+
+<span id="post_hoc_power_analysis">post-hoc power analysis</span>
+:   Calculating statistical power after a study is complete, based on the
+    observed effect; generally uninformative.
+
 <span id="preregistration">pre-registration</span>
 :   A practice in which researchers publicly commit to their hypotheses and
     analysis plan before collecting data, reducing the risk of HARKing and
@@ -363,6 +408,9 @@
 <span id="preprint">preprint</span>
 :   A version of a research paper that has been posted publicly
     before it has undergone formal peer review and official journal publication.
+
+<span id="probability_distribution">probability distribution</span>
+:   A function describing how likely each possible value of a variable is.
 
 <span id="proxy_metric">proxy metric</span>
 :   A measurable quantity used as a stand-in for a concept that is harder
@@ -401,12 +449,20 @@
     formative evaluation; not appropriate for comparing product versions or
     producing generalizable estimates of performance.
 
+<span id="relative_risk">relative risk</span>
+:   For binary outcomes, the ratio of the probability of an event in one
+    group to the probability in another.
+
 <span id="retrospective_analysis">retrospective analysis</span>
 :   An analysis of data collected before the research question was
     formulated, such as examining historical logs, commit records, or past
     surveys.
 
 ## S
+
+<span id="sampling_distribution">sampling distribution</span>
+:   The distribution of a statistic (such as the mean) computed from many
+    samples of the same size.
 
 <span id="sampling_strategy">sampling strategy</span>
 :   The method used to select participants from a population. Strategies
@@ -434,6 +490,13 @@
 :   The tendency for survey or interview respondents to give answers they
     believe are more socially acceptable rather than truthful responses,
     distorting self-reported data.
+
+<span id="spearmans_rho">Spearman's ρ</span>
+:   A measure of rank-order correlation, used for monotone relationships.
+
+<span id="standard_deviation">standard deviation</span>
+:   The square root of the variance, expressing spread in the same units as
+    the data.
 
 <span id="statistical_power">statistical power</span>
 :   The probability that a study will detect an effect if one truly exists;
@@ -502,6 +565,14 @@
 :   The use of multiple data sources, methods, or investigators to increase
     confidence in a finding.
 
+<span id="type_i_error">Type I error</span>
+:   A false positive: rejecting the null hypothesis when it is actually
+    true.
+
+<span id="type_ii_error">Type II error</span>
+:   A false negative: failing to reject the null hypothesis when it is
+    actually false.
+
 ## U
 
 <span id="unconscious_formalization">unconscious formalization</span>
@@ -515,6 +586,10 @@
     constraining the direction of conversation.
 
 ## V
+
+<span id="variance">variance</span>
+:   A measure of spread equal to the average squared deviation from the
+    mean.
 
 ## W
 

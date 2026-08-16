@@ -9,28 +9,28 @@ or use it to check whether a study you are evaluating applied the right tool.
 
 ## Descriptive Statistics
 
--   The *mean* is the sum of values divided by the count;
+-   The {{<g mean "mean" >}} is the sum of values divided by the count;
     it is sensitive to outliers
--   The *median* is the middle value when sorted;
+-   The {{<g median "median" >}} is the middle value when sorted;
     use it when the distribution is skewed or when outliers are meaningful data points
     (e.g., response times, salaries)
--   The *mode* is the most frequent value;
+-   The {{<g mode "mode" >}} is the most frequent value;
     it is sometimes useful for categorical data
--   *Variance* is the average squared deviation from the mean;
+-   {{<g variance "Variance" >}} is the average squared deviation from the mean;
     it is hard to interpret because it is in squared units
--   *Standard deviation* (SD) is the square root of variance;
+-   {{<g standard_deviation "Standard deviation" >}} (SD) is the square root of variance;
     it is in the same units as the data
--   The *interquartile range* (IQR) is the distance between the 25th and 75th percentiles;
+-   The {{<g interquartile_range "interquartile range" >}} (IQR) is the distance between the 25th and 75th percentiles;
     it is more robust than SD when outliers are present
--   A *box plot* shows median, IQR, and outliers;
+-   A {{<g box_plot "box plot" >}} shows median, IQR, and outliers;
     it is more informative than a bar chart with error bars for most research purposes
 
 ## Probability and Distributions
 
--   A *probability distribution* describes how likely each possible value is;
+-   A {{<g probability_distribution "probability distribution" >}} describes how likely each possible value is;
     discrete distributions apply to counts, continuous distributions to measurements
--   The *normal distribution* is symmetric and bell-shaped;
-    it appears often because the *central limit theorem* says that
+-   The {{<g normal_distribution "normal distribution" >}} is symmetric and bell-shaped;
+    it appears often because the {{<g central_limit_theorem "central limit theorem" >}} says that
     averages of many independent random variables tend toward normal,
     regardless of the original distribution
 -   Many things in software engineering are *not* normally distributed:
@@ -38,25 +38,24 @@ or use it to check whether a study you are evaluating applied the right tool.
     are typically right-skewed (long tail of large values)
 -   When normality is violated, use non-parametric tests
     (Mann-Whitney U test instead of t-test; Spearman's ρ instead of Pearson's r)
--   The *distribution of a sample mean* (the sampling distribution)
+-   The {{<g sampling_distribution "distribution of a sample mean" >}} (the sampling distribution)
     is distinct from the distribution of individual observations;
     it has smaller spread (SD / √n) and is more nearly normal
     even when individual observations are not
 
 ## Hypothesis Testing
 
--   The *null hypothesis* (H₀) is the claim that there is no effect;
+-   The null hypothesis (H₀) is the claim that there is no effect;
     the alternative hypothesis (H₁) is that there is one
 -   You test H₀ by asking, "How likely is my data if H₀ were true?"
--   A *p-value* is this probability;
-    small p-values are evidence against H₀
--   *Type I error* (false positive, α):
+-   This probability is a p-value, and small p-values are evidence against H₀
+-   {{<g type_i_error "Type I error" >}} (false positive, α):
     rejecting H₀ when it is true;
     conventional threshold α = 0.05
--   *Type II error* (false negative, β):
+-   {{<g type_ii_error "Type II error" >}} (false negative, β):
     failing to reject H₀ when H₁ is true;
     power = 1 − β
--   A *confidence interval* (CI) gives a range of values consistent with the data;
+-   A {{<g confidence_interval "confidence interval" >}} (CI) gives a range of values consistent with the data;
     A 95% CI means that if the study were repeated many times,
     the interval would contain the true value 95% of the time
     -   CIs are usually more informative than p-values alone
@@ -65,28 +64,28 @@ or use it to check whether a study you are evaluating applied the right tool.
 ## Effect Sizes
 
 -   Effect size measures the *magnitude* of an effect, independent of sample size
--   *Cohen's d* for comparing two means: d = (mean₁ − mean₂) / pooled SD
+-   Use Cohen's d to compare two means: d = (mean₁ − mean₂) / pooled SD
     -   d = 0.2: small; d = 0.5: medium; d = 0.8: large
     -   These benchmarks are rough guides from psychology; interpret in context
--   *Odds ratio* (OR):
+-   {{<g odds_ratio "Odds ratio" >}} (OR):
     for binary outcomes, the ratio of odds in two groups;
     OR = 1 means no effect;
     OR > 1 means higher odds in the treatment group
--   *Relative risk* (RR):
+-   {{<g relative_risk "Relative risk" >}} (RR):
     for binary outcomes, the ratio of proportions;
     more intuitive than OR but only valid for prospective studies
--   *Pearson's r*:
+-   {{<g pearsons_r "Pearson's r" >}}:
     correlation between two continuous variables;
     ranges from −1 to 1;
     r² is the proportion of variance in one variable explained by the other
--   *Spearman's ρ* (rho):
+-   {{<g spearmans_rho "Spearman's ρ" >}} (rho):
     rank-order correlation;
     use when the relationship is monotone but not linear,
     or when variables are ordinal
 
 ## Statistical Power and Sample Size
 
--   *Power* is the probability of detecting a real effect;
+-   Statistical power is the probability of detecting a real effect;
     usually targeted at 0.80
 -   Power increases with larger sample size, larger true effect, and higher α
 -   The required sample size for a two-sample t-test is approximately
@@ -98,7 +97,7 @@ or use it to check whether a study you are evaluating applied the right tool.
 -   Most software engineering experiments are underpowered:
     typical sample sizes of 20–50 participants can only detect large effects
     (d > 0.8) reliably
--   *Post-hoc power analysis* (calculating power after a null result)
+-   {{<g post_hoc_power_analysis "Post-hoc power analysis" >}} (calculating power after a null result)
     is generally uninformative and should be treated with skepticism
 
 ## Multiple Comparisons
@@ -106,10 +105,10 @@ or use it to check whether a study you are evaluating applied the right tool.
 -   If you run k independent tests each at α = 0.05,
     the probability of at least one false positive is 1 − (0.95)^k
     -   k = 10: 40% chance of a false positive; k = 20: 64%
--   *Bonferroni correction*:
+-   {{<g bonferroni_correction "Bonferroni correction" >}}:
     use α/k as the threshold for each test;
     conservative (reduces power), but simple
--   *False discovery rate* (FDR, Benjamini-Hochberg):
+-   {{<g false_discovery_rate "False discovery rate" >}} (FDR, Benjamini-Hochberg):
     controls the expected proportion of false positives among rejected hypotheses;
     less conservative than Bonferroni for large numbers of tests
 -   Exploratory analyses that test many hypotheses should be clearly labeled as exploratory;
