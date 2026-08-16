@@ -27,7 +27,6 @@ ul.task-list li input[type="checkbox"] {
 div.csl-bib-body { }
 div.csl-entry {
   clear: both;
-  margin-bottom: 0em;
 }
 .hanging-indent div.csl-entry {
   margin-left:2em;
@@ -329,14 +328,14 @@ Note
 <ul>
 <li><a href="../glossary/index.html#proxy_metric">Proxy metrics</a> stand in for concepts that are hard to measure directly; lines of code is one of the oldest</li>
 <li>AI assistants generate more code, not necessarily better outcomes. A team that sees a 40% increase in lines of code per developer after adopting AI tools has measured verbosity, not productivity</li>
-<li>Deleting 2,000 lines of tangled logic and replacing it with 200 clean ones is an improvement that looks like a loss on this metric <span class="citation" data-cites="Sadowski2019">(<a href="../bibliography/index.html#ref-Sadowski2019" role="doc-biblioref"><span class="nocase">Sadowski &amp; (eds.)</span>, 2019</a>)</span></li>
+<li>Deleting 2,000 lines of tangled logic and replacing it with 200 clean ones is an improvement that looks like a loss on this metric <span class="citation" data-cites="Sadowski2019">(<a href="../bibliography/index.html#ref-Sadowski2019" role="doc-biblioref"><span class="nocase">Sadowski and (eds.)</span> 2019</a>)</span></li>
 <li>More code means more to read, maintain, and debug, all of which are future costs</li>
 </ul>
 </section>
 <section id="timing-artificial-tasks" class="level2" data-number="3.2">
 <h2 data-number="3.2" class="anchored" data-anchor-id="timing-artificial-tasks"><span class="header-section-number">3.2</span> Timing Artificial Tasks</h2>
 <ul>
-<li>A widely cited study found developers using GitHub Copilot completed a task 55% faster than those who did not <span class="citation" data-cites="Peng2023">(<a href="../bibliography/index.html#ref-Peng2023" role="doc-biblioref">Peng et al., 2023</a>)</span></li>
+<li>A widely cited study found developers using GitHub Copilot completed a task 55% faster than those who did not <span class="citation" data-cites="Peng2023">(<a href="../bibliography/index.html#ref-Peng2023" role="doc-biblioref">Peng et al. 2023</a>)</span></li>
 <li>The task was implementing an HTTP server in JavaScript, from scratch, in ninety minutes, by developers with no other obligations that day</li>
 <li>Real software development involves navigating a large codebase you did not write, understanding a requirement described ambiguously in a ticket, coordinating with three colleagues, and attending four meetings</li>
 <li>Speed on a greenfield toy task does not predict speed on any of that</li>
@@ -347,9 +346,9 @@ Note
 <ul>
 <li>AI tools make code generation faster: that half is easy to measure</li>
 <li>The other half: time spent reviewing AI-generated code for correctness, time lost debugging confidently wrong suggestions, security vulnerabilities introduced by plausible-looking but insecure code, and technical debt from suggestions that solved the immediate problem while ignoring the surrounding design</li>
-<li>More code generated means more code to review: if AI increases code volume without increasing review capacity, cycle time may worsen <span class="citation" data-cites="Forsgren2021">(<a href="../bibliography/index.html#ref-Forsgren2021" role="doc-biblioref">Forsgren et al., 2021</a>)</span></li>
+<li>More code generated means more code to review: if AI increases code volume without increasing review capacity, cycle time may worsen <span class="citation" data-cites="Forsgren2021">(<a href="../bibliography/index.html#ref-Forsgren2021" role="doc-biblioref">Forsgren et al. 2021</a>)</span></li>
 <li>Optimizing one stage of a pipeline while ignoring the others is a systems-thinking failure dressed as a productivity study</li>
-<li>A study of GitHub Copilot’s code found that a substantial fraction of generated code contained security vulnerabilities, and that developers under time pressure accepted insecure suggestions at higher rates <span class="citation" data-cites="Pearce2022">(<a href="../bibliography/index.html#ref-Pearce2022" role="doc-biblioref">Pearce et al., 2022</a>)</span></li>
+<li>A study of GitHub Copilot’s code found that a substantial fraction of generated code contained security vulnerabilities, and that developers under time pressure accepted insecure suggestions at higher rates <span class="citation" data-cites="Pearce2022">(<a href="../bibliography/index.html#ref-Pearce2022" role="doc-biblioref">Pearce et al. 2022</a>)</span></li>
 <li>Measuring only the inputs that go up while ignoring the costs that also rise is not measurement: it is marketing</li>
 </ul>
 </section>
@@ -365,7 +364,7 @@ Note
 <section id="asking-developers-if-they-feel-more-productive" class="level2" data-number="3.5">
 <h2 data-number="3.5" class="anchored" data-anchor-id="asking-developers-if-they-feel-more-productive"><span class="header-section-number">3.5</span> Asking Developers If They Feel More Productive</h2>
 <ul>
-<li>Survey results like “87% of developers report feeling more productive with AI tools” are regularly cited as evidence that the tools work <span class="citation" data-cites="Liang2024">(<a href="../bibliography/index.html#ref-Liang2024" role="doc-biblioref">Liang et al., 2024</a>)</span></li>
+<li>Survey results like “87% of developers report feeling more productive with AI tools” are regularly cited as evidence that the tools work <span class="citation" data-cites="Liang2024">(<a href="../bibliography/index.html#ref-Liang2024" role="doc-biblioref">Liang et al. 2024</a>)</span></li>
 <li>Three things make self-report systematically misleading here:
 <ul>
 <li>The <a href="../glossary/index.html#hawthorne_effect">Hawthorne effect</a>: people work differently when they know they are being observed and evaluated</li>
@@ -384,9 +383,9 @@ Note
 <section id="goodharts-law-revisited" class="level2" data-number="3.6">
 <h2 data-number="3.6" class="anchored" data-anchor-id="goodharts-law-revisited"><span class="header-section-number">3.6</span> Goodhart’s Law Revisited</h2>
 <ul>
-<li>In 2023, McKinsey proposed measuring individual developer productivity using counts of commits, pull requests, code reviews, and similar activities <span class="citation" data-cites="McKinsey2023">(<a href="../bibliography/index.html#ref-McKinsey2023" role="doc-biblioref">Elsayed et al., 2023</a>)</span></li>
-<li>But remember Goodhart’s Law: when a measure becomes a target, it ceases to be a good measure <span class="citation" data-cites="Goodhart1984">(<a href="../bibliography/index.html#ref-Goodhart1984" role="doc-biblioref">Goodhart, 1984</a>)</span></li>
-<li>When developers know their commit count is tracked, they make more, smaller commits; when ticket counts are tracked, tickets get split; the numbers improve while the underlying work does not <span class="citation" data-cites="Beck2023">(<a href="../bibliography/index.html#ref-Beck2023" role="doc-biblioref">Beck, 2023</a>)</span></li>
+<li>In 2023, McKinsey proposed measuring individual developer productivity using counts of commits, pull requests, code reviews, and similar activities <span class="citation" data-cites="McKinsey2023">(<a href="../bibliography/index.html#ref-McKinsey2023" role="doc-biblioref">Elsayed et al. 2023</a>)</span></li>
+<li>But remember Goodhart’s Law: when a measure becomes a target, it ceases to be a good measure <span class="citation" data-cites="Goodhart1984">(<a href="../bibliography/index.html#ref-Goodhart1984" role="doc-biblioref">Goodhart 1984</a>)</span></li>
+<li>When developers know their commit count is tracked, they make more, smaller commits; when ticket counts are tracked, tickets get split; the numbers improve while the underlying work does not <span class="citation" data-cites="Beck2023">(<a href="../bibliography/index.html#ref-Beck2023" role="doc-biblioref">Beck 2023</a>)</span></li>
 <li>Activity is not output, and output is not value</li>
 </ul>
 </section>
@@ -425,7 +424,7 @@ Note
 </ul></li>
 <li>Acceptance measures whether the generated code looked plausible enough for a developer to press Tab</li>
 <li>It does <em>not</em> measure whether the code was correct, secure, or maintainable</li>
-<li>Developers under time pressure accept more suggestions, including insecure ones <span class="citation" data-cites="Pearce2022">(<a href="../bibliography/index.html#ref-Pearce2022" role="doc-biblioref">Pearce et al., 2022</a>)</span>
+<li>Developers under time pressure accept more suggestions, including insecure ones <span class="citation" data-cites="Pearce2022">(<a href="../bibliography/index.html#ref-Pearce2022" role="doc-biblioref">Pearce et al. 2022</a>)</span>
 <ul>
 <li>A tight deadline makes acceptance rate rise for exactly the wrong reasons</li>
 <li>“Adopt AI or lose your job” doesn’t encourage careful reflection</li>
@@ -486,30 +485,30 @@ A vendor announces that their AI assistant’s suggestion acceptance rate rose f
 <p>Find a recent vendor claim about an AI tool’s impact on developer productivity, such as a blog post, marketing page, or case study. Identify the baseline the claim uses: what does the AI-assisted group get compared to? Then write two sentences describing a more informative baseline and why it would change the interpretation of the result.</p>
 
 
-<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list" style="display: none">
+<div id="refs" class="references csl-bib-body hanging-indent" role="list" style="display: none">
 <div id="ref-Beck2023" class="csl-entry" role="listitem">
-Beck, K. (2023). <em>Measuring developer productivity: Real-world examples.</em> <a href="https://tidyfirst.substack.com/p/measuring-developer-productivity">https://tidyfirst.substack.com/p/measuring-developer-productivity</a>
+Beck, Kent. 2023. <em>Measuring Developer Productivity: Real-World Examples.</em> <a href="https://tidyfirst.substack.com/p/measuring-developer-productivity">https://tidyfirst.substack.com/p/measuring-developer-productivity</a>.
 </div>
 <div id="ref-McKinsey2023" class="csl-entry" role="listitem">
-Elsayed, N., Elhounsri, T., &amp; Blumberg, S. (2023). <em>Yes, you can measure software developer productivity.</em> <a href="https://www.mckinsey.com/industries/technology-media-and-telecommunications/our-insights/yes-you-can-measure-software-developer-productivity">https://www.mckinsey.com/industries/technology-media-and-telecommunications/our-insights/yes-you-can-measure-software-developer-productivity</a>
+Elsayed, Nora, Tarek Elhounsri, and Sven Blumberg. 2023. <em>Yes, You Can Measure Software Developer Productivity.</em> <a href="https://www.mckinsey.com/industries/technology-media-and-telecommunications/our-insights/yes-you-can-measure-software-developer-productivity">https://www.mckinsey.com/industries/technology-media-and-telecommunications/our-insights/yes-you-can-measure-software-developer-productivity</a>.
 </div>
 <div id="ref-Forsgren2021" class="csl-entry" role="listitem">
-Forsgren, N., Storey, M.-A., Maddila, C., Zimmermann, T., Houck, B., &amp; Butler, J. (2021). The SPACE of developer productivity. <em>ACM Queue</em>, <em>19</em>(1).
+Forsgren, Nicole, Margaret-Anne Storey, Chandra Maddila, Thomas Zimmermann, Brian Houck, and Jenna Butler. 2021. <span>“The SPACE of Developer Productivity.”</span> <em>ACM Queue</em> 19 (1).
 </div>
 <div id="ref-Goodhart1984" class="csl-entry" role="listitem">
-Goodhart, C. (1984). Problems of monetary management: The u.k. experience. <em>Inflation, Depression, and Economic Policy in the West</em>.
+Goodhart, Charles. 1984. <span>“Problems of Monetary Management: The u.k. Experience.”</span> <em>Inflation, Depression, and Economic Policy in the West</em>.
 </div>
 <div id="ref-Liang2024" class="csl-entry" role="listitem">
-Liang, J. T., Yang, C., &amp; Myers, B. A. (2024). A large-scale survey on the usability of AI programming assistants: Successes and challenges. <em>Proc. ICSE’24</em>. <a href="https://doi.org/10.1145/3597503.3608128">https://doi.org/10.1145/3597503.3608128</a>
+Liang, Jenny T., Chenyang Yang, and Brad A. Myers. 2024. <span>“A Large-Scale Survey on the Usability of AI Programming Assistants: Successes and Challenges.”</span> <em>Proc. ICSE’24</em>. <a href="https://doi.org/10.1145/3597503.3608128">https://doi.org/10.1145/3597503.3608128</a>.
 </div>
 <div id="ref-Pearce2022" class="csl-entry" role="listitem">
-Pearce, H., Ahmad, B., Tan, B., Dolan-Gavitt, B., &amp; Karri, R. (2022). Asleep at the keyboard? Assessing the security of GitHub copilot’s code contributions. <em>Proc. s&amp;p’22</em>. <a href="https://doi.org/10.1109/SP46214.2022.9833571">https://doi.org/10.1109/SP46214.2022.9833571</a>
+Pearce, Hammond, Baleegh Ahmad, Benjamin Tan, Brendan Dolan-Gavitt, and Ramesh Karri. 2022. <span>“Asleep at the Keyboard? Assessing the Security of GitHub Copilot’s Code Contributions.”</span> <em>Proc. S&amp;p’22</em>. <a href="https://doi.org/10.1109/SP46214.2022.9833571">https://doi.org/10.1109/SP46214.2022.9833571</a>.
 </div>
 <div id="ref-Peng2023" class="csl-entry" role="listitem">
-Peng, S., Kalliamvakou, E., Cihon, P., &amp; Demirer, M. (2023). <em>The impact of AI on developer productivity: Evidence from GitHub copilot.</em> (Vol. 06590, p. 2023). <a href="https://doi.org/10.48550/arXiv.2302.06590">https://doi.org/10.48550/arXiv.2302.06590</a>
+Peng, Sida, Eirini Kalliamvakou, Peter Cihon, and Mert Demirer. 2023. <em>The Impact of AI on Developer Productivity: Evidence from GitHub Copilot.</em> Vol. 06590. <a href="https://doi.org/10.48550/arXiv.2302.06590">https://doi.org/10.48550/arXiv.2302.06590</a>.
 </div>
 <div id="ref-Sadowski2019" class="csl-entry" role="listitem">
-<span class="nocase">Sadowski, C., &amp; (eds.), T. Z.</span> (2019). <em>Rethinking productivity in software engineering</em>. Apress.
+<span class="nocase">Sadowski, Caitlin, and Thomas Zimmermann (eds.)</span>. 2019. <em>Rethinking Productivity in Software Engineering</em>. Apress. ISBN 9781484242216.
 </div>
 </div>
 </section>
