@@ -184,7 +184,7 @@ format: revealjs
     -   Inactive repositories, class assignments, personal experiments, etc.
 -   **Survivorship bias**: you only see projects that still exist
 -   Example: projects with more tests also tend to have more experienced developers
-    —   You cannot attribute lower defect rates to testing alone
+    -   You cannot attribute lower defect rates to testing alone
 
 ## Reading Studies Critically
 
