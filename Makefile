@@ -53,6 +53,7 @@ ${DOCS}/%.html: %.qmd
 	mkdir -p $(@D)
 	pandoc $< ${SLIDES_FLAGS} -o $@
 	cp mccole/slides.css ${DOCS}/mccole/slides.css
+	cp mccole/*.png ${DOCS}/mccole
 	sed -i '' '/simple\.css/d' $@
 
 ## check: check structure, spelling, etc.
