@@ -15,16 +15,13 @@ but please note that all contributors must abide by our [Code of Conduct](@/cond
 
 ## Lessons
 
-1.  [Introduction](@/intro/)
-1.  [Defining Productivity](@/productivity/)
-1.  [How to Be Wrong](@/wrong/)
-1.  [Qualitative Methods: Interviews and Surveys](@/qualitative/)
-1.  [Quantitative Methods: Controlled Experiments](@/quantitative/)
-1.  [Observational Studies and Natural Experiments](@/observational/)
-1.  [Reading Studies Critically](@/critical/)
-1.  [Running Studies in Your Organization](@/running/)
-1.  [Starting Cheap](@/cheaply/)
-1.  [Conclusion: What to Do Next](@/finale/)
+1.  [Is AI Worth It?](@/intro/)
+1.  [What "More Productive" Means](@/productivity/)
+1.  [How Studies Go Wrong](@/wrong/)
+1.  [Reading a Study](@/critical/)
+1.  [Cheap and Fast](@/cheaply/)
+1.  [Designing a Study](@/design/)
+1.  [Running a Study](@/running/)
 
 </div>
 
@@ -40,8 +37,6 @@ but please note that all contributors must abide by our [Code of Conduct](@/cond
 1.  [Contributing](@/contributing/)
 1.  [Bibliography](@/bibliography/)
 1.  [Glossary](@/glossary/)
-1.  [Further Reading](@/further/)
-1.  [Statistical Reference](@/stats/)
 
 </div>
 

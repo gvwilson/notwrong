@@ -1,4 +1,4 @@
-# Shipping It: Ethics, Politics, and GQM
+# Running a Study
 
 ::: {.callout-note}
 
@@ -48,7 +48,7 @@ project for them; it's their existing job pointed at a new tool.
 If you don't have a UX team, the earlier chapters are the toolkit you would
 otherwise hand them: the [cheap-and-fast lesson](../cheaply/index.qmd) for
 formative think-aloud and RITE studies, and the [study-design
-lesson](../quantitative/index.qmd) for the statistics to interpret the results.
+lesson](../design/index.qmd) for the statistics to interpret the results.
 If you *do* have a UX team but want to check or follow along with their work, the
 checklist in the [reading-studies lesson](../critical/index.qmd) is what you use
 to sanity-check their conclusions. Either way, get someone *outside* your

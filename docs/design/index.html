@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>10&nbsp; Conclusion: What to Do Next – How to Not Be Wrong About AI</title>
+<title>6&nbsp; Designing a Study – How to Not Be Wrong About AI</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -52,7 +52,7 @@ div.csl-indent {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../license/index.html" rel="next">
+<link href="../running/index.html" rel="next">
 <link href="../cheaply/index.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
@@ -92,6 +92,35 @@ div.csl-indent {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="../mccole/book.css">
 </head>
@@ -105,7 +134,7 @@ div.csl-indent {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../finale/index.html"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Conclusion: What to Do Next</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../design/index.html"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Designing a Study</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -142,61 +171,43 @@ div.csl-indent {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../intro/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></span></a>
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Is AI Worth It?</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../productivity/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Defining Productivity</span></span></a>
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">What “More Productive” Means</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../wrong/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">How to Be Wrong</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../qualitative/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Qualitative Methods: Interviews and Surveys</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../quantitative/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Quantitative Methods: Controlled Experiments</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../observational/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Observational Studies and Natural Experiments</span></span></a>
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">How Studies Go Wrong</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../critical/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Reading Studies Critically</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../running/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Running Studies in Your Organization</span></span></a>
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Reading a Study</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../cheaply/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Starting Cheaply</span></span></a>
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Cheap and Fast</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../finale/index.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Conclusion: What to Do Next</span></span></a>
+  <a href="../design/index.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Designing a Study</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../running/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Running a Study</span></span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
@@ -238,18 +249,6 @@ div.csl-indent {
  <span class="menu-text"><span class="chapter-number">E</span>&nbsp; <span class="chapter-title">Glossary</span></span></a>
   </div>
 </li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../further/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">F</span>&nbsp; <span class="chapter-title">Further Reading</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../stats/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">G</span>&nbsp; <span class="chapter-title">Statistical Reference</span></span></a>
-  </div>
-</li>
       </ul>
   </li>
     </ul>
@@ -262,29 +261,28 @@ div.csl-indent {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#matching-research-questions-to-methods" id="toc-matching-research-questions-to-methods" class="nav-link active" data-scroll-target="#matching-research-questions-to-methods"><span class="header-section-number">10.1</span> Matching Research Questions to Methods</a></li>
-  <li><a href="#triangulating-methods" id="toc-triangulating-methods" class="nav-link" data-scroll-target="#triangulating-methods"><span class="header-section-number">10.2</span> Triangulating Methods</a></li>
-  <li><a href="#what-we-know-about-ai-and-developer-productivity" id="toc-what-we-know-about-ai-and-developer-productivity" class="nav-link" data-scroll-target="#what-we-know-about-ai-and-developer-productivity"><span class="header-section-number">10.3</span> What We Know About AI and Developer Productivity</a></li>
-  <li><a href="#what-is-being-oversold" id="toc-what-is-being-oversold" class="nav-link" data-scroll-target="#what-is-being-oversold"><span class="header-section-number">10.4</span> What Is Being Oversold</a></li>
-  <li><a href="#staying-current-without-drowning" id="toc-staying-current-without-drowning" class="nav-link" data-scroll-target="#staying-current-without-drowning"><span class="header-section-number">10.5</span> Staying Current Without Drowning</a></li>
-  <li><a href="#how-to-push-for-better-evidence" id="toc-how-to-push-for-better-evidence" class="nav-link" data-scroll-target="#how-to-push-for-better-evidence"><span class="header-section-number">10.6</span> How to Push for Better Evidence</a></li>
-  <li><a href="#misconceptions" id="toc-misconceptions" class="nav-link" data-scroll-target="#misconceptions"><span class="header-section-number">10.7</span> Misconceptions</a></li>
-  <li><a href="#check-understanding" id="toc-check-understanding" class="nav-link" data-scroll-target="#check-understanding"><span class="header-section-number">10.8</span> Check Understanding</a></li>
-  <li><a href="#exercises" id="toc-exercises" class="nav-link" data-scroll-target="#exercises"><span class="header-section-number">10.9</span> Exercises</a>
+  <li><a href="#qualitative-methods-interviews-and-surveys" id="toc-qualitative-methods-interviews-and-surveys" class="nav-link active" data-scroll-target="#qualitative-methods-interviews-and-surveys"><span class="header-section-number">6.1</span> Qualitative Methods: Interviews and Surveys</a></li>
+  <li><a href="#controlled-experiments" id="toc-controlled-experiments" class="nav-link" data-scroll-target="#controlled-experiments"><span class="header-section-number">6.2</span> Controlled Experiments</a></li>
+  <li><a href="#observational-and-natural-experiments" id="toc-observational-and-natural-experiments" class="nav-link" data-scroll-target="#observational-and-natural-experiments"><span class="header-section-number">6.3</span> Observational and Natural Experiments</a></li>
+  <li><a href="#the-statistics-you-actually-need" id="toc-the-statistics-you-actually-need" class="nav-link" data-scroll-target="#the-statistics-you-actually-need"><span class="header-section-number">6.4</span> The Statistics You Actually Need</a></li>
+  <li><a href="#the-four-validity-threats" id="toc-the-four-validity-threats" class="nav-link" data-scroll-target="#the-four-validity-threats"><span class="header-section-number">6.5</span> The Four Validity Threats</a></li>
+  <li><a href="#misconceptions" id="toc-misconceptions" class="nav-link" data-scroll-target="#misconceptions"><span class="header-section-number">6.6</span> Misconceptions</a></li>
+  <li><a href="#check-understanding" id="toc-check-understanding" class="nav-link" data-scroll-target="#check-understanding"><span class="header-section-number">6.7</span> Check Understanding</a></li>
+  <li><a href="#exercises" id="toc-exercises" class="nav-link" data-scroll-target="#exercises"><span class="header-section-number">6.8</span> Exercises</a>
   <ul class="collapse">
-  <li><a href="#research-agenda-20-minutes" id="toc-research-agenda-20-minutes" class="nav-link" data-scroll-target="#research-agenda-20-minutes"><span class="header-section-number">10.9.1</span> Research Agenda (20 minutes)</a></li>
-  <li><a href="#evidence-briefing-20-minutes" id="toc-evidence-briefing-20-minutes" class="nav-link" data-scroll-target="#evidence-briefing-20-minutes"><span class="header-section-number">10.9.2</span> Evidence Briefing (20 minutes)</a></li>
-  <li><a href="#the-question-behind-the-question-15-minutes" id="toc-the-question-behind-the-question-15-minutes" class="nav-link" data-scroll-target="#the-question-behind-the-question-15-minutes"><span class="header-section-number">10.9.3</span> The Question Behind the Question (15 minutes)</a></li>
+  <li><a href="#power-calculation-15-minutes-solo" id="toc-power-calculation-15-minutes-solo" class="nav-link" data-scroll-target="#power-calculation-15-minutes-solo"><span class="header-section-number">6.8.1</span> Power Calculation (15 minutes, solo)</a></li>
+  <li><a href="#method-match-15-minutes-pairs" id="toc-method-match-15-minutes-pairs" class="nav-link" data-scroll-target="#method-match-15-minutes-pairs"><span class="header-section-number">6.8.2</span> Method Match (15 minutes, pairs)</a></li>
+  <li><a href="#build-your-own-20-minutes-pairs" id="toc-build-your-own-20-minutes-pairs" class="nav-link" data-scroll-target="#build-your-own-20-minutes-pairs"><span class="header-section-number">6.8.3</span> Build Your Own (20 minutes, pairs)</a></li>
   </ul></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/gvwilson/notwrong/edit/main/finale/index.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/gvwilson/notwrong/blob/main/finale/index.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://github.com/gvwilson/notwrong/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/gvwilson/notwrong/edit/main/design/index.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/gvwilson/notwrong/blob/main/design/index.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://github.com/gvwilson/notwrong/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Conclusion: What to Do Next</span></h1>
+<h1 class="title"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Designing a Study</span></h1>
 </div>
 
 
@@ -312,165 +310,147 @@ Note
 </div>
 <div class="callout-body-container callout-body">
 <ul>
-<li>Match a research question to the most appropriate method.</li>
-<li>Distinguish what AI-productivity research actually shows from what is being oversold.</li>
-<li>Describe what rigorous future research on AI in software engineering would look like.</li>
-<li>Identify concrete next steps for applying these methods in your own context.</li>
+<li>Choose the right method — qualitative, controlled experiment, or observational — for a research question.</li>
+<li>Read p-values and effect sizes without overstating them.</li>
+<li>Estimate the sample size a study needs.</li>
+<li>Recognize the four kinds of validity threat.</li>
 </ul>
 </div>
 </div>
-<p>In 2001, Mark Harman and Bryan Jones published a paper proposing that software engineering problems could be treated as search problems: find the test suite that maximizes coverage, or the configuration that minimizes defects—and solved with optimization algorithms <span class="citation" data-cites="Harman2001">(<a href="../bibliography/index.html#ref-Harman2001" role="doc-biblioref">Harman and Jones 2001</a>)</span>. At the time this seemed like an interesting theoretical curiosity. Two decades later, search-based software engineering is a thriving subfield with annual conferences, graduate programs, and practical tools. It exists because someone decided to ask a question that had not previously been asked.</p>
-<p>The questions researchers ask shape what the field knows. The questions practitioners ask shape what gets funded and studied. You now have the tools to ask better questions.</p>
-<section id="matching-research-questions-to-methods" class="level2" data-number="10.1">
-<h2 data-number="10.1" class="anchored" data-anchor-id="matching-research-questions-to-methods"><span class="header-section-number">10.1</span> Matching Research Questions to Methods</h2>
-<ul>
-<li>“Is there a difference?” → controlled experiment or quasi-experiment</li>
-<li>“How large is the difference?” → effect size and confidence intervals</li>
-<li>“Why does this happen?” → qualitative methods (interviews, observation)</li>
-<li>“What do practitioners think?” → surveys</li>
-<li>“What patterns exist in large codebases?” → mining software repositories</li>
-<li>“What causes what?” → natural experiments, DiD, ITS—or randomization</li>
-<li>Remember: no single method answers all questions, so complex questions need mixed methods</li>
-<li>The hardest step is often translating a vague concern (“Is AI bad for us?”) into a specific, answerable question</li>
-</ul>
+<p>Jonas has been pushed past his comfort zone. “OK,” he says to Maya, “we can’t just watch five people and we can’t just read the vendor’s studies. So how do we <em>actually</em> find out whether this tool helps?” This chapter is the answer: the three families of method you can reach for, and the small amount of statistics you need to use them without fooling yourself.</p>
+<p>The right method follows the question, not your preference. “Is there a difference?” calls for an experiment. “Why does this happen?” calls for interviews. “What patterns exist in our codebase?” calls for an observational study. No single method answers all questions, which is why serious programs mix them.</p>
+<section id="qualitative-methods-interviews-and-surveys" class="level2" data-number="6.1">
+<h2 data-number="6.1" class="anchored" data-anchor-id="qualitative-methods-interviews-and-surveys"><span class="header-section-number">6.1</span> Qualitative Methods: Interviews and Surveys</h2>
+<p>Use qualitative methods when you don’t yet know what to measure, when the phenomenon is about meaning and context, or when you need to understand <em>why</em> rather than <em>that</em>.</p>
+<p><strong>Interviews</strong> come in three kinds. <a href="../glossary/index.html#structured_interview">Structured</a> uses a fixed script; <a href="../glossary/index.html#unstructured_interview">unstructured</a> follows the participant’s lead; <a href="../glossary/index.html#semi_structured_interview">semi-structured</a> — the workhorse — has a guide but allows follow-up. Ask open questions (“tell me about a time the suggestion was wrong in a way that surprised you”), probe what they say (“you mentioned you don’t trust it for security — can you say more?”), and avoid <a href="../glossary/index.html#leading_question">leading questions</a> (“don’t you find it faster?”) and hypotheticals (“would you use it if…”) — people are poor predictors of their own behavior.</p>
+<p><strong>Surveys</strong> trade depth for breadth. <a href="../glossary/index.html#likert_scale">Likert scales</a> (“strongly agree” to “strongly disagree”) are common but have known problems; use at least five points. Watch the <a href="../glossary/index.html#sampling_strategy">sampling strategy</a>: a <a href="../glossary/index.html#convenience_sampling">convenience sample</a> (whoever responds) is usually biased toward engaged users, and a low response rate can produce <a href="../glossary/index.html#non_response_bias">non-response bias</a> larger than sampling error. Pilot with three to five people before distributing.</p>
+<p><strong>Thematic analysis</strong> is how you turn interview data into findings. <a href="../glossary/index.html#open_coding">Open coding</a> tags segments with labels close to what people said — use <a href="../glossary/index.html#gerund_coding">gerund coding</a> (actions, not nouns): “switching off suggestions after a bad experience,” not “negative attitude.” <a href="../glossary/index.html#axial_coding">Axial coding</a> groups codes into themes that make a <em>claim</em> (“developers trust AI for syntax but not for logic”), and you keep collecting until you reach <a href="../glossary/index.html#saturation">saturation</a> — new data stops producing new codes.</p>
 </section>
-<section id="triangulating-methods" class="level2" data-number="10.2">
-<h2 data-number="10.2" class="anchored" data-anchor-id="triangulating-methods"><span class="header-section-number">10.2</span> Triangulating Methods</h2>
-<ul>
-<li>Interruption research used three complementary approaches on the same phenomenon <span class="citation" data-cites="Mark2008">(<a href="../bibliography/index.html#ref-Mark2008" role="doc-biblioref">Mark et al. 2008</a>)</span>
-<ul>
-<li>Controlled lab experiments (measured resumption lags precisely but under artificial conditions)</li>
-<li>Cognitive models (predicted error rates without any participants)</li>
-<li>Observational studies (found that workers switch contexts every three minutes, which was faster than any lab task)</li>
-</ul></li>
-<li>Each method answered questions the others could not
-<ul>
-<li>The lab studies established causal mechanisms</li>
-<li>The observational studies established that the phenomenon occurs at scale in real work</li>
-</ul></li>
-</ul>
+<section id="controlled-experiments" class="level2" data-number="6.2">
+<h2 data-number="6.2" class="anchored" data-anchor-id="controlled-experiments"><span class="header-section-number">6.2</span> Controlled Experiments</h2>
+<p>A <a href="../glossary/index.html#controlled_experiment">controlled experiment</a> manipulates a variable and measures the effect while holding everything else constant. The <a href="../glossary/index.html#treatment_group">treatment group</a> gets the intervention; the <a href="../glossary/index.html#control_group">control group</a> doesn’t. <a href="../glossary/index.html#randomization">Randomization</a> — assigning people to conditions by chance — is what makes causal claims defensible, because it spreads unknown confounders evenly across the groups.</p>
+<p>Two ideas carry the statistics. The <a href="../glossary/index.html#null_hypothesis">null hypothesis</a> (H₀) is “no effect.” A <a href="../glossary/index.html#p_value">p-value</a> is the probability of seeing data at least this extreme <em>if H₀ were true</em>. Crucially, it is <strong>not</strong> the probability the result is wrong, and p &lt; 0.05 is a 1920s convention, not a law of nature. You never prove an effect exists; you either reject H₀ or fail to reject it — and failing to reject doesn’t mean “no effect,” it may just mean your study was underpowered.</p>
+<p><a href="../glossary/index.html#statistical_significance">Significance</a> says whether an effect is likely real; <a href="../glossary/index.html#effect_size">effect size</a> says how big it is. <a href="../glossary/index.html#cohens_d">Cohen's d</a> measures the difference between two means in standard-deviation units — 0.2 small, 0.5 medium, 0.8 large. A huge sample can find a “significant” effect that’s too small to matter, which is why effect size should always travel with the p-value.</p>
+<p><a href="../glossary/index.html#statistical_power">Statistical power</a> is the probability of detecting an effect that’s actually there. Most software-engineering experiments are dramatically underpowered <span class="citation" data-cites="Kampenes2007">(<a href="../bibliography/index.html#ref-Kampenes2007" role="doc-biblioref">Kampenes et al. 2007</a>)</span> — a typical 20–50 participants can only reliably detect a large effect (d &gt; 0.8). The required sample size for a two-sample t-test is roughly</p>
+<p><span class="math display">\[ n = 2 (z_\alpha + z_\beta)^2 \sigma^2 / \delta^2 \]</span></p>
+<p>where δ is the smallest difference you care about, σ is the population standard deviation, z_α = 1.96 (for α = 0.05), and z_β = 0.84 (for 80% power). Calculate this <em>before</em> running the study, not after.</p>
+<p><a href="../glossary/index.html#blocking_variable">Blocking</a> handles a known nuisance variable (like experience) by grouping people into strata before randomizing, so the senior developers can’t all land in one group by chance.</p>
 </section>
-<section id="what-we-know-about-ai-and-developer-productivity" class="level2" data-number="10.3">
-<h2 data-number="10.3" class="anchored" data-anchor-id="what-we-know-about-ai-and-developer-productivity"><span class="header-section-number">10.3</span> What We Know About AI and Developer Productivity</h2>
-<ul>
-<li>A foundational finding underlies most AI code generation: <span class="citation" data-cites="Hindle2016">(<a href="../bibliography/index.html#ref-Hindle2016" role="doc-biblioref">Hindle et al. 2016</a>)</span> showed that code is statistically more repetitive and predictable than natural language
-<ul>
-<li>This naturalness hypothesis explains why language models work well for code: they exploit structural regularity that does not exist in general text</li>
-<li>Understanding the finding separates the technical reality from marketing claims about “intelligence”</li>
-</ul></li>
-<li>Controlled experiments show AI tools can speed up specific, well-defined tasks (e.g., code generation or writing tests) for individual developers</li>
-<li>Effects on end-to-end software delivery (e.g., defect rates and lead time) are much less studied and less consistent</li>
-<li>More experienced developers appear to benefit less or even be slowed down; less experienced developers show larger gains on narrow tasks</li>
-<li>Nearly all studies are short-term, use artificial or narrow tasks, and are conducted on volunteers or students
-<ul>
-<li>External validity to large-scale professional software development is largely assumed</li>
-</ul></li>
-</ul>
+<section id="observational-and-natural-experiments" class="level2" data-number="6.3">
+<h2 data-number="6.3" class="anchored" data-anchor-id="observational-and-natural-experiments"><span class="header-section-number">6.3</span> Observational and Natural Experiments</h2>
+<p>An <a href="../glossary/index.html#observational_study">observational study</a> measures the world as it is, without assigning anyone to anything. <a href="../glossary/index.html#msr">Mining software repositories</a> (MSR) — extracting data from git history, issue trackers, and CI logs — is the most common form, and it’s full of traps: GitHub projects are not a representative sample, <a href="../glossary/index.html#survivorship_bias">survivorship bias</a> hides the projects that died, and confounders lurk everywhere.</p>
+<p>The trade-off is fundamental. Controlled experiments maximize internal validity but are artificial; observational studies maximize realism but can’t rule out confounders. <a href="../glossary/index.html#quasi_experimental_design">Quasi-experiments</a> sit between: <a href="../glossary/index.html#difference_in_differences">difference-in-differences</a> compares the <em>change</em> in a treated group against the change in a control group (assuming the two would have changed similarly otherwise); <a href="../glossary/index.html#interrupted_time_series">interrupted time series</a> looks for a trend change at the moment an intervention landed. A <a href="../glossary/index.html#natural_experiment">natural experiment</a> exploits real-world variation that approximates random assignment — say, a tool rolled out to some offices first because of licensing, not because they asked for it.</p>
+<p>Finally, correlation is not causation. Three rivals explain any correlation between A and B: A causes B, B causes A, or a third thing C causes both. Randomization is what lets you rule out the last two.</p>
 </section>
-<section id="what-is-being-oversold" class="level2" data-number="10.4">
-<h2 data-number="10.4" class="anchored" data-anchor-id="what-is-being-oversold"><span class="header-section-number">10.4</span> What Is Being Oversold</h2>
+<section id="the-statistics-you-actually-need" class="level2" data-number="6.4">
+<h2 data-number="6.4" class="anchored" data-anchor-id="the-statistics-you-actually-need"><span class="header-section-number">6.4</span> The Statistics You Actually Need</h2>
+<p>You don’t need a degree to decode a methods section. The essentials:</p>
 <ul>
-<li>Aggregate productivity claims (“AI makes everyone 55% faster”) are derived from specific task studies
-<ul>
-<li>The generalization is rarely justified</li>
-</ul></li>
-<li>Industry reports on AI adoption frequently lack peer review, methodology sections, and conflict-of-interest disclosures</li>
-<li>The absence of replications is treated as evidence the original finding stands, rather than as a flaw</li>
+<li><strong>Descriptive</strong> — <a href="../glossary/index.html#mean">mean</a> is sensitive to outliers; the <a href="../glossary/index.html#median">median</a> isn’t. Software data (task times, file sizes, defect counts) is usually right-skewed, so medians and <a href="../glossary/index.html#interquartile_range">interquartile ranges</a> are usually the honest summary.</li>
+<li><strong>Type I vs Type II error</strong> — a <a href="../glossary/index.html#type_i_error">Type I error</a> is a false positive (rejecting H₀ when it’s true); a <a href="../glossary/index.html#type_ii_error">Type II error</a> is a false negative (missing a real effect). Power = 1 − β.</li>
+<li><strong>Multiple comparisons</strong> — run 20 tests at α = 0.05 and you expect one false positive by chance; correct with <a href="../glossary/index.html#bonferroni_correction">Bonferroni</a> or <a href="../glossary/index.html#false_discovery_rate">false discovery rate</a> control.</li>
+<li><strong>Confidence intervals</strong> — a <a href="../glossary/index.html#confidence_interval">95% CI</a> is usually more informative than a p-value because it shows direction <em>and</em> magnitude.</li>
 </ul>
+<p><strong>Worked power example.</strong> You want to detect a 3-defect-per-release reduction, and the standard deviation across teams is 4 defects. Plug δ = 3, σ = 4 into the formula: n = 2(1.96 + 0.84)² × 16 / 9 ≈ 28 teams per condition — 56 total. If you can only recruit 10 teams per condition, you’ll likely miss a real effect. Detecting a smaller difference (δ = 1) would need about 251 teams per condition.</p>
 </section>
-<section id="staying-current-without-drowning" class="level2" data-number="10.5">
-<h2 data-number="10.5" class="anchored" data-anchor-id="staying-current-without-drowning"><span class="header-section-number">10.5</span> Staying Current Without Drowning</h2>
-<ul>
-<li>Follow proceedings of top venues: ICSE, FSE, MSR, ESEM, ASE</li>
-<li>Use Google Scholar alerts for specific research questions rather than general topic feeds</li>
-<li>Check pre-registration databases (AsPredicted, OSF) for upcoming studies on topics you care about</li>
-<li>Be skeptical of preprints until they appear in peer-reviewed venues, and skeptical of peer-reviewed papers until they are replicated</li>
-<li>Build a network: one well-chosen researcher to follow is more valuable than a hundred papers to skim</li>
-</ul>
+<section id="the-four-validity-threats" class="level2" data-number="6.5">
+<h2 data-number="6.5" class="anchored" data-anchor-id="the-four-validity-threats"><span class="header-section-number">6.5</span> The Four Validity Threats</h2>
+<p>Every threat to a study’s credibility falls into one of four buckets <span class="citation" data-cites="Campbell1963 Wohlin2000">(<a href="../bibliography/index.html#ref-Campbell1963" role="doc-biblioref">Campbell and Stanley 1963</a>; <a href="../bibliography/index.html#ref-Wohlin2000" role="doc-biblioref">Wohlin et al. 2000</a>)</span>:</p>
+<ol type="1">
+<li><strong>Conclusion validity</strong> — was the analysis right and powerful enough? (underpowering, violated test assumptions, uncorrected multiple comparisons.)</li>
+<li><strong>Internal validity</strong> — can you conclude the treatment caused the outcome? (confounders, selection bias, <a href="../glossary/index.html#novelty_effect">novelty</a>, <a href="../glossary/index.html#learning_effect">learning</a>, and <a href="../glossary/index.html#boredom_effect">boredom</a> effects.)</li>
+<li><strong>Construct validity</strong> — does the measurement capture the concept?</li>
+<li><strong>External validity</strong> — does it generalize beyond this sample and task?</li>
+</ol>
+<p>Many software-engineering experiments have strong internal validity but weak external validity — a randomized trial on students doing a 90-minute toy task may be airtight <em>and</em> tell you almost nothing about your team.</p>
 </section>
-<section id="how-to-push-for-better-evidence" class="level2" data-number="10.6">
-<h2 data-number="10.6" class="anchored" data-anchor-id="how-to-push-for-better-evidence"><span class="header-section-number">10.6</span> How to Push for Better Evidence</h2>
-<ul>
-<li>Ask for evidence before adopting tools at your organization: what study supports this claim, and is that study applicable to your context?</li>
-<li>Contribute to the evidence base: document your own organization’s experience carefully and share it, even in blog posts or case studies</li>
-<li>Support pre-registration when you run internal studies</li>
-<li>When an executive cites a statistic about AI productivity, ask who funded the study, what task was studied, and was there a control group?</li>
-</ul>
-</section>
-<section id="misconceptions" class="level2" data-number="10.7">
-<h2 data-number="10.7" class="anchored" data-anchor-id="misconceptions"><span class="header-section-number">10.7</span> Misconceptions</h2>
+<section id="misconceptions" class="level2" data-number="6.6">
+<h2 data-number="6.6" class="anchored" data-anchor-id="misconceptions"><span class="header-section-number">6.6</span> Misconceptions</h2>
 <dl>
-<dt>The evidence on AI and developer productivity is settled.</dt>
+<dt>p &lt; 0.05 means the result is probably true.</dt>
 <dd>
-The field is less than a decade old, dominated by short-term studies on narrow tasks, heavily influenced by industry funding, and almost entirely lacking independent replication. Some things seem to be true in some contexts but very little has been settled.
+It means the data would be unusual if there were no effect. Whether the result reflects reality also depends on prior plausibility and whether the analysis was pre-specified.
 </dd>
-<dt>More published studies on a topic means we know more about it.</dt>
+<dt>A large sample turns correlation into causation.</dt>
 <dd>
-More studies increase knowledge only if they are well-designed, independently replicated, and free of systematic bias. A hundred underpowered studies funded by the same industry stakeholders add less than one independent, pre-registered, adequately powered replication.
+Sample size increases precision, not causal warrant. A million-point observational study is still observational.
 </dd>
-<dt>Practitioner experience is a reliable substitute for empirical study.</dt>
+<dt>Not finding a significant effect means the treatment doesn’t work.</dt>
 <dd>
-Practitioners are subject to the same cognitive biases as anyone else. Systematic study is not a criticism of experience—it is a way to check whether experience is misleading you.
+It means the data is consistent with no effect. An underpowered study misses real effects all the time.
+</dd>
+<dt>Qualitative research is just asking people what they think.</dt>
+<dd>
+Rigorous qualitative work involves systematic collection, structured coding, audit trails, and intercoder reliability.
+</dd>
+<dt>GitHub data represents software development.</dt>
+<dd>
+Open-source GitHub projects are a small, self-selected slice of the software actually built. Commercial and embedded code is largely invisible to MSR.
 </dd>
 </dl>
 </section>
-<section id="check-understanding" class="level2" data-number="10.8">
-<h2 data-number="10.8" class="anchored" data-anchor-id="check-understanding"><span class="header-section-number">10.8</span> Check Understanding</h2>
+<section id="check-understanding" class="level2" data-number="6.7">
+<h2 data-number="6.7" class="anchored" data-anchor-id="check-understanding"><span class="header-section-number">6.7</span> Check Understanding</h2>
 <details>
 <summary>
-A colleague says: “There are hundreds of studies showing AI tools improve developer productivity—the evidence is overwhelming.” What is the most important methodological concern you would raise?
+A study reports p = 0.03. A colleague says “there’s a 3% chance this result is wrong.” What’s actually correct?
 </summary>
-<p>Publication bias: studies showing positive effects are more likely to be published than studies showing null or negative effects. A large number of published studies showing positive effects does not mean the weight of evidence is positive—it may mean that negative results are in file drawers. A well-conducted meta-analysis that corrects for publication bias (using funnel plots and trim-and-fill methods) would give a more reliable picture than a count of positive studies.</p>
+<p>If the null were true, you’d see a result this extreme 3% of the time. The p-value is not the probability the result is a false positive — that also depends on the prior probability an effect exists, which the p-value doesn’t capture.</p>
 </details>
 <details>
 <summary>
-Name two types of long-term effects of AI coding tools that have not been adequately studied, and for each, describe what method you would use to study it and why.
+500 developers using AI commit 8% more often (p = 0.001, Cohen’s d = 0.15). What should you conclude?
 </summary>
-<p>Deskilling: the concern that relying on AI suggestions atrophies developers’ ability to solve problems independently. This is hard to study with an experiment (you cannot ethically deprive developers of tools for years). A longitudinal observational study comparing assessments on code challenges, interview performance, and debugging exercises over time for heavy versus light AI tool users, with careful attention to confounding by role, tenure, and tool type, would help answer the question, but good luck getting funding.</p>
-<p>Code maintainability: whether AI-generated code is harder or easier to maintain over time. An MSR study following repositories that adopted AI coding tools and measuring maintainability metrics like churn rate or code complexity over one to two years would provide evidence, again with caution about confounding and selection bias.</p>
+<p>Statistically significant but practically tiny: d = 0.15 is below the “small” benchmark, and with 500 participants the study can detect effects too small to matter. Whether an 8% commit bump means anything depends on construct validity — commits are a poor productivity proxy.</p>
 </details>
 <details>
 <summary>
-You are asked to advise your organization on whether to mandate AI coding tools for all developers. What two pieces of evidence would you most want before making a recommendation, and why?
+Why can’t you conclude “no effect” from a non-significant result?
 </summary>
-<p>Answers will vary, but strong answers will ask for:</p>
-<ol type="1">
-<li>Evidence from a context similar to your organization (not students on artificial tasks), including effect sizes and confidence intervals</li>
-<li>Evidence on outcome measures that matter to your organization like defect rates, lead time, or developer satisfaction, not just speed on isolated tasks.</li>
-</ol>
-<p>Give yourself additional credit for noting the importance of long-term evidence (not just 90-minute experiments) and for asking about conflict of interest in the cited studies.</p>
+<p>A non-significant result means the data is consistent with H₀, not that H₀ is true. The study may simply have been underpowered. Absence of evidence is not evidence of absence.</p>
 </details>
 <details>
 <summary>
-The following sentence contains a reasoning error. Identify and correct it: “No study has found that AI tools deskill developers, so we can safely assume they don’t.”
+What’s the difference between internal and external validity, and why do they trade off?
 </summary>
-<p>This is absence of evidence used as evidence of absence. The lack of published studies showing deskilling could mean deskilling does not occur, or it could mean no one has run a well-powered long-term study designed to detect it. Given that most AI coding tool studies are short-term and focused on productivity, the absence of deskilling findings is unsurprising and uninformative. The correct statement is, “The evidence on whether AI tools cause deskilling is insufficient to draw conclusions.”</p>
+<p>Internal validity is whether you can conclude the treatment caused the outcome; external validity is whether the finding generalizes. Randomized experiments maximize internal validity at the cost of artificiality, while observational studies are realistic but can’t rule out confounders. You rarely get both at once.</p>
 </details>
 </section>
-<section id="exercises" class="level2" data-number="10.9">
-<h2 data-number="10.9" class="anchored" data-anchor-id="exercises"><span class="header-section-number">10.9</span> Exercises</h2>
-<section id="research-agenda-20-minutes" class="level3" data-number="10.9.1">
-<h3 data-number="10.9.1" class="anchored" data-anchor-id="research-agenda-20-minutes"><span class="header-section-number">10.9.1</span> Research Agenda (20 minutes)</h3>
-<p>Write a one-page research agenda for one question you care about related to AI and software development. Include the specific research question, the method you would use, the sample you would need, the outcome measure, two threats to validity, and one ethical consideration. Be honest about what your proposed design can and cannot establish.</p>
+<section id="exercises" class="level2" data-number="6.8">
+<h2 data-number="6.8" class="anchored" data-anchor-id="exercises"><span class="header-section-number">6.8</span> Exercises</h2>
+<section id="power-calculation-15-minutes-solo" class="level3" data-number="6.8.1">
+<h3 data-number="6.8.1" class="anchored" data-anchor-id="power-calculation-15-minutes-solo"><span class="header-section-number">6.8.1</span> Power Calculation (15 minutes, solo)</h3>
+<p>Use n = 2(z_α + z_β)²σ²/δ² with α = 0.05 (z = 1.96) and 80% power (z = 0.84). You want to detect a 3-defect-per-release reduction, σ = 5 defects. Compute the minimum teams per condition. Then say, in one sentence, whether your organization could actually run this study — and what that implies.</p>
 </section>
-<section id="evidence-briefing-20-minutes" class="level3" data-number="10.9.2">
-<h3 data-number="10.9.2" class="anchored" data-anchor-id="evidence-briefing-20-minutes"><span class="header-section-number">10.9.2</span> Evidence Briefing (20 minutes)</h3>
-<p>Prepare a five-minute verbal briefing for a non-technical manager who wants to know, “What does the research say about AI coding tools?” Write bullet points covering what the evidence actually shows, what important questions are unanswered, and one specific caution about how to interpret the most widely cited statistic they are likely to have heard.</p>
+<section id="method-match-15-minutes-pairs" class="level3" data-number="6.8.2">
+<h3 data-number="6.8.2" class="anchored" data-anchor-id="method-match-15-minutes-pairs"><span class="header-section-number">6.8.2</span> Method Match (15 minutes, pairs)</h3>
+<p>For each question, name the method you’d use and one sentence on why:</p>
+<ul>
+<li>Why do some teams at Meridian ignore the AI tool while others use it daily?</li>
+<li>Did the tool change time-to-merge across the whole org?</li>
+<li>Does the tool’s generated code carry more security bugs than human code?</li>
+<li>What actually slows developers down most in their daily work?</li>
+</ul>
 </section>
-<section id="the-question-behind-the-question-15-minutes" class="level3" data-number="10.9.3">
-<h3 data-number="10.9.3" class="anchored" data-anchor-id="the-question-behind-the-question-15-minutes"><span class="header-section-number">10.9.3</span> The Question Behind the Question (15 minutes)</h3>
-<p>A manager says, “We’re spending $X per developer per year on AI coding tools. Are we getting our money’s worth?” Restate this as three specific, answerable research questions. For each, name the method you would use and one data source you would need. Then explain which question matters most to the organization and why.</p>
+<section id="build-your-own-20-minutes-pairs" class="level3" data-number="6.8.3">
+<h3 data-number="6.8.3" class="anchored" data-anchor-id="build-your-own-20-minutes-pairs"><span class="header-section-number">6.8.3</span> Build Your Own (20 minutes, pairs)</h3>
+<p>Design an experiment for one claim below. Specify treatment and control, how you’d assign participants, what you’d measure and how, a realistic sample size, and two threats to external validity.</p>
+<ul>
+<li>Pair programming reduces defect rates.</li>
+<li>AI-assisted code review is faster than code review without it.</li>
+<li>Developers who write tests first produce better-designed code.</li>
+</ul>
 
 
 <div id="refs" class="references csl-bib-body hanging-indent" role="list" style="display: none">
-<div id="ref-Harman2001" class="csl-entry" role="listitem">
-Harman, Mark, and Bryan F. Jones. 2001. <span>“Search-Based Software Engineering.”</span> <em>Information and Software Technology</em> 43 (14).
+<div id="ref-Campbell1963" class="csl-entry" role="listitem">
+Campbell, Donald T., and Julian C. Stanley. 1963. <em>Experimental and Quasi-Experimental Designs for Research</em>. Houghton Mifflin.
 </div>
-<div id="ref-Hindle2016" class="csl-entry" role="listitem">
-Hindle, Abram, Earl T. Barr, Mark Gabel, Zhendong Su, and Premkumar Devanbu. 2016. <span>“On the Naturalness of Software.”</span> <em>Comm. ACM</em> 59 (5). <a href="https://doi.org/10.1145/2902362">https://doi.org/10.1145/2902362</a>.
+<div id="ref-Kampenes2007" class="csl-entry" role="listitem">
+Kampenes, Vigdis By, Tore Dybå, Jo Erskine Hannay, and Dag I. K. Sjøberg. 2007. <span>“A Systematic Review of Effect Size in Software Engineering Experiments.”</span> <em>Information and Software Technology</em>.
 </div>
-<div id="ref-Mark2008" class="csl-entry" role="listitem">
-Mark, Gloria, Daniela Gudith, and Ulrich Klocke. 2008. <span>“The Cost of Interrupted Work: More Speed and Stress.”</span> <em>Proc. CHI’08</em>.
+<div id="ref-Wohlin2000" class="csl-entry" role="listitem">
+Wohlin, Claes, Per Runeson, Martin Höst, Magnus C. Ohlsson, Björn Regnell, and Anders Wesslén. 2000. <em>Experimentation in Software Engineering: An Introduction</em>. Kluwer Academic Publishers. ISBN 9783662693056.
 </div>
 </div>
 </section>
@@ -879,13 +859,13 @@ Mark, Gloria, Daniela Gudith, and Ulrich Klocke. 2008. <span>“The Cost of Inte
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../cheaply/index.html" class="pagination-link" aria-label="Starting Cheaply">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Starting Cheaply</span></span>
+      <a href="../cheaply/index.html" class="pagination-link" aria-label="Cheap and Fast">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Cheap and Fast</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../license/index.html" class="pagination-link" aria-label="License">
-        <span class="nav-page-text"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">License</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../running/index.html" class="pagination-link" aria-label="Running a Study">
+        <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Running a Study</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
@@ -894,4 +874,4 @@ Mark, Gloria, Daniela Gudith, and Ulrich Klocke. 2008. <span>“The Cost of Inte
 
 
 
-<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/gvwilson/notwrong/edit/main/finale/index.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/gvwilson/notwrong/blob/main/finale/index.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://github.com/gvwilson/notwrong/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/gvwilson/notwrong/edit/main/design/index.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/gvwilson/notwrong/blob/main/design/index.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://github.com/gvwilson/notwrong/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>

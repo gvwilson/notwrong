@@ -1,4 +1,4 @@
-# The Ways AI Studies Go Wrong
+# How Studies Go Wrong
 
 ::: {.callout-note}
 

@@ -11,21 +11,16 @@ book:
     - intro/index.qmd
     - productivity/index.qmd
     - wrong/index.qmd
-    - qualitative/index.qmd
-    - quantitative/index.qmd
-    - observational/index.qmd
     - critical/index.qmd
-    - running/index.qmd
     - cheaply/index.qmd
-    - finale/index.qmd
+    - design/index.qmd
+    - running/index.qmd
   appendices:
     - license/index.qmd
     - conduct/index.qmd
     - contributing/index.qmd
     - bibliography/index.qmd
     - glossary/index.qmd
-    - further/index.qmd
-    - stats/index.qmd
 
 bibliography: bibliography/references.bib
 csl: mccole/book.csl
