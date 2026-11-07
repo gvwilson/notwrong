@@ -1,248 +1,219 @@
-# Defining Productivity
+# What "More Productive" Even Means
 
 ::: {.callout-note}
 
--   Explain construct validity and why it matters when measuring productivity.
--   Identify proxy metrics and their common failure modes.
--   Evaluate the DORA metrics as a worked example of operationalization.
--   Show how definitional choices shape study conclusions.
+-   Explain why "productivity" is a definition problem before it is a
+    measurement problem.
+-   Judge whether a metric actually captures the thing it claims to measure.
+-   Recognize the classic proxy-metric traps and Goodhart's Law.
+-   Reproduce how the "10x programmer" claim collapses as the definition
+    tightens.
 
 :::
 
-Before you can measure whether AI makes programmers more productive,
-you have to decide what "productive" means.
-That turns out to be surprisingly hard.
+Back at Meridian, Dev has a number for the CTO ready to go: *pull requests
+merged per week.* It went up 18% after the AI tool shipped, so the tool is
+working. Case closed.
 
-In 2021,
-researchers at Microsoft published a framework called SPACE,
-which argued that developer productivity has five dimensions:
-Satisfaction and well-being,
-Performance,
-Activity, Communication and collaboration,
-and Efficiency and flow [@Forsgren2021].
-The paper's central argument is that no single metric captures productivity,
-and that organizations that optimize for one dimension (say, commit frequency)
-often degrade others (say, satisfaction or code quality).
-If you only measure what is easy to count, you will optimize for the wrong thing.
+Maya asks the one question that stops the room: *"Working at what?"*
 
-## Why "Programmer Productivity" Is Hard to Define
+Before you can measure whether AI makes programmers more productive, you have
+to decide what "productive" means — and that turns out to be the hard part. A
+2021 Microsoft paper called SPACE argued that developer productivity has at
+least five dimensions — satisfaction, performance, activity, communication, and
+efficiency-and-flow — and that optimizing one (say, commit frequency) routinely
+degrades the others [@Forsgren2021]. If you only measure what is easy to count,
+you optimize for the wrong thing.
 
--   Productivity in manufacturing means output per unit of time
-    (widgets per hour), which requires both output and time to be measurable
--   Software output is not homogeneous:
-    a ten-line bugfix may be worth more than a thousand-line feature or vice versa
--   Much of software work is invisible:
-    reading code, attending meetings, reviewing pull requests, helping colleagues
--   The effects of software work are often delayed:
-    a decision made today may affect defect rates six months from now
--   Individual productivity is entangled with team and organizational factors
-    that are hard to isolate
--   Most of a developer's time is not spent writing code:
-    -   A field study tracking 20 developers over two weeks found that
-        coding activities occupied roughly 25% of the working day on average
-    -   Meetings, email, and coordination consumed most of the rest [@Meyer2017]
+## Construct Validity: Does the Number Mean What You Think It Means?
 
-## Construct Validity
+{{<g construct_validity "Construct validity" >}} is the degree to which a
+measurement actually captures the concept it is supposed to capture. A metric
+has high construct validity when changes in the metric reliably reflect changes
+in the thing you care about.
 
--   {{<g construct_validity "Construct validity" >}} is the degree to which
-    a measurement actually captures the concept it is supposed to capture
--   A metric has construct validity if changes in the metric
-    reliably reflect changes in the underlying concept
--   Lines of code written per day has low construct validity as a productivity measure
-    -   You can write more lines by making code worse
--   Construct validity is often assumed rather than demonstrated,
-    especially in industry studies
+Productivity is unusually hard to operationalize. In manufacturing it means
+"widgets per hour" — output and time are both measurable. Software output is not
+homogeneous: a ten-line bugfix can be worth more than a thousand-line feature, or
+vice versa. Much of the work is invisible (reading code, reviewing, helping a
+colleague). The effects are delayed (a shortcut today becomes defects in six
+months). And most of a developer's day isn't even writing code: a field study
+tracking developers for two weeks found coding occupied roughly a quarter of the
+day, with meetings and coordination consuming the rest [@Meyer2017].
 
-## Proxy Metrics and Their Failure Modes
+The consequence: construct validity is usually *assumed* rather than
+*demonstrated*, especially in industry studies. Dev's "PRs per week" is a
+perfect example — it's a number, but it isn't "productivity."
 
--   A proxy metric is a measurable quantity used as a stand-in for something harder to measure
--   Common proxies for developer productivity and their problems:
-    -   Lines of code: incentivizes verbosity; punishes refactoring
-    -   Commit frequency: incentivizes small, meaningless commits
-    -   Story points completed: incentivizes inflation of estimates
-    -   Pull requests merged: incentivizes trivial PRs; discourages complex work
-    -   Bugs closed: incentivizes closing without fixing
--   {{<g goodharts_law "Goodhart's Law" >}}: when a measure becomes a target,
-    it ceases to be a good measure [@Goodhart1984]
+## Proxy Metrics and How They Go Wrong
+
+A {{<g proxy_metric "proxy metric" >}} is a measurable quantity you use as a
+stand-in for something harder to measure. The usual proxies for developer
+productivity, and the way each one gets gamed:
+
+-   **Lines of code** — incentivizes verbosity; punishes refactoring and
+    deletion. In 1982, Apple tracked LOC until Bill Atkinson deleted ~2,000
+    lines of QuickDraw in one week and management stopped asking
+    [@Sadowski2019].
+-   **Commit frequency** — incentivizes small, meaningless commits.
+-   **Story points completed** — incentivizes inflating the estimates.
+-   **Pull requests merged** — incentivizes trivial PRs and discourages hard
+    work.
+-   **Bugs closed** — incentivizes closing without fixing.
+
+There's a name for the general phenomenon. {{<g goodharts_law "Goodhart's Law" >}}
+says that *when a measure becomes a target, it ceases to be a good measure*
+[@Goodhart1984]. The moment people know they're being scored on commit count,
+they make more, smaller commits. The number improves; the work does not. The
+same trap bedevils AI-productivity studies, which is why the next chapter treats
+it as the first mistake to watch for.
 
 ::: {.callout-note}
 
-In the early 1980s,
-Apple measured programmer productivity by lines of code per day.
-l Atkinson, who wrote the QuickDraw graphics library,
-once submitted a timesheet showing -2000 lines:
-he had replaced 2000 lines with a faster, shorter algorithm [@Sadowski2019].
-The metric penalized the improvement.
+In the early 1980s, Apple measured programmer productivity by lines of code per
+day. Bill Atkinson, who wrote the QuickDraw graphics library, once submitted a
+timesheet showing **-2000 lines**: he'd replaced 2,000 lines with a faster,
+shorter algorithm. The metric penalized the improvement [@Sadowski2019].
 
 :::
 
-## The DORA Metrics as a Worked Example
+## Watch the "10x Programmer" Collapse
 
--   The DevOps Research and Assessment (DORA) program identified four
-    metrics that correlate with organizational performance [@Forsgren2018]:
-    -   {{<g deployment_frequency "Deployment frequency" >}}:
-        how often code is deployed to production
-    -   {{<g lead_time_for_change "Lead time for changes" >}}:
-        time from commit to production
-    -   {{<g change_failure_rate "Change failure rate" >}}:
-        proportion of deployments causing failures
-    -   {{<g time_to_restore_service "Time to restore service" >}}:
-        time to recover from failures
--   These are {{<g operationalization "operationalizations" >}}:
-    specific, measurable definitions of abstract concepts
--   DORA metrics have better construct validity than raw activity counts
-    because they are tied to customer outcomes
--   They still have blind spots:
-    a team can score well on DORA while building the wrong product
+The best way to see that "productivity" is a definition, not a fact, is to do
+the arithmetic yourself. In 2000 Lutz Prechelt measured a mix of students and
+professionals, using seven different languages, as they each solved the *same*
+small algorithmic problem [@Prechelt2000]. The raw data is in
+`data/prechelt.csv` — one row per person, with the language (`lang`), work time
+in hours (`whours`), and several quality metrics.
 
-## How Definitional Choices Shape Conclusions
+Start with the crudest possible claim: *the fastest programmer is N times faster
+than the slowest.* Compute the minimum and maximum work time and take the ratio.
+You'll get something like **105x**. Is there really a 105x programmer? Almost
+certainly not — that ratio compares the single fastest person to the single
+slowest, and the slowest "came back every day for a week."
 
--   If you define productivity as "tasks completed per hour",
-    AI tools look good (faster completion on well-defined tasks)
--   If you define productivity as "business value delivered per quarter",
-    the picture is murkier (task completion speed may not be the bottleneck)
--   If you define productivity as "developer satisfaction and retention",
-    the evidence is mixed and context-dependent
--   The choice of definition is a values choice as much as a technical one:
-    it reflects what the organization cares about
--   Studies that do not explicitly state their operationalization of productivity
-    cannot be compared with each other
--   Developer well-being is both a dimension of productivity and a precondition for it:
-    -   A survey of 1,318 developers found that
-        the top causes of unhappiness are being stuck on a problem,
-        time pressure, and dealing with bad code,
-        and that unhappiness predicts lower cognitive performance, disrupted flow,
-        and reduced code quality [@Graziotin2018]
-    -   A lab study using biometric sensors found that developers' emotions
-        correlate with their perceived progress on change tasks [@Muller2015],
-        raising the possibility of measuring productivity through affect
-        rather than output alone
+Now tighten the definition the way a careful researcher would:
 
-## Reframing: Productivity as Waste Reduction
+1. **Homogeneous language.** The mix of seven languages confounds the
+   comparison (some languages suit the task better). Filter to just the Java
+   rows. The ratio drops to about **17x**.
+2. **Compare the top 10% to the ordinary, not the worst.** "Faster than normal
+   programmers" should mean "faster than the slower half." Compare the median of
+   the top 10% (the 5th percentile) to the median of the bottom half (the 75th
+   percentile). The ratio drops again — to around **11x**, and under some
+   reasonable definitions to **5x**.
+3. **Factor in quality.** "Productivity" isn't just speed — it's value per
+   effort. The `z1000rel` column is a reliability score (100 is perfect, lower
+   means more defects), and `z1000mem` is memory use. Once you fold in "did it
+   actually work?", the picture changes again.
 
--   An alternative to measuring output is identifying waste:
-    work that consumes effort without delivering value
--   A two-and-a-half-year study at Pivotal identified nine waste categories:
-    building the wrong feature or product,
-    mismanaging the backlog,
-    rework,
-    unnecessarily complex solutions,
-    extraneous cognitive load,
-    psychological distress,
-    waiting and multitasking,
-    knowledge loss,
-    and ineffective communication [@Sedano2017]
--   Waste is often easier to observe and quantify than output
--   Asking "what slows us down?" is frequently more actionable than
-    "how do we measure productivity?"
+The lesson isn't "there are no fast programmers." It's that *the answer depends
+on the question,* and a number that moves by a factor of 20 depending on how you
+ask is not a fact about the world — it's a fact about your definition.
+
+## The Grown-Up Version: SPACE and DORA
+
+If single metrics are hopeless, what do serious teams use?
+
+**SPACE** (Satisfaction-and-well-being, Performance, Activity, Communication,
+Efficiency-and-flow) is a framework for remembering that productivity has
+multiple dimensions and that they trade off [@Forsgren2021]. **DORA** — the
+DevOps Research and Assessment program — found four metrics that correlate with
+*organizational* delivery performance: deployment frequency, lead time for
+changes, change failure rate, and time to restore service [@Forsgren2018]. DORA
+metrics have better construct validity than raw activity counts because they tie
+to customer outcomes rather than to keystrokes.
+
+Both are still imperfect. A team can score beautifully on DORA while building
+the wrong product, and neither framework will tell you whether the AI tool —
+specifically — is helping. What they give you is the right *question* to ask:
+which dimension are we trying to move, and how would we know?
 
 ## Misconceptions
 
 Writing more code means being more productive.
-:   This is the intuition behind lines-of-code metrics,
-    and it is wrong in both directions:
-    a developer who removes a thousand lines of tangled code
-    and replaces them with a hundred clear ones has improved the codebase,
-    not harmed it.
+:   Wrong in both directions: deleting a thousand lines of tangled code and
+    replacing them with a hundred clear ones improves the codebase, not harms it.
+
+If a metric improves, the thing it measures must be improving.
+:   Goodhart's Law kicks in the moment people know they're being measured.
+    Better-looking numbers are often just behavior change around the measurement.
+
+Productivity is an objective property you can measure with the right data.
+:   Every operationalization embeds a choice about what matters — speed, quality,
+    satisfaction, business value. Those are values choices, not measurement
+    problems.
 
 DORA metrics measure individual developer productivity.
-:   They measure team and organizational delivery performance.
-    Using deployment frequency or change failure rate to evaluate an individual developer
-    conflates the level of analysis
-    and ignores the team and system factors that dominate individual variation.
-
-If a metric improves, the underlying thing it measures must be improving.
-:   Goodhart's Law applies as soon as people know they are being measured.
-    Metrics that look better because of behavior change around the measurement
-    are not evidence of real improvement.
-
-Productivity is an objective property that can be measured if you have the right data.
-:   Every operationalization of productivity embeds a choice about what matters,
-    such as speed, quality, satisfaction, or business value.
-    Those are values choices, not measurement problems.
+:   They measure team and organizational delivery. Using them to grade an
+    individual conflates levels of analysis and ignores the system factors that
+    dominate individual variation.
 
 Better measurement tools produce better management.
-:   Measurement is not management.
-    Even complete data requires qualitative insight to explain causation,
-    and organizations change constantly,
-    making any model stale.
-    Improving productivity requires behavior change,
-    which requires judgment and trust,
-    not more dashboards
+:   Measurement is not management. Even complete data needs judgment to act on,
+    and improving productivity requires behavior change, not more dashboards
     [@Sadowski2019].
 
 ## Check Understanding
 
 <details markdown="1">
-<summary markdown="1">What is construct validity, and why does it matter when evaluating productivity metrics?</summary>
+<summary markdown="1">What is construct validity, and why does it matter for a productivity metric?</summary>
 
-Construct validity is the degree to which a measurement captures
-the concept it is meant to represent.
-It matters because a metric with low construct validity will mislead you:
-you can improve the number without improving the underlying thing you care about.
-For productivity,
-a metric like "commits per day" has low construct validity
-because developers can increase it without becoming more productive
-(and may actually become less productive while doing so).
+Construct validity is how well a measurement captures the concept it's meant to
+represent. It matters because a low-validity metric will mislead you: you can
+improve the number without improving the thing you care about. "Commits per day"
+has low construct validity — developers can raise it while becoming *less*
+productive.
 
 </details>
 
 <details markdown="1">
-<summary markdown="1">A manager announces that their team's productivity increased 20% after adopting an AI coding assistant, measured by pull requests merged per week. Identify two specific threats to the validity of this conclusion.</summary>
+<summary markdown="1">Dev says "PRs merged per week went up 18%, so the tool is working." Give two specific threats to that conclusion.</summary>
 
-First,
-pull requests merged per week is a proxy metric with low construct validity:
-developers may respond to the measurement by splitting work into smaller PRs
-without increasing the actual value delivered.
-Second,
-this is a before-and-after comparison without a control group,
-so any number of things that changed at the same time
-(e.g., team composition, codebase maturity, or sprint planning practices)
-could explain the increase.
-Adoption of an AI tool is one possible cause among many.
+First, PRs-per-week is a low-validity proxy: developers respond to being
+measured by splitting work into smaller PRs without delivering more value.
+Second, it's a before-and-after comparison with no control group, so any
+concurrent change (team growth, a new CI, a backlog cleanup) could explain the
+rise.
 
 </details>
 
 <details markdown="1">
-<summary markdown="1">The following research design contains a flaw related to operationalization. Identify and fix it: "We measured the impact of code review on productivity by counting defects closed in the month after code review was introduced."</summary>
+<summary markdown="1">In the Prechelt data, why does the "fastest vs slowest" ratio (about 105x) overstate real differences between programmers?</summary>
 
-The flaw is that "defects closed" is an activity metric that reflects ticket-closing behavior,
-not actual defect elimination.
-After introducing code review,
-teams may close old tickets more aggressively or change their defect-reporting practices,
-inflating the count.
-A better operationalization would measure defect escape rate
-(i.e., defects found in production per release)
-before and after the intervention,
-using a consistent defect definition.
+Because it compares the single fastest person to the single slowest, and the
+slowest person is an outlier who took "every day for a week." Tightening the
+definition — restricting to one language, comparing the top 10% to the *typical*
+programmer rather than the worst, and folding in quality — collapses the ratio
+to roughly 5x–17x. The headline number is an artifact of the definition.
 
 </details>
 
 ## Exercises
 
-### Operationalize It (15 minutes)
+### The Prechelt Data Lab (25 minutes, solo or pairs)
 
-Choose one of the following abstract concepts and write a specific,
-measurable operationalization for it.
-Then write one paragraph explaining the ways your operationalization might fail to capture the concept:
+Load `data/prechelt.csv` into a spreadsheet or a short script. Compute, and
+write down each number:
 
--   Code quality
--   Team collaboration
--   Developer satisfaction
--   Onboarding effectiveness
+1.  The min and max `whours`, and their ratio.
+2.  The same ratio restricted to `lang == "Java"`.
+3.  The 5th and 75th percentiles of `whours` across all rows, and their ratio.
+4.  The same percentiles restricted to Java, and their ratio.
 
-### DORA in the Wild (20 minutes)
+Then answer in one sentence: *which of these is the "right" answer to "how much
+faster is a fast programmer than a normal one" — and why does it depend on your
+definition?*
 
-Look up the most recent State of DevOps Report (published annually by Google Cloud / DORA).
-Find one claim about high-performing teams and trace it back to the specific metric used.
-Then explain what this metric does not capture that you would want to know before acting on the claim?
+### Operationalize It (15 minutes, pairs)
 
-### Goodhart's Law in Practice (10 minutes)
+Pick one of — *code quality, developer satisfaction, onboarding effectiveness* —
+and write a specific, measurable definition for it. Then write one paragraph on
+how your definition could be gamed (i.e., improved without the underlying thing
+improving). Trade with a partner and try to game *their* definition.
 
-Think of a metric you have seen used to evaluate developer performance
-at your current or a previous organization,
-or from a case study you have read.
-Describe one specific way that metric was or could be gamed,
-i.e.,
-how someone could improve the number without improving the thing
-the number is supposed to measure.
+### Goodhart in the Wild (10 minutes, solo)
+
+Think of a metric you've seen used to judge developer performance. Describe one
+concrete way someone could improve the number without improving the work. If you
+can't think of one from your own job, use "number of tickets closed per sprint."

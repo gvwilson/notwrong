@@ -1,184 +1,188 @@
-# Introduction
+# The Question: Is Our AI Tool Worth It?
 
 ::: {.callout-note}
 
--   Define empirical software engineering and explain why it matters for practitioners.
--   Distinguish qualitative from quantitative research methods.
--   Identify why media coverage of AI studies is often unreliable.
--   Evaluate a claim by asking what evidence would refute it.
+-   Restate a vague worry about AI tools ("is this helping us?") as an
+    answerable research question.
+-   Distinguish the *kinds* of question that call for qualitative versus
+    quantitative methods.
+-   Recognize why most coverage of AI-productivity studies can't be trusted
+    on its own.
 
 :::
 
-In 2023,
-a team at GitHub published a paper claiming that
-developers using Copilot completed tasks 55% faster than those who did not [@Peng2023].
-That number spread through tech media like a cold through an open-plan office.
-Executives cited it in all-hands meetings,
-and blog posts called it a "landmark study".
+In early 2023 a team at GitHub published a paper claiming that developers using
+Copilot completed a programming task **55% faster** than those who did not
+[@Peng2023]. Within weeks that number was everywhere: all-hands decks, vendor
+sites, blog posts calling it a "landmark study." Executives repeated it to
+justify buying tools for thousands of developers. Almost nobody asked the
+question that actually mattered: *is 55% even a plausible answer to the question
+I have?*
 
-Only a few people asked whether 55% was even plausible.
-They were right to do so.
-The study used 95 participants on a single artificial task
-(implementing an HTTP server in JavaScript),
-lasted ninety minutes,
-and was funded by GitHub.
-None of that makes it wrong,
-but it does mean "55% faster" applies to a very narrow slice of software development.
-This workshop is about how to do those studies better.
+It turns out the study used 95 people doing one artificial task — building an
+HTTP server in JavaScript from scratch — for ninety minutes, and it was funded
+by GitHub, the company that sells Copilot. None of that makes the result
+*wrong*. It does mean "55% faster" describes a very narrow slice of what your
+team does all day, and it may not transfer to *your* question at all.
 
-## What Empirical Software Engineering Is
+This workshop is about learning to answer the question your manager is going to
+ask you in two weeks:
 
--   {{<g empirical_software_engineering "Empirical software engineering" >}}
-    (ESE) uses observation and experiment to study how software is built,
-    and what practices actually work
-    -   ESE is distinct from building better tools: its goal is knowledge, not artifacts
--   It draws on methods from psychology, sociology, economics, and statistics
--   The field has existed since at least the 1970s
-    -   Sackman et al's deeply flawed but widely quoted study on programmer productivity
-        from 1968 is an early example [@Sackman1968]
--   Even simple-sounding questions resist easy answers
-    -   Prechelt measured 73 professional developers solving the same programming task
-         and found completion times ranged from 0.6 to 63 hours [@Prechelt2000]
-    -   After controlling for programming language the ratio shrank to 17-fold
-    -   With a careful definition of "more productive" it shrank further to 5-to-11-fold
-    -   The answer depends a lot on exactly what question is asked
+> We're paying $X per developer per year for this AI tool. Is it worth it?
 
-## Why Media Coverage Is Unreliable
+That question is smaller than it looks, because every word in it is doing hidden
+work. Worth *what*? To *whom*? Compared to *what alternative*? Over *what time
+period*? Most of this workshop is about turning those hidden words into things
+you can actually measure.
 
--   Journalists rarely read past the abstract,
-    and abstracts rarely report limitations
--   Press releases are written by communications teams whose job is to generate coverage,
-    not accuracy
--   {{<g preprint "Preprints" >}} circulate as freely as peer-reviewed papers,
-    with no visible distinction to non-specialists
--   Conflict of interest is common
-    -   A large fraction of AI productivity studies are funded by
-         the companies selling the tools being studied
--   Replication is rare in software engineering research
-    -   Most results are reported once and never checked
+## The Running Case
 
-## Claims, Studies, and Evidence
+To keep the ideas concrete, every chapter will return to the same situation.
 
--   A {{<g claim "claim" >}} is an assertion: "AI tools make programmers more productive"
--   A {{<g study "study" >}} is a systematic attempt to test a claim
--   {{<g evidence "Evidence" >}} is what a study produces, and varies in quality
--   The chain from claim to policy is often much shorter than it should be
-    -   One study with a nice headline can change hiring practices, procurement decisions,
-         and university curricula
--   Good scientific practice distinguishes between "this study found X" and "X is true"
+Meridian is a mid-sized company that builds software for supply-chain logistics.
+Three months ago it rolled out an AI coding assistant to all of its ~200
+developers. The CTO now wants to know whether the subscription is paying for
+itself. Four people have been asked to figure it out:
 
-## Qualitative vs. Quantitative
+- **Maya**, a staff engineer — skeptical, wants evidence she can defend, and
+  deeply suspicious of vendor numbers.
+- **Dev**, the engineering manager who chose the tool — wants a clean dashboard
+  metric he can show the CTO, ideally one that goes up and to the right.
+- **Jonas**, a junior developer — the tool's biggest fan, who genuinely feels
+  faster with it, but has the least experience to judge whether that feeling is
+  right.
+- **Priya**, a solutions engineer from the vendor — friendly, knowledgeable, and
+  paid to keep Meridian as a customer.
 
--   {{<g quantitative_methods "Quantitative methods" >}} measure things:
-    task completion time, defect rate, commit frequency
-    -   Good for "how much" and "is there a difference"
-    -   Requires that you can define and measure what you care about
--   {{<g qualitative_methods "Qualitative methods" >}} describe things:
-     what developers think about a tool,
-    how teams decide what to build,
-    why a particular practice was adopted
-    -   Good for "why" and "what is happening here"
-    -   Requires that you can access and interpret people's experiences
--   Neither is superior
-    -   The question determines the method
--   Mixed-methods studies use both, which is more expensive but often more informative
-    -   E.g., [@Brandt2009] combined a lab experiment with query log analysis
-        to understand how programmers use web resources while coding
-    -   Lab study identified the range of purposes (learning, reminding, extending knowledge);
-        log data confirmed those patterns appeared in real-world searches
+Each chapter will hand this group a different way of attacking the question.
+Watch for the moments where Maya, Dev, Jonas, and Priya each *feel* sure of
+something — and where the methods in this book show one of them is wrong.
+
+## Two Ways to Answer the Question
+
+When you set out to evaluate a tool, you can do it one of two ways, and the
+question — not your preference — decides which is right.
+
+**Quantitative** methods *measure* things: how long a task takes, how many
+defects ship, how many pull requests merge in a week. They answer "how much" and
+"is there a difference." They only work when you can define and count the thing
+you care about — which, as the next chapter shows, is harder for "productivity"
+than most people admit.
+
+**Qualitative** methods *describe* things: what developers think of the tool,
+why a team adopted it and another didn't, where people get stuck. They answer
+"why" and "what's actually happening." They only work when you can get close
+enough to real people to see their actual experience, not their survey answers.
+
+Neither is more rigorous than the other. A good program mixes both: qualitative
+work often *finds* the right question, and quantitative work *answers* it. The
+trap is methodological tribalism — "we only do numbers" or "numbers can't
+capture developer experience" — which usually means the speaker would rather
+not find out something that complicates a decision they've already made.
+
+## Why You Can't Trust the Coverage
+
+Most of what you'll read about AI and developer productivity is filtered through
+several layers, each of which degrades accuracy:
+
+-   **Journalists read abstracts.** Abstracts rarely report limitations, and the
+    story "AI makes developers 55% faster" is a lot more shareable than "one
+    study on one toy task found a speed-up."
+-   **Press releases are marketing.** They exist to generate coverage, not
+    accuracy, and they're written by people whose job is to make the funder
+    look good.
+-   **Preprints look just like papers.** To a non-specialist, an unreviewed
+    arXiv preprint and a peer-reviewed journal article are indistinguishable —
+    and a large fraction of AI-productivity studies are one, not the other.
+-   **Conflict of interest is the norm.** A large share of these studies are
+    funded by the companies selling the tools, so the default assumption should
+    be that the deck is stacked, not that it isn't.
+
+The lesson isn't "don't believe anything." It's *"trace the claim to the
+evidence, and ask what the evidence can actually support."* That's the skill
+this workshop teaches.
 
 ## Misconceptions
 
 Peer review means a study is correct.
-:   Peer review is a filter for obvious errors and implausible claims,
-    not a certificate of validity.
-    Reviewers rarely re-run analyses,
-    check raw data,
-    or verify that reported results follow from the methods described.
+:   Peer review filters out obvious errors and implausible claims; it does not
+    certify validity. Reviewers rarely re-run analyses or check the raw data.
 
 A larger sample always makes a study better.
-:   Sample size matters, but it cannot fix a flawed design.
-    A study with ten thousand participants on an irrelevant task
-    tells you nothing about the question you care about.
+:   Sample size can't fix a flawed design. Ten thousand people doing an
+    irrelevant task tell you nothing about the question you actually care about.
 
 Qualitative methods are less rigorous than quantitative methods.
 :   They use different standards of rigor, not lower ones.
 
 One well-designed study settles a question.
-:   Single studies, however well designed,
-    report what happened in one sample under one set of conditions.
-    A finding becomes reliable through replication across different samples,
-    contexts, and research teams.
+:   A single study reports what happened in one sample under one set of
+    conditions. Findings become trustworthy through replication across
+    different samples, contexts, and teams.
 
 ## Check Understanding
 
 <details markdown="1">
 <summary markdown="1">What is the difference between a claim and evidence?</summary>
 
-A claim is an assertion, such as, "AI tools make programmers more productive."
-Evidence is what a systematic study produces when it tests that claim.
-Evidence varies in quality depending on the study design,
-sample size, context, and potential for bias.
-A single study produces evidence for or against a specific claim under specific conditions;
-it does not prove or disprove the claim in general.
+A claim is an assertion, such as "AI tools make programmers more productive."
+Evidence is what a systematic study produces when it tests that claim, and it
+varies in quality depending on design, sample, context, and bias. A single study
+produces evidence for or against a specific claim under specific conditions; it
+does not prove or disprove the claim in general.
 
 </details>
 
 <details markdown="1">
-<summary markdown="1">The GitHub Copilot study found a 55% speed increase. A colleague says this means that AI doubles productivity. Identify two specific problems with that interpretation.</summary>
+<summary markdown="1">The GitHub Copilot study found a 55% speed increase. Dev says this means AI doubles productivity. Name two specific problems with that interpretation.</summary>
 
-First, the study used an artificial task,
-which does not represent the full range of software development work.
-Second, "55% faster on one task" is not the same as "doubles overall productivity".
-Productivity involves much more than task completion time,
-and the effect on the full working day is unknown.
-A third problem, if needed:
-the study was funded by GitHub,
-which has a financial interest in Copilot appearing effective.
+First, the study used a single artificial task, which doesn't represent the
+range of work developers actually do. Second, "55% faster on one task" is not
+"doubles overall productivity" — productivity includes far more than task
+completion time, and the effect on the whole working day is unknown. Third, the
+study was funded by GitHub, which has a financial interest in Copilot looking
+effective.
 
 </details>
 
 <details markdown="1">
-<summary markdown="1">A researcher says, "We used qualitative methods because quantitative methods can't capture the nuances of developer experience." A second researcher says, "We used quantitative methods because qualitative findings can't be generalized." Which researcher is right?</summary>
+<summary markdown="1">Maya wants to use numbers only; Jonas says developer experience can't be captured numerically. Who's right?</summary>
 
-Neither.
-Qualitative methods are better suited to understanding what is happening and why,
-while quantitative methods are better suited to measuring how much and whether there is a difference.
-The choice of method should depend on the research question.
-Dismissing either approach without considering the question is a sign of methodological tribalism,
-not sound reasoning.
+Neither. The method follows the question. "How much time does this save?" is a
+quantitative question; "why do people hesitate to accept suggestions?" is a
+qualitative one. Dismissing either approach before knowing the question is
+methodological tribalism, not reasoning.
 
 </details>
 
 ## Exercises
 
-### Find the Funding (15 minutes)
+### Restate the Question (10 minutes, solo)
 
-Find a recent news article about an AI tool's impact on software development.
-Locate the original study it references (or the closest study you can find).
-Identify who funded the study,
-what the actual sample was,
-what task was studied,
-and what the abstract claims versus what the methods section actually supports.
-Write two or three sentences summarizing the gap between the headline and the evidence.
+Meridian's CTO asks, "Are we getting our money's worth from this AI tool?" Write
+down three *specific, answerable* research questions that unpack that vague
+one — each with the metric you'd need, the comparison you'd make, and the time
+period you'd look at. Example: "Has median time-to-first-review for pull
+requests changed since we deployed the tool, compared to the three months
+before?" Keep them to one sentence each.
 
-### Qualitative or Quantitative? (10 minutes)
+### Qualitative or Quantitative? (10 minutes, pairs)
 
-For each of the following research questions,
-decide whether you would primarily use qualitative or quantitative methods,
-and give one sentence explaining why:
+For each question below, say whether you'd primarily use qualitative or
+quantitative methods, and in one sentence why:
 
--   Do developers who use pair programming make fewer defects?
--   Why do some teams adopt test-driven development while others reject it?
--   How do developers decide when to ask an AI assistant for help
-     versus working through a problem themselves?
--   Does code review time decrease when teams adopt a particular tool?
+-   Do developers who use the assistant produce fewer defects?
+-   Why do some teams on Meridian's codebase use the tool daily while others
+    ignore it?
+-   How do developers decide when to trust an AI suggestion versus working it
+    out themselves?
+-   Does code review take less time when reviewers use the assistant?
 
-### Replication Reality Check (20 minutes)
+### Spot the Gap (15 minutes, pairs)
 
-Pick one claim you have heard or read about AI and software development
-(e.g., "AI tools reduce onboarding time" or
-"AI-generated code has more security vulnerabilities").
-Search for at least two studies that address this claim.
-Do they agree?
-If not, what differences in method might explain the disagreement?
+Pick one AI-productivity claim you've actually heard (for example, "AI cuts
+onboarding time in half" or "AI-generated code has more security bugs"). Find
+the study behind it — or the closest thing to one — and list, in one line each:
+who funded it, what the sample actually was, what task was studied, and what the
+headline claims versus what the methods actually show. Compare your list with
+your partner's; the point is to feel how much a headline hides.

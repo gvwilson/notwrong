@@ -1,288 +1,255 @@
-# Quantitative Methods: Controlled Experiments
+# Designing a Study You Can Trust
 
 ::: {.callout-note}
 
--   Design a controlled experiment with proper randomization and control groups.
--   Interpret p-values and effect sizes without overstating what they show.
--   Estimate required sample size given a target statistical power.
--   Identify internal and external validity threats in an experimental design.
+-   Choose the right method — qualitative, controlled experiment, or
+    observational — for a research question.
+-   Read p-values and effect sizes without overstating them.
+-   Estimate the sample size a study needs.
+-   Recognize the four kinds of validity threat.
 
 :::
 
-In 2005, Hakan Erdogmus and his colleagues published
-a study of test-driven development [@Erdogmus2005].
-They recruited university students,
-randomly assigned them to TDD or test-last conditions,
-and measured code quality and productivity.
-They found that TDD produced more tests and slightly better coverage,
-but the effect on external code quality was not significant.
-The study is remembered not for a dramatic finding but for being careful—and
-for the researchers' candid discussion of what their careful design still could not rule out.
+Jonas has been pushed past his comfort zone. "OK," he says to Maya, "we can't
+just watch five people and we can't just read the vendor's studies. So how do we
+*actually* find out whether this tool helps?" This chapter is the answer: the
+three families of method you can reach for, and the small amount of statistics
+you need to use them without fooling yourself.
 
-Controlled experiments are the gold standard for causal claims.
-They are also expensive, difficult, and frequently misunderstood.
+The right method follows the question, not your preference. "Is there a
+difference?" calls for an experiment. "Why does this happen?" calls for
+interviews. "What patterns exist in our codebase?" calls for an observational
+study. No single method answers all questions, which is why serious programs mix
+them.
 
-## Experimental Design
+## Qualitative Methods: Interviews and Surveys
 
--   A {{<g controlled_experiment "controlled experiment" >}} manipulates
-    one or more {{<g independent_variables "independent variables" >}}
-    and measures their effect on one or more {{<g dependent_variables "dependent variables" >}}
-    while holding other factors constant
--   The {{<g treatment_group "treatment group" >}} receives the intervention being tested;
-    the {{<g control_group "control group" >}} does not
--   {{<g randomization "Randomization" >}} assigns participants to conditions randomly,
-    which distributes unknown confounding variables evenly across groups
-    -   The mechanism that makes causal claims defensible
--   {{<g blinding "Blinding" >}}
-    -   In a {{<g single_blind_study "single-blind study" >}},
-        participants do not know which condition they are in
-    -   In a {{<g double_blind_study "double-blind study" >}},
-        neither participants nor experimenters know until analysis
-    -   Full blinding is rarely possible in software engineering studies:
-        you cannot hide from a developer that they are using TDD
+Use qualitative methods when you don't yet know what to measure, when the
+phenomenon is about meaning and context, or when you need to understand *why*
+rather than *that*.
 
-## The Null Hypothesis
+**Interviews** come in three kinds. {{<g structured_interview "Structured" >}}
+uses a fixed script; {{<g unstructured_interview "unstructured" >}} follows the
+participant's lead; {{<g semi_structured_interview "semi-structured" >}} — the
+workhorse — has a guide but allows follow-up. Ask open questions ("tell me about
+a time the suggestion was wrong in a way that surprised you"), probe what they
+say ("you mentioned you don't trust it for security — can you say more?"), and
+avoid {{<g leading_question "leading questions" >}} ("don't you find it faster?")
+and hypotheticals ("would you use it if…") — people are poor predictors of their
+own behavior.
 
--   The {{<g null_hypothesis "null hypothesis" >}} (H₀) is
-    the assumption that there is no effect,
-    i.e., that the treatment makes no difference
--   The {{<g alternative_hypothesis "alternative hypothesis" >}} (H₁) is
-    that there is an effect
--   You never prove H₁:
-    you either reject H₀ (when your data is inconsistent with "no effect")
-    or fail to reject it
--   Failing to reject H₀ does not mean the null is true
-    -   It may mean your study was not powerful enough to detect a real effect
+**Surveys** trade depth for breadth. {{<g likert_scale "Likert scales" >}}
+("strongly agree" to "strongly disagree") are common but have known problems;
+use at least five points. Watch the {{<g sampling_strategy "sampling strategy" >}}:
+a {{<g convenience_sampling "convenience sample" >}} (whoever responds) is
+usually biased toward engaged users, and a low response rate can produce
+{{<g non_response_bias "non-response bias" >}} larger than sampling error. Pilot
+with three to five people before distributing.
 
-## p-Values
+**Thematic analysis** is how you turn interview data into findings. {{<g
+open_coding "Open coding" >}} tags segments with labels close to what people
+said — use {{<g gerund_coding "gerund coding" >}} (actions, not nouns): "switching
+off suggestions after a bad experience," not "negative attitude." {{<g
+axial_coding "Axial coding" >}} groups codes into themes that make a *claim*
+("developers trust AI for syntax but not for logic"), and you keep collecting
+until you reach {{<g saturation "saturation" >}} — new data stops producing new
+codes.
 
--   A {{<g p_value "p-value" >}} is the probability of observing data
-    at least as extreme as what you observed
-    if the null hypothesis were true
-    -   It is not the probability that the null hypothesis is true
-    -   It is not the probability that your result is a false positive
-    -   It is not the probability that you will replicate
--   p < 0.05 means that if there were no effect,
-    you would see a result this extreme or more extreme less than 5% of the time by chance
--   The 0.05 threshold is a convention from the 1920s, not a law of nature.
+## Controlled Experiments
 
-## Effect Size
+A {{<g controlled_experiment "controlled experiment" >}} manipulates a variable
+and measures the effect while holding everything else constant. The
+{{<g treatment_group "treatment group" >}} gets the intervention; the
+{{<g control_group "control group" >}} doesn't. {{<g randomization
+"Randomization" >}} — assigning people to conditions by chance — is what makes
+causal claims defensible, because it spreads unknown confounders evenly across
+the groups.
 
--   {{<g statistical_significance "Statistical significance" >}}
-    tells you whether an effect is likely to be real
--   {{<g effect_size "Effect size" >}} tells you how large it is
--   {{<g cohens_d "Cohen's d" >}} measures the difference between two means
-    in standard deviation units:
-    -   d = 0.2: small effect
-    -   d = 0.5: medium effect
-    -   d = 0.8: large effect
-    -   These benchmarks are rough guides, not thresholds
--   A study with thousands of participants can find statistically significant effects
-    that are too small to matter in practice
--   Always report effect size alongside p-values
-    -   One without the other is incomplete
+Two ideas carry the statistics. The {{<g null_hypothesis "null hypothesis" >}}
+(H₀) is "no effect." A {{<g p_value "p-value" >}} is the probability of seeing
+data at least this extreme *if H₀ were true*. Crucially, it is **not** the
+probability the result is wrong, and p < 0.05 is a 1920s convention, not a law of
+nature. You never prove an effect exists; you either reject H₀ or fail to reject
+it — and failing to reject doesn't mean "no effect," it may just mean your study
+was underpowered.
 
-## Statistical Power and Sample Size
+{{<g statistical_significance "Significance" >}} says whether an effect is likely
+real; {{<g effect_size "effect size" >}} says how big it is. {{<g cohens_d
+"Cohen's d" >}} measures the difference between two means in standard-deviation
+units — 0.2 small, 0.5 medium, 0.8 large. A huge sample can find a "significant"
+effect that's too small to matter, which is why effect size should always travel
+with the p-value.
 
--   {{<g statistical_power "Statistical power" >}} is the probability that
-    your study will detect an effect if one actually exists
--   Power depends on sample size, effect size, and the significance threshold (alpha)
--   A typical target is 80% power:
-    you accept a 20% chance of a false negative
--   Most software engineering experiments are dramatically underpowered [@Kampenes2007]
-    -   Studies with 20-30 participants can only detect very large effects (d > 0.8)
--   The consequences of underpowering
-    -   You miss real effects
-    -   The effects you do detect are inflated
-        (the {{<g winners_curse "winner's curse" >}})
--   Calculate required sample size before running the study, not after
+{{<g statistical_power "Statistical power" >}} is the probability of detecting an
+effect that's actually there. Most software-engineering experiments are
+dramatically underpowered [@Kampenes2007] — a typical 20–50 participants can
+only reliably detect a large effect (d > 0.8). The required sample size for a
+two-sample t-test is roughly
 
-## Blocking Variables
+$$ n = 2 (z_\alpha + z_\beta)^2 \sigma^2 / \delta^2 $$
 
--   {{<g blocking_variable "Blocking" >}} controls a known {{<g nuisance_variable "nuisance variable" >}}
-    by grouping experimental units before randomization,
-    guaranteeing that its effect is distributed evenly across conditions
--   Randomization distributes unknown {{<g confounding_variable "confounding_variables" >}}
-    (or "confounders")
-    -   Blocking handles known ones explicitly
--   Example: developer experience
-    -   A random assignment of 40 developers might give all the seniors to one group by chance
-    -   Blocking first divides developers into experience strata,
-        then randomizes within each stratum
--   Benefit:
-    removing the nuisance factor's variance from the error term
-    increases statistical power without adding participants
--   In a {{<g within_subjects_design "within-subjects design" >}},
-    each participant applies both treatments to different tasks,
-    acting as their own control
-    -   Advantage: eliminates between-person variation entirely
-    -   Disadvantage: vulnerable to {{<g order_effects "order effects" >}}
-        -   Doing a task second is different from doing it first,
-            regardless of technique
--   Whether and how the blocks were analyzed matters for interpreting the results
--   Many SE experiments on inspection and testing techniques are implicitly within-subjects
-    -   Each person uses multiple methods on multiple programs
+where δ is the smallest difference you care about, σ is the population standard
+deviation, z_α = 1.96 (for α = 0.05), and z_β = 0.84 (for 80% power). Calculate
+this *before* running the study, not after.
 
-## Threats to Validity
+{{<g blocking_variable "Blocking" >}} handles a known nuisance variable (like
+experience) by grouping people into strata before randomizing, so the senior
+developers can't all land in one group by chance.
 
--   Validity threats fall into four categories [@Campbell1963; @Wohlin2000]
--   Construct validity: does your measurement actually capture the concept you care about?
-    -   Discussed [earlier](../productivity/index.qmd)
--   {{<g conclusion_validity "Conclusion validity" >}}:
-    did you use the right statistical procedure,
-    and was the study powerful enough to detect an effect if one exists?
-    -   Threats: underpowered design,
-        violated test assumptions (e.g., applying a t-test to heavily skewed data),
-        multiple comparisons without correction
--   Internal validity:
-    can you conclude that the treatment caused the outcome?
-    -   Threats: confounding variables, selection bias, {{<g maturation_effect "maturation effects" >}}
-    -   SE-specific behavioral threats, which arise because people are the experimental subjects:
-        -   Novelty effect (discussed [earlier](../wrong/index.qmd))
-        -   {{<g learning_effect "Learning effect" >}}:
-            participants improve on a later task through practice,
-            making the later condition look better regardless of which technique it used
-        -   {{<g boredom_effect "Boredom effect" >}}:
-            performance declines as the experiment drags on; conditions applied later look worse
-        -   {{<g unconscious_formalization "Unconscious formalization" >}}:
-            participants apply methods more carefully than usual
-            because they know they are being observed
--   {{<g external_validity "External validity" >}}: do your findings generalize
-    beyond your sample and setting?
-    -   Threats: students are not professional developers; a 90-minute task
-        is not a six-month project; one programming language is not all
-        programming languages
--   Many SE experiments have strong internal validity but weak external validity,
-    which limits what you can conclude
--   Pair programming research illustrates the problem
-    -   Most controlled experiments assigned students to pair or solo conditions
-        on a small isolated task with a randomly assigned partner…
-    -   …none of which reflects how pair programming is used in industry
-    -   A grounded theory study of 60+ recorded sessions from a dozen companies
-        found that what matters is the specific knowledge gap between partners…
-    -   …which is the variable the experiments controlled away [@Zieris2014]
+## Observational and Natural Experiments
 
-## Ethical Considerations
+An {{<g observational_study "observational study" >}} measures the world as it
+is, without assigning anyone to anything. {{<g msr "Mining software
+repositories" >}} (MSR) — extracting data from git history, issue trackers, and
+CI logs — is the most common form, and it's full of traps: GitHub projects are
+not a representative sample, {{<g survivorship_bias "survivorship bias" >}} hides
+the projects that died, and confounders lurk everywhere.
 
--   All of the consideration from [the previous lesson](../qualitative/index.qmd) apply
--   Random assignment to conditions:
-    withholding a potentially beneficial tool from a control group requires justification
-    -   "We want to measure the effect" is not sufficient
--   Blinding:
-    if participants are not told which condition they are in,
-    debrief them afterward
+The trade-off is fundamental. Controlled experiments maximize internal validity
+but are artificial; observational studies maximize realism but can't rule out
+confounders. {{<g quasi_experimental_design "Quasi-experiments" >}} sit between:
+{{<g difference_in_differences "difference-in-differences" >}} compares the
+*change* in a treated group against the change in a control group (assuming the
+two would have changed similarly otherwise); {{<g interrupted_time_series
+"interrupted time series" >}} looks for a trend change at the moment an
+intervention landed. A {{<g natural_experiment "natural experiment" >}} exploits
+real-world variation that approximates random assignment — say, a tool rolled out
+to some offices first because of licensing, not because they asked for it.
+
+Finally, correlation is not causation. Three rivals explain any correlation
+between A and B: A causes B, B causes A, or a third thing C causes both.
+Randomization is what lets you rule out the last two.
+
+## The Statistics You Actually Need
+
+You don't need a degree to decode a methods section. The essentials:
+
+-   **Descriptive** — {{<g mean "mean" >}} is sensitive to outliers; the
+    {{<g median "median" >}} isn't. Software data (task times, file sizes,
+    defect counts) is usually right-skewed, so medians and
+    {{<g interquartile_range "interquartile ranges" >}} are usually the honest
+    summary.
+-   **Type I vs Type II error** — a {{<g type_i_error "Type I error" >}} is a
+    false positive (rejecting H₀ when it's true); a {{<g type_ii_error "Type II
+    error" >}} is a false negative (missing a real effect). Power = 1 − β.
+-   **Multiple comparisons** — run 20 tests at α = 0.05 and you expect one false
+    positive by chance; correct with {{<g bonferroni_correction "Bonferroni" >}}
+    or {{<g false_discovery_rate "false discovery rate" >}} control.
+-   **Confidence intervals** — a {{<g confidence_interval "95% CI" >}} is usually
+    more informative than a p-value because it shows direction *and* magnitude.
+
+**Worked power example.** You want to detect a 3-defect-per-release reduction,
+and the standard deviation across teams is 4 defects. Plug δ = 3, σ = 4 into the
+formula: n = 2(1.96 + 0.84)² × 16 / 9 ≈ 28 teams per condition — 56 total. If
+you can only recruit 10 teams per condition, you'll likely miss a real effect.
+Detecting a smaller difference (δ = 1) would need about 251 teams per condition.
+
+## The Four Validity Threats
+
+Every threat to a study's credibility falls into one of four buckets
+[@Campbell1963; @Wohlin2000]:
+
+1.  **Conclusion validity** — was the analysis right and powerful enough?
+    (underpowering, violated test assumptions, uncorrected multiple comparisons.)
+2.  **Internal validity** — can you conclude the treatment caused the outcome?
+    (confounders, selection bias, {{<g novelty_effect "novelty" >}}, {{<g
+    learning_effect "learning" >}}, and {{<g boredom_effect "boredom" >}}
+    effects.)
+3.  **Construct validity** — does the measurement capture the concept?
+4.  **External validity** — does it generalize beyond this sample and task?
+
+Many software-engineering experiments have strong internal validity but weak
+external validity — a randomized trial on students doing a 90-minute toy task
+may be airtight *and* tell you almost nothing about your team.
 
 ## Misconceptions
 
 p < 0.05 means the result is probably true.
-:   It means that if there were no effect,
-    data this extreme would arise by chance less than 5% of the time.
-    Whether the result reflects a real phenomenon also depends on
-    the prior plausibility of the hypothesis
-    and on whether the analysis was pre-specified,
-    neither of which the p-value captures.
+:   It means the data would be unusual if there were no effect. Whether the
+    result reflects reality also depends on prior plausibility and whether the
+    analysis was pre-specified.
 
-A study using students is worthless for understanding professional developers.
-:   Student studies are not worthless, but they do have limited external validity.
-    The appropriate response is to be specific about what the study can and cannot generalize to,
-    not to dismiss it.
-
-Statistical significance means practical significance.
-:   An effect can be statistically significant (i.e., reliably detectable)
-    while being too small to matter in practice.
-    A 2% improvement in task completion time that requires retraining the whole organization
-    is not a useful finding just because p < 0.001.
+A large sample turns correlation into causation.
+:   Sample size increases precision, not causal warrant. A million-point
+    observational study is still observational.
 
 Not finding a significant effect means the treatment doesn't work.
-:   Failing to reject the null hypothesis means the data are consistent with no effect.
-    It does *not* mean no effect exists.
-    An underpowered study will frequently miss real effects,
-    and most software engineering experiments are underpowered.
+:   It means the data is consistent with no effect. An underpowered study misses
+    real effects all the time.
+
+Qualitative research is just asking people what they think.
+:   Rigorous qualitative work involves systematic collection, structured coding,
+    audit trails, and intercoder reliability.
+
+GitHub data represents software development.
+:   Open-source GitHub projects are a small, self-selected slice of the software
+    actually built. Commercial and embedded code is largely invisible to MSR.
 
 ## Check Understanding
 
 <details markdown="1">
-<summary markdown="1">A study reports p = 0.03. A colleague says "there's only a 3% chance this result is wrong." What is actually correct?/summary>
+<summary markdown="1">A study reports p = 0.03. A colleague says "there's a 3% chance this result is wrong." What's actually correct?</summary>
 
-The correct interpretation is: if the null hypothesis were true (i.e., if there was no effect),
-there would be a 3% chance of observing a result at least as extreme as this one by chance.
-It does not mean there is a 3% chance the result is a false positive:
-that probability depends on the prior probability that an effect exists,
-which the p-value does not capture.
-The colleague's statement is a common and consequential misinterpretation.
+If the null were true, you'd see a result this extreme 3% of the time. The p-value
+is not the probability the result is a false positive — that also depends on the
+prior probability an effect exists, which the p-value doesn't capture.
 
 </details>
 
 <details markdown="1">
-<summary markdown="1">Why can't you conclude from a non-significant result (p > 0.05) that there is no effect?</summary>
+<summary markdown="1">500 developers using AI commit 8% more often (p = 0.001, Cohen's d = 0.15). What should you conclude?</summary>
 
-A non-significant result means the data is consistent with the null hypothesis,
-not that the null hypothesis is true.
-The study may have been underpowered,
-i.e.,
-have too few participants to detect an effect that exists.
-Absence of evidence is not evidence of absence,
-especially in software engineering research where sample sizes are typically small.
+Statistically significant but practically tiny: d = 0.15 is below the "small"
+benchmark, and with 500 participants the study can detect effects too small to
+matter. Whether an 8% commit bump means anything depends on construct validity —
+commits are a poor productivity proxy.
 
 </details>
 
 <details markdown="1">
-<summary markdown="1">A study of 500 developers finds that those using AI tools commit code 8% more frequently (p = 0.001, Cohen's d = 0.15). What should you conclude?</summary>
+<summary markdown="1">Why can't you conclude "no effect" from a non-significant result?</summary>
 
-The effect is statistically significant (unlikely to be due to chance with this sample size)
-but very small (d = 0.15 is below the conventional threshold for a "small" effect).
-With 500 participants,
-the study has enough power to detect tiny effects.
-The practical significance is unclear:
-an 8% increase in commit frequency may or may not reflect any meaningful change in productivity,
-especially given the construct validity problems with using commits as a productivity proxy.
+A non-significant result means the data is consistent with H₀, not that H₀ is
+true. The study may simply have been underpowered. Absence of evidence is not
+evidence of absence.
 
 </details>
 
 <details markdown="1">
-<summary markdown="1">Identify the threat to internal validity in the following study design: "We introduced AI coding tools to our team in January and measured productivity (PRs merged) in February. Productivity increased 15%."</summary>
+<summary markdown="1">What's the difference between internal and external validity, and why do they trade off?</summary>
 
-Many things may have changed between January and February,
-so you cannot attribute the change to the AI tools without a control group.
-This is a pre-post design (before and after the intervention) with no control,
-which cannot rule out alternative explanations.
-A stronger design would compare against a control group,
-i.e., another team that did not receive the tool.
+Internal validity is whether you can conclude the treatment caused the outcome;
+external validity is whether the finding generalizes. Randomized experiments
+maximize internal validity at the cost of artificiality, while observational
+studies are realistic but can't rule out confounders. You rarely get both at
+once.
 
 </details>
 
 ## Exercises
 
-### Power Calculation (15 minutes)
+### Power Calculation (15 minutes, solo)
 
-*See [the appendix on statistics](../stats/index.qmd) for a worked example before trying this exercise.*
+Use n = 2(z_α + z_β)²σ²/δ² with α = 0.05 (z = 1.96) and 80% power (z = 0.84).
+You want to detect a 3-defect-per-release reduction, σ = 5 defects. Compute the
+minimum teams per condition. Then say, in one sentence, whether your
+organization could actually run this study — and what that implies.
 
-You want to study whether a new code review tool reduces defect escape rate.
-From prior data,
-you know the standard deviation of defect escape rate across teams is about 5 defects per release.
-You want to detect a difference of 3 defects per release
-(about a 60% reduction from a typical baseline of 5).
-Using the formula n = 2(z_α + z_β)²σ²/δ² with α = 0.05 (z = 1.96) and 80% power (z = 0.84),
-calculate the minimum number of teams per condition.
-What does this tell you about the feasibility of running this study?
+### Method Match (15 minutes, pairs)
 
-### Design Critique (20 minutes)
+For each question, name the method you'd use and one sentence on why:
 
-Read the methods section of [@Erdogmus2005].
-List three design choices the researchers made;
-for each,
-explain why they made that choice
-and describe one threat to validity it does not address.
+-   Why do some teams at Meridian ignore the AI tool while others use it daily?
+-   Did the tool change time-to-merge across the whole org?
+-   Does the tool's generated code carry more security bugs than human code?
+-   What actually slows developers down most in their daily work?
 
-### Build Your Own (20 minutes)
+### Build Your Own (20 minutes, pairs)
 
-Design a controlled experiment to test one of the following claims.
-Specify the treatment and control conditions,
-how you will assign participants,
-what you will measure (and how),
-a realistic sample size,
+Design an experiment for one claim below. Specify treatment and control, how
+you'd assign participants, what you'd measure and how, a realistic sample size,
 and two threats to external validity.
 
--   Pair programming reduces defect rates
--   Code review with AI assistance is faster than code review without it
--   Developers who write tests first produce better-designed code
+-   Pair programming reduces defect rates.
+-   AI-assisted code review is faster than code review without it.
+-   Developers who write tests first produce better-designed code.
