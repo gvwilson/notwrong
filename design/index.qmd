@@ -152,9 +152,8 @@ Every threat to a study's credibility falls into one of four buckets
 1.  **Conclusion validity** — was the analysis right and powerful enough?
     (underpowering, violated test assumptions, uncorrected multiple comparisons.)
 2.  **Internal validity** — can you conclude the treatment caused the outcome?
-    (confounders, selection bias, {{<g novelty_effect "novelty" >}}, {{<g
-    learning_effect "learning" >}}, and {{<g boredom_effect "boredom" >}}
-    effects.)
+    (confounders, selection bias, novelty, {{<g learning_effect "learning" >}},
+    and {{<g boredom_effect "boredom" >}} effects.)
 3.  **Construct validity** — does the measurement capture the concept?
 4.  **External validity** — does it generalize beyond this sample and task?
 
