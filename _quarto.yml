@@ -1,6 +1,5 @@
-project:
-  type: book
-  output-dir: docs
+metadata-files:
+  - mccole/mccole.yml
 
 book:
   title: "How to Not Be Wrong About AI"
@@ -21,21 +20,3 @@ book:
     - contributing/index.qmd
     - bibliography/index.qmd
     - glossary/index.qmd
-
-bibliography: bibliography/references.bib
-csl: mccole/book.csl
-
-filters:
-  - mccole/links.lua
-
-shortcodes:
-  - mccole/glossary.lua
-  - mccole/inc-noh1.lua
-
-format:
-  html:
-    css: mccole/book.css
-    link-citations: true
-    theme: cosmo
-  pdf:
-    documentclass: mccole/krantz
