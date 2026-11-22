@@ -775,7 +775,7 @@
     "href": "glossary/index.html#a",
     "title": "Appendix E — Glossary",
     "section": "",
-    "text": "A/B testing\n\nA controlled experiment in which participants or users are randomly assigned to one of two variants to measure which performs better on a defined metric.\n\naffinity mapping\n\nAn analysis technique in which individual observations are written on separate notes and then grouped into clusters that share an underlying cause or theme, with each cluster named as a claim rather than a label.\n\nagile manifesto\n\nThe 2001 statement of four values and twelve principles for agile software development, emphasizing individuals and interactions, working software, customer collaboration, and responding to change.\n\nalternative hypothesis\n\nThe hypothesis that an effect exists; denoted H₁. Accepted when the null hypothesis is rejected.\n\naxial coding\n\nA stage in grounded theory analysis in which open codes are grouped into higher-level themes and the relationships between categories are examined.",
+    "text": "A/B testing\n\nA controlled experiment in which participants or users are randomly assigned to one of two variants to measure which performs better on a defined metric.\n\naffinity mapping\n\nAn analysis technique in which individual observations are written on separate notes and then grouped into clusters that share an underlying cause or theme, with each cluster named as a claim rather than a label.\n\naxial coding\n\nA stage in grounded theory analysis in which open codes are grouped into higher-level themes and the relationships between categories are examined.",
     "crumbs": [
       "Appendices",
       "<span class='chapter-number'>E</span>  <span class='chapter-title'>Glossary</span>"
@@ -786,7 +786,7 @@
     "href": "glossary/index.html#b",
     "title": "Appendix E — Glossary",
     "section": "E.2 B",
-    "text": "E.2 B\n\nblinding\n\nAn experimental design feature in which participants (single-blind), experimenters, or both (double-blind) do not know which condition a participant is in, reducing expectation bias.\n\nblocking variable\n\nA variable known to affect the outcome but not of experimental interest; controlled by grouping experimental units into blocks of similar values before randomization, guaranteeing that the nuisance factor’s effect is distributed evenly across treatment conditions.\n\nBonferroni correction\n\nA method for adjusting significance thresholds when performing multiple statistical tests, dividing the desired alpha level by the number of comparisons to control the family-wise error rate.\n\nboredom effect\n\nA threat to internal validity in which participants’ performance or attention degrades over time due to fatigue or disengagement, rather than any effect of the treatment.\n\nbox plot\n\nA plot showing the median, quartiles, and outliers of a distribution.",
+    "text": "E.2 B\n\nblocking variable\n\nA variable known to affect the outcome but not of experimental interest; controlled by grouping experimental units into blocks of similar values before randomization, guaranteeing that the nuisance factor’s effect is distributed evenly across treatment conditions.\n\nBonferroni correction\n\nA method for adjusting significance thresholds when performing multiple statistical tests, dividing the desired alpha level by the number of comparisons to control the family-wise error rate.\n\nboredom effect\n\nA threat to internal validity in which participants’ performance or attention degrades over time due to fatigue or disengagement, rather than any effect of the treatment.",
     "crumbs": [
       "Appendices",
       "<span class='chapter-number'>E</span>  <span class='chapter-title'>Glossary</span>"
@@ -797,7 +797,7 @@
     "href": "glossary/index.html#c",
     "title": "Appendix E — Glossary",
     "section": "E.3 C",
-    "text": "E.3 C\n\ncentral limit theorem\n\nThe theorem that the average of many independent random variables tends toward a normal distribution regardless of the original distribution.\n\nchange failure rate\n\nThe proportion of deployments that result in degraded service or require remediation; one of the four DORA metrics used to measure software delivery performance.\n\nclaim\n\nAn assertion about the world that a study attempts to support or refute through evidence.\n\nCohen’s d\n\nA measure of effect size for comparing two means, expressed in units of pooled standard deviation. Conventionally, d = 0.2 is small, d = 0.5 is medium, and d = 0.8 is large.\n\nconclusion validity\n\nThe degree to which a study’s statistical analysis is appropriate and adequately powered to detect the effect it reports; threatened by underpowered designs, violated test assumptions, and uncorrected multiple comparisons.\n\nconfidence interval\n\nA range of values, computed from data, that is likely to contain the true population value.\n\nconfirmation bias\n\nThe tendency to search for, interpret, and recall information in ways that confirm pre-existing beliefs, distorting the analysis of data.\n\nconfirmatory analysis\n\nAnalysis designed to test a pre-specified hypothesis using data collected expressly for that purpose, as opposed to exploratory analysis which searches for patterns without a prior hypothesis.\n\nconfounding variable\n\nA variable that is associated with both the independent variable and the outcome, potentially explaining an observed relationship without there being a direct causal link.\n\nconstruct validity\n\nThe degree to which a measurement actually captures the concept it is intended to represent.\n\ncontrol group\n\nThe group in an experiment that does not receive the treatment; used as a baseline for comparison.\n\ncontrolled experiment\n\nA study in which one or more independent variables are manipulated while other factors are held constant, allowing causal claims to be made.\n\nconvenience sampling\n\nSelecting participants based on ease of access rather than random selection, making the sample easier to recruit but harder to generalize from.",
+    "text": "E.3 C\n\nCohen’s d\n\nA measure of effect size for comparing two means, expressed in units of pooled standard deviation. Conventionally, d = 0.2 is small, d = 0.5 is medium, and d = 0.8 is large.\n\nconfidence interval\n\nA range of values, computed from data, that is likely to contain the true population value.\n\nconstruct validity\n\nThe degree to which a measurement actually captures the concept it is intended to represent.\n\ncontrol group\n\nThe group in an experiment that does not receive the treatment; used as a baseline for comparison.\n\ncontrolled experiment\n\nA study in which one or more independent variables are manipulated while other factors are held constant, allowing causal claims to be made.\n\nconvenience sampling\n\nSelecting participants based on ease of access rather than random selection, making the sample easier to recruit but harder to generalize from.",
     "crumbs": [
       "Appendices",
       "<span class='chapter-number'>E</span>  <span class='chapter-title'>Glossary</span>"
@@ -808,7 +808,7 @@
     "href": "glossary/index.html#d",
     "title": "Appendix E — Glossary",
     "section": "E.4 D",
-    "text": "E.4 D\n\ndependent variable\n\nThe outcome measured in an experiment; the variable expected to change in response to manipulation of the independent variable.\n\ndeployment frequency\n\nHow often an organization successfully deploys code to production; one of the four DORA metrics used to measure software delivery performance.\n\ndifference-in-differences\n\nA quasi-experimental design that compares the change in outcome for a treated group to the change for a control group over the same period.\n\ndouble blind study\n\nAn experiment in which neither the participants nor the experimenters interacting with them know which condition each participant is in, reducing both participant expectation effects and experimenter bias.",
+    "text": "E.4 D\n\ndifference-in-differences\n\nA quasi-experimental design that compares the change in outcome for a treated group to the change for a control group over the same period.",
     "crumbs": [
       "Appendices",
       "<span class='chapter-number'>E</span>  <span class='chapter-title'>Glossary</span>"
@@ -819,7 +819,7 @@
     "href": "glossary/index.html#e",
     "title": "Appendix E — Glossary",
     "section": "E.5 E",
-    "text": "E.5 E\n\neffect size\n\nA measure of the magnitude of an effect, independent of sample size. Examples include Cohen’s d, odds ratio, and Pearson’s r.\n\nempirical software engineering\n\nThe subfield of software engineering that uses systematic data collection and analysis to study how software is built, maintained, and used.\n\nevidence\n\nData or observations gathered through study to support or refute a claim, which varies in quality and reliability depending on how it was collected.\n\nexperience sampling method\n\nA research technique in which participants are prompted at random or scheduled intervals during their normal activities to report their current task, state, or perceptions, capturing in-the-moment data rather than retrospective recall.\n\nexploratory analysis\n\nAnalysis that searches for patterns, relationships, or hypotheses in data without pre-specified predictions; used to generate rather than test hypotheses.\n\nexternal validity\n\nThe degree to which study findings generalize beyond the specific sample, setting, and task studied.",
+    "text": "E.5 E\n\neffect size\n\nA measure of the magnitude of an effect, independent of sample size. Examples include Cohen’s d, odds ratio, and Pearson’s r.",
     "crumbs": [
       "Appendices",
       "<span class='chapter-number'>E</span>  <span class='chapter-title'>Glossary</span>"
@@ -830,7 +830,7 @@
     "href": "glossary/index.html#f",
     "title": "Appendix E — Glossary",
     "section": "E.6 F",
-    "text": "E.6 F\n\nfalse discovery rate\n\nThe expected proportion of false positives among rejected hypotheses; controlled by the Benjamini-Hochberg procedure.\n\nfile drawer problem\n\nThe tendency for null results to go unpublished, causing the published literature to overrepresent positive findings.\n\nformative evaluation\n\nEvaluation conducted during development to identify problems and guide improvement, as opposed to summative evaluation which assesses a completed product. Formative studies typically use small samples and qualitative methods; their goal is to find things to fix, not to measure how often problems occur.\n\nfunnel plot\n\nA scatter plot of effect size against sample size used in meta-analysis; asymmetry suggests publication bias.",
+    "text": "E.6 F\n\nfalse discovery rate\n\nThe expected proportion of false positives among rejected hypotheses; controlled by the Benjamini-Hochberg procedure.\n\nformative evaluation\n\nEvaluation conducted during development to identify problems and guide improvement, as opposed to summative evaluation which assesses a completed product. Formative studies typically use small samples and qualitative methods; their goal is to find things to fix, not to measure how often problems occur.",
     "crumbs": [
       "Appendices",
       "<span class='chapter-number'>E</span>  <span class='chapter-title'>Glossary</span>"
@@ -841,7 +841,7 @@
     "href": "glossary/index.html#g",
     "title": "Appendix E — Glossary",
     "section": "E.7 G",
-    "text": "E.7 G\n\ngerund coding\n\nA practice from grounded theory in which codes are written as verb phrases rather than nouns, capturing the actions, choices, and processes participants describe rather than labeling a static category.\n\nGoal-Question-Metric (GQM)\n\nA structured approach to defining measurements in which a study goal is decomposed into questions whose answers would indicate success, and each question is linked to a specific operationalized metric.\n\nGoodhart’s Law\n\nThe principle that when a measure becomes a target, it ceases to be a good measure, because people optimize the measured variable rather than the underlying goal it was meant to track.\n\ngrounded theory\n\nA qualitative research methodology in which theory is developed inductively from data through iterative coding and constant comparison, rather than testing a predetermined hypothesis.\n\nguerrilla research\n\nInformal user research conducted without formal institutional support, using convenience samples recruited opportunistically and methods that prioritize speed and low cost over statistical rigor. Appropriate for formative evaluation; not appropriate for making quantitative claims about populations.",
+    "text": "E.7 G\n\ngerund coding\n\nA practice from grounded theory in which codes are written as verb phrases rather than nouns, capturing the actions, choices, and processes participants describe rather than labeling a static category.\n\nGoal-Question-Metric (GQM)\n\nA structured approach to defining measurements in which a study goal is decomposed into questions whose answers would indicate success, and each question is linked to a specific operationalized metric.\n\nGoodhart’s Law\n\nThe principle that when a measure becomes a target, it ceases to be a good measure, because people optimize the measured variable rather than the underlying goal it was meant to track.\n\nguerrilla research\n\nInformal user research conducted without formal institutional support, using convenience samples recruited opportunistically and methods that prioritize speed and low cost over statistical rigor. Appropriate for formative evaluation; not appropriate for making quantitative claims about populations.",
     "crumbs": [
       "Appendices",
       "<span class='chapter-number'>E</span>  <span class='chapter-title'>Glossary</span>"
@@ -852,7 +852,7 @@
     "href": "glossary/index.html#h",
     "title": "Appendix E — Glossary",
     "section": "E.8 H",
-    "text": "E.8 H\n\nhabituation\n\nA decrease in response to a repeated stimulus over time, which threatens internal validity.\n\nHARKing\n\nHypothesizing After Results are Known: presenting exploratory findings as if they had been predicted in advance, inflating false positive rates.\n\nHawthorne effect\n\nThe tendency for people to change their behavior when they know they are being observed, independent of any intervention being studied. Named for a series of workplace studies at the Hawthorne Works factory in the 1920s and 1930s, it causes measured performance to differ from typical performance and is a threat to internal validity in studies where participants know they are being watched.",
+    "text": "E.8 H\n\nHARKing\n\nHypothesizing After Results are Known: presenting exploratory findings as if they had been predicted in advance, inflating false positive rates.\n\nHawthorne effect\n\nThe tendency for people to change their behavior when they know they are being observed, independent of any intervention being studied. Named for a series of workplace studies at the Hawthorne Works factory in the 1920s and 1930s, it causes measured performance to differ from typical performance and is a threat to internal validity in studies where participants know they are being watched.",
     "crumbs": [
       "Appendices",
       "<span class='chapter-number'>E</span>  <span class='chapter-title'>Glossary</span>"
@@ -863,29 +863,7 @@
     "href": "glossary/index.html#i",
     "title": "Appendix E — Glossary",
     "section": "E.9 I",
-    "text": "E.9 I\n\nindependent variable\n\nThe variable that is manipulated or selected by the researcher to examine its effect on an outcome.\n\ninformed consent\n\nA research ethics requirement that participants know what data is being collected, how it will be used, and that they can withdraw without penalty.\n\nintercoder reliability\n\nThe degree of agreement between two or more researchers independently applying the same coding scheme to qualitative data. Commonly measured with Cohen’s kappa.\n\ninternal survey\n\nA survey administered within a single organization to collect data from employees, commonly used to measure team practices, tool adoption, or workplace satisfaction.\n\ninternal validity\n\nThe degree to which a study can support the conclusion that the treatment caused the observed outcome, as opposed to some other explanation.\n\ninterquartile range\n\nThe distance between the 25th and 75th percentiles; a robust measure of spread.\n\ninterrupted time series\n\nA quasi-experimental design that looks for a change in trend at the point when an intervention occurred, using data from before and after.",
-    "crumbs": [
-      "Appendices",
-      "<span class='chapter-number'>E</span>  <span class='chapter-title'>Glossary</span>"
-    ]
-  },
-  {
-    "objectID": "glossary/index.html#j",
-    "href": "glossary/index.html#j",
-    "title": "Appendix E — Glossary",
-    "section": "E.10 J",
-    "text": "E.10 J",
-    "crumbs": [
-      "Appendices",
-      "<span class='chapter-number'>E</span>  <span class='chapter-title'>Glossary</span>"
-    ]
-  },
-  {
-    "objectID": "glossary/index.html#k",
-    "href": "glossary/index.html#k",
-    "title": "Appendix E — Glossary",
-    "section": "E.11 K",
-    "text": "E.11 K",
+    "text": "E.9 I\n\ninformed consent\n\nA research ethics requirement that participants know what data is being collected, how it will be used, and that they can withdraw without penalty.\n\ninternal survey\n\nA survey administered within a single organization to collect data from employees, commonly used to measure team practices, tool adoption, or workplace satisfaction.\n\ninterquartile range\n\nThe distance between the 25th and 75th percentiles; a robust measure of spread.\n\ninterrupted time series\n\nA quasi-experimental design that looks for a change in trend at the point when an intervention occurred, using data from before and after.",
     "crumbs": [
       "Appendices",
       "<span class='chapter-number'>E</span>  <span class='chapter-title'>Glossary</span>"
@@ -895,8 +873,8 @@
     "objectID": "glossary/index.html#l",
     "href": "glossary/index.html#l",
     "title": "Appendix E — Glossary",
-    "section": "E.12 L",
-    "text": "E.12 L\n\nlead time for change\n\nThe elapsed time between a code change being committed and that change running in production; one of the four DORA metrics used to measure software delivery performance.\n\nleading question\n\nA question worded in a way that suggests or implies a particular answer, potentially biasing respondents’ replies.\n\nlearning effect\n\nA threat to internal validity in within-subjects designs: participants improve on a later task or condition simply through practice, making the later treatment appear more effective regardless of its merit.\n\nLikert scale\n\nA survey response format using ordered categories such as “Strongly agree” to “Strongly disagree,” typically with 5 or 7 points.\n\nlongitudinal study\n\nA study that collects data from the same subjects at multiple points over an extended period, enabling researchers to track changes and developmental trends over time.",
+    "section": "E.10 L",
+    "text": "E.10 L\n\nleading question\n\nA question worded in a way that suggests or implies a particular answer, potentially biasing respondents’ replies.\n\nlearning effect\n\nA threat to internal validity in within-subjects designs: participants improve on a later task or condition simply through practice, making the later treatment appear more effective regardless of its merit.\n\nLikert scale\n\nA survey response format using ordered categories such as “Strongly agree” to “Strongly disagree,” typically with 5 or 7 points.",
     "crumbs": [
       "Appendices",
       "<span class='chapter-number'>E</span>  <span class='chapter-title'>Glossary</span>"
@@ -906,8 +884,8 @@
     "objectID": "glossary/index.html#m",
     "href": "glossary/index.html#m",
     "title": "Appendix E — Glossary",
-    "section": "E.13 M",
-    "text": "E.13 M\n\nmaturation effect\n\nA threat to internal validity in which participants naturally change over the course of a study (e.g., growing older, more tired, or more experienced) independently of the treatment.\n\nmean\n\nThe arithmetic average of a set of values, found by dividing the sum by the count.\n\nmedian\n\nThe middle value in a sorted set of values; robust to outliers.\n\nmeta-analysis\n\nA statistical technique for combining results from multiple independent studies of the same question to estimate an overall effect size.\n\nmining software repositories (MSR)\n\nA research approach that extracts and analyzes data from version control systems, issue trackers, code review tools, and related sources.\n\nmode\n\nThe most frequently occurring value in a set of values.",
+    "section": "E.11 M",
+    "text": "E.11 M\n\nmean\n\nThe arithmetic average of a set of values, found by dividing the sum by the count.\n\nmedian\n\nThe middle value in a sorted set of values; robust to outliers.\n\nmining software repositories (MSR)\n\nA research approach that extracts and analyzes data from version control systems, issue trackers, code review tools, and related sources.",
     "crumbs": [
       "Appendices",
       "<span class='chapter-number'>E</span>  <span class='chapter-title'>Glossary</span>"
@@ -917,8 +895,8 @@
     "objectID": "glossary/index.html#n",
     "href": "glossary/index.html#n",
     "title": "Appendix E — Glossary",
-    "section": "E.14 N",
-    "text": "E.14 N\n\nnatural experiment\n\nA study that exploits real-world variation that approximates random assignment, without the researcher directly manipulating any variable.\n\nnon-response bias\n\nA bias that arises when researchers analyze only survey respondents without accounting for those who did not reply, which can skew results if non-respondents differ systematically from respondents.\n\nnormal distribution\n\nA symmetric, bell-shaped distribution defined by its mean and standard deviation.\n\nnovelty effect\n\nA threat to internal validity in which any new tool, method, or process receives a temporary performance boost because participants are motivated by its novelty, inflating the apparent benefit of the intervention.\n\nnuisance variable\n\nA variable that can affect the outcome but is not of primary interest; controlled through randomization, blocking, or statistical adjustment to isolate the effect of interest.\n\nnull hypothesis\n\nThe hypothesis that there is no effect; denoted H₀. Statistical testing evaluates whether the data is inconsistent with the null hypothesis.\n\nnull result\n\nA study outcome in which no statistically significant effect is found; also called a negative result.",
+    "section": "E.12 N",
+    "text": "E.12 N\n\nnatural experiment\n\nA study that exploits real-world variation that approximates random assignment, without the researcher directly manipulating any variable.\n\nnon-response bias\n\nA bias that arises when researchers analyze only survey respondents without accounting for those who did not reply, which can skew results if non-respondents differ systematically from respondents.\n\nnovelty effect\n\nA threat to internal validity in which any new tool, method, or process receives a temporary performance boost because participants are motivated by its novelty, inflating the apparent benefit of the intervention.\n\nnull hypothesis\n\nThe hypothesis that there is no effect; denoted H₀. Statistical testing evaluates whether the data is inconsistent with the null hypothesis.",
     "crumbs": [
       "Appendices",
       "<span class='chapter-number'>E</span>  <span class='chapter-title'>Glossary</span>"
@@ -928,8 +906,8 @@
     "objectID": "glossary/index.html#o",
     "href": "glossary/index.html#o",
     "title": "Appendix E — Glossary",
-    "section": "E.15 O",
-    "text": "E.15 O\n\nobservational study\n\nA study in which the researcher measures variables as they naturally occur, without manipulating any conditions.\n\nodds ratio\n\nFor binary outcomes, the ratio of the odds of an event in one group to the odds in another.\n\nopen coding\n\nThe initial stage in qualitative data analysis in which the researcher reads through data and attaches descriptive labels (codes) to segments of text.\n\noperationalization\n\nThe process of turning an abstract concept or research construct into a specific, measurable variable that can be observed and recorded in a study.\n\norder effects\n\nChanges in participant responses caused by the sequence in which conditions are presented, such as practice or fatigue, rather than the conditions themselves; a threat to internal validity in within-subjects designs.\n\novergeneralization\n\nDrawing conclusions that extend beyond what the data actually support, typically by ignoring important differences in context, population, or sample.",
+    "section": "E.13 O",
+    "text": "E.13 O\n\nobservational study\n\nA study in which the researcher measures variables as they naturally occur, without manipulating any conditions.\n\nopen coding\n\nThe initial stage in qualitative data analysis in which the researcher reads through data and attaches descriptive labels (codes) to segments of text.",
     "crumbs": [
       "Appendices",
       "<span class='chapter-number'>E</span>  <span class='chapter-title'>Glossary</span>"
@@ -939,8 +917,8 @@
     "objectID": "glossary/index.html#p",
     "href": "glossary/index.html#p",
     "title": "Appendix E — Glossary",
-    "section": "E.16 P",
-    "text": "E.16 P\n\np-hacking\n\nTrying multiple analyses or data subsets until p &lt; 0.05 is achieved, then reporting only that analysis, inflating the false positive rate.\n\np-value\n\nThe probability of observing data at least as extreme as the observed data, assuming the null hypothesis is true. Not the probability that the null hypothesis is true.\n\nPearson’s r\n\nA measure of linear correlation between two continuous variables, ranging from −1 to 1.\n\npost-hoc power analysis\n\nCalculating statistical power after a study is complete, based on the observed effect; generally uninformative.\n\npre-registration\n\nA practice in which researchers publicly commit to their hypotheses and analysis plan before collecting data, reducing the risk of HARKing and p-hacking.\n\npreprint\n\nA version of a research paper that has been posted publicly before it has undergone formal peer review and official journal publication.\n\nprobability distribution\n\nA function describing how likely each possible value of a variable is.\n\nproxy metric\n\nA measurable quantity used as a stand-in for a concept that is harder to measure directly.\n\npublication bias\n\nThe tendency for journals to publish studies with statistically significant results more often than studies with null results.",
+    "section": "E.14 P",
+    "text": "E.14 P\n\np-hacking\n\nTrying multiple analyses or data subsets until p &lt; 0.05 is achieved, then reporting only that analysis, inflating the false positive rate.\n\np-value\n\nThe probability of observing data at least as extreme as the observed data, assuming the null hypothesis is true. Not the probability that the null hypothesis is true.\n\npre-registration\n\nA practice in which researchers publicly commit to their hypotheses and analysis plan before collecting data, reducing the risk of HARKing and p-hacking.\n\nproxy metric\n\nA measurable quantity used as a stand-in for a concept that is harder to measure directly.\n\npublication bias\n\nThe tendency for journals to publish studies with statistically significant results more often than studies with null results.",
     "crumbs": [
       "Appendices",
       "<span class='chapter-number'>E</span>  <span class='chapter-title'>Glossary</span>"
@@ -950,8 +928,8 @@
     "objectID": "glossary/index.html#q",
     "href": "glossary/index.html#q",
     "title": "Appendix E — Glossary",
-    "section": "E.17 Q",
-    "text": "E.17 Q\n\nqualitative methods\n\nResearch approaches that collect and analyze non-numerical data such as interviews, observations, and documents in order to understand meaning, context, and experience.\n\nquantitative methods\n\nResearch approaches that collect and analyze numerical data to describe patterns, test hypotheses, or estimate effect sizes.\n\nquasi-experimental design\n\nA research design that compares groups without random assignment, relying on pre-existing groups or naturally occurring conditions to estimate treatment effects.",
+    "section": "E.15 Q",
+    "text": "E.15 Q\n\nquasi-experimental design\n\nA research design that compares groups without random assignment, relying on pre-existing groups or naturally occurring conditions to estimate treatment effects.",
     "crumbs": [
       "Appendices",
       "<span class='chapter-number'>E</span>  <span class='chapter-title'>Glossary</span>"
@@ -961,8 +939,8 @@
     "objectID": "glossary/index.html#r",
     "href": "glossary/index.html#r",
     "title": "Appendix E — Glossary",
-    "section": "E.18 R",
-    "text": "E.18 R\n\nrandomization\n\nThe random assignment of participants to experimental conditions, distributing known and unknown confounders evenly across groups.\n\nRapid Iterative Testing and Evaluation (RITE)\n\nA usability testing method in which the most severe problem identified in each session is addressed before the next session begins, enabling rapid improvement with small participant pools. Appropriate for formative evaluation; not appropriate for comparing product versions or producing generalizable estimates of performance.\n\nrelative risk\n\nFor binary outcomes, the ratio of the probability of an event in one group to the probability in another.\n\nretrospective analysis\n\nAn analysis of data collected before the research question was formulated, such as examining historical logs, commit records, or past surveys.",
+    "section": "E.16 R",
+    "text": "E.16 R\n\nrandomization\n\nThe random assignment of participants to experimental conditions, distributing known and unknown confounders evenly across groups.\n\nRapid Iterative Testing and Evaluation (RITE)\n\nA usability testing method in which the most severe problem identified in each session is addressed before the next session begins, enabling rapid improvement with small participant pools. Appropriate for formative evaluation; not appropriate for comparing product versions or producing generalizable estimates of performance.\n\nretrospective analysis\n\nAn analysis of data collected before the research question was formulated, such as examining historical logs, commit records, or past surveys.",
     "crumbs": [
       "Appendices",
       "<span class='chapter-number'>E</span>  <span class='chapter-title'>Glossary</span>"
@@ -972,8 +950,8 @@
     "objectID": "glossary/index.html#s",
     "href": "glossary/index.html#s",
     "title": "Appendix E — Glossary",
-    "section": "E.19 S",
-    "text": "E.19 S\n\nsampling distribution\n\nThe distribution of a statistic (such as the mean) computed from many samples of the same size.\n\nsampling strategy\n\nThe method used to select participants from a population. Strategies include convenience sampling, random sampling, and stratified sampling.\n\nsaturation\n\nIn qualitative research, the point at which collecting additional data no longer introduces new codes or themes.\n\nselection bias\n\nBias introduced when the sample is not representative of the population the researcher intends to generalize to.\n\nsemi-structured interview\n\nAn interview that follows a predetermined set of questions but allows the interviewer to probe further or deviate based on participant responses.\n\nsingle blind study\n\nAn experiment in which participants do not know which condition they are in, but the experimenters do. This reduces participant bias but leaves experimenter influence as a possible threat.\n\nsocial desirability bias\n\nThe tendency for survey or interview respondents to give answers they believe are more socially acceptable rather than truthful responses, distorting self-reported data.\n\nSpearman’s ρ\n\nA measure of rank-order correlation, used for monotone relationships.\n\nstandard deviation\n\nThe square root of the variance, expressing spread in the same units as the data.\n\nstatistical power\n\nThe probability that a study will detect an effect if one truly exists; conventionally targeted at 0.80.\n\nstatistical significance\n\nA determination that observed data is unlikely under the null hypothesis, typically using a threshold of p &lt; 0.05; does not imply practical importance or a large effect.\n\nstratified sampling\n\nA sampling method in which the population is divided into subgroups (strata) and participants are drawn from each subgroup to ensure the sample reflects key population characteristics.\n\nstructured interview\n\nAn interview in which every participant is asked exactly the same questions in the same order, enabling systematic comparison across respondents.\n\nstudy\n\nA systematic attempt to collect and analyze evidence in order to test a claim or answer a research question.\n\nsummative evaluation\n\nEvaluation conducted after development is complete to assess whether a product meets its goals, as opposed to formative evaluation conducted during development to guide improvement. Summative studies require controlled conditions and sufficient sample sizes to support quantitative claims.\n\nsurvivorship bias\n\nBias introduced by analyzing only cases that survived a selection process, ignoring cases that did not.",
+    "section": "E.17 S",
+    "text": "E.17 S\n\nsampling strategy\n\nThe method used to select participants from a population. Strategies include convenience sampling, random sampling, and stratified sampling.\n\nsaturation\n\nIn qualitative research, the point at which collecting additional data no longer introduces new codes or themes.\n\nselection bias\n\nBias introduced when the sample is not representative of the population the researcher intends to generalize to.\n\nsemi-structured interview\n\nAn interview that follows a predetermined set of questions but allows the interviewer to probe further or deviate based on participant responses.\n\nsocial desirability bias\n\nThe tendency for survey or interview respondents to give answers they believe are more socially acceptable rather than truthful responses, distorting self-reported data.\n\nstatistical power\n\nThe probability that a study will detect an effect if one truly exists; conventionally targeted at 0.80.\n\nstatistical significance\n\nA determination that observed data is unlikely under the null hypothesis, typically using a threshold of p &lt; 0.05; does not imply practical importance or a large effect.\n\nstructured interview\n\nAn interview in which every participant is asked exactly the same questions in the same order, enabling systematic comparison across respondents.\n\nsummative evaluation\n\nEvaluation conducted after development is complete to assess whether a product meets its goals, as opposed to formative evaluation conducted during development to guide improvement. Summative studies require controlled conditions and sufficient sample sizes to support quantitative claims.\n\nsurvivorship bias\n\nBias introduced by analyzing only cases that survived a selection process, ignoring cases that did not.",
     "crumbs": [
       "Appendices",
       "<span class='chapter-number'>E</span>  <span class='chapter-title'>Glossary</span>"
@@ -983,8 +961,8 @@
     "objectID": "glossary/index.html#t",
     "href": "glossary/index.html#t",
     "title": "Appendix E — Glossary",
-    "section": "E.20 T",
-    "text": "E.20 T\n\ntask-based testing\n\nA research method in which participants are given specific, realistic tasks to complete with a product or system while the researcher observes and records their behavior, as opposed to open-ended exploration that produces impressions rather than observable actions.\n\nthematic analysis\n\nA qualitative analysis method in which data is coded and grouped into themes through iterative passes.\n\nthink-aloud protocol\n\nA data collection technique in which participants verbalize their thoughts, decisions, and reactions as they perform tasks, providing access to real-time reasoning that retrospective reporting misses. Commonly used in usability testing and qualitative studies of how people interact with tools and interfaces.\n\ntime to restore service\n\nThe time it takes to recover normal operation after a failure in production; one of the four DORA metrics used to measure software delivery performance.\n\ntreatment group\n\nThe group in an experiment that receives the intervention or manipulation being studied; compared against the control group to estimate the treatment effect.\n\ntriangulation\n\nThe use of multiple data sources, methods, or investigators to increase confidence in a finding.\n\nType I error\n\nA false positive: rejecting the null hypothesis when it is actually true.\n\nType II error\n\nA false negative: failing to reject the null hypothesis when it is actually false.",
+    "section": "E.18 T",
+    "text": "E.18 T\n\ntask-based testing\n\nA research method in which participants are given specific, realistic tasks to complete with a product or system while the researcher observes and records their behavior, as opposed to open-ended exploration that produces impressions rather than observable actions.\n\nthink-aloud protocol\n\nA data collection technique in which participants verbalize their thoughts, decisions, and reactions as they perform tasks, providing access to real-time reasoning that retrospective reporting misses. Commonly used in usability testing and qualitative studies of how people interact with tools and interfaces.\n\ntreatment group\n\nThe group in an experiment that receives the intervention or manipulation being studied; compared against the control group to estimate the treatment effect.\n\nType I error\n\nA false positive: rejecting the null hypothesis when it is actually true.\n\nType II error\n\nA false negative: failing to reject the null hypothesis when it is actually false.",
     "crumbs": [
       "Appendices",
       "<span class='chapter-number'>E</span>  <span class='chapter-title'>Glossary</span>"
@@ -994,63 +972,8 @@
     "objectID": "glossary/index.html#u",
     "href": "glossary/index.html#u",
     "title": "Appendix E — Glossary",
-    "section": "E.21 U",
-    "text": "E.21 U\n\nunconscious formalization\n\nThe tendency to treat informal, context-dependent practices as if they were formal, rule-based procedures, leading to oversimplified models of how work is actually done.\n\nunstructured interview\n\nAn interview with no fixed list of questions, guided entirely by the participant’s responses, used to explore topics in depth without constraining the direction of conversation.",
-    "crumbs": [
-      "Appendices",
-      "<span class='chapter-number'>E</span>  <span class='chapter-title'>Glossary</span>"
-    ]
-  },
-  {
-    "objectID": "glossary/index.html#v",
-    "href": "glossary/index.html#v",
-    "title": "Appendix E — Glossary",
-    "section": "E.22 V",
-    "text": "E.22 V\n\nvariance\n\nA measure of spread equal to the average squared deviation from the mean.",
-    "crumbs": [
-      "Appendices",
-      "<span class='chapter-number'>E</span>  <span class='chapter-title'>Glossary</span>"
-    ]
-  },
-  {
-    "objectID": "glossary/index.html#w",
-    "href": "glossary/index.html#w",
-    "title": "Appendix E — Glossary",
-    "section": "E.23 W",
-    "text": "E.23 W\n\nwinners curse\n\nThe phenomenon in which studies that achieve statistical significance tend to overestimate the true effect size, because extreme results are more likely to cross the significance threshold.\n\nwithin subjects design\n\nAn experimental design in which each participant experiences all conditions, allowing comparison of outcomes within the same individual. This increases statistical power but is vulnerable to order effects.",
-    "crumbs": [
-      "Appendices",
-      "<span class='chapter-number'>E</span>  <span class='chapter-title'>Glossary</span>"
-    ]
-  },
-  {
-    "objectID": "glossary/index.html#x",
-    "href": "glossary/index.html#x",
-    "title": "Appendix E — Glossary",
-    "section": "E.24 X",
-    "text": "E.24 X",
-    "crumbs": [
-      "Appendices",
-      "<span class='chapter-number'>E</span>  <span class='chapter-title'>Glossary</span>"
-    ]
-  },
-  {
-    "objectID": "glossary/index.html#y",
-    "href": "glossary/index.html#y",
-    "title": "Appendix E — Glossary",
-    "section": "E.25 Y",
-    "text": "E.25 Y",
-    "crumbs": [
-      "Appendices",
-      "<span class='chapter-number'>E</span>  <span class='chapter-title'>Glossary</span>"
-    ]
-  },
-  {
-    "objectID": "glossary/index.html#z",
-    "href": "glossary/index.html#z",
-    "title": "Appendix E — Glossary",
-    "section": "E.26 Z",
-    "text": "E.26 Z",
+    "section": "E.19 U",
+    "text": "E.19 U\n\nunstructured interview\n\nAn interview with no fixed list of questions, guided entirely by the participant’s responses, used to explore topics in depth without constraining the direction of conversation.",
     "crumbs": [
       "Appendices",
       "<span class='chapter-number'>E</span>  <span class='chapter-title'>Glossary</span>"
