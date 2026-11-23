@@ -1,350 +1,70 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head><meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <title>Designing a Study</title>
+  <link rel="stylesheet" href="../mccole/mccole-book.css">
 
-<meta charset="utf-8">
-<meta name="generator" content="quarto-1.11.9">
-
-<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-
-
-<title>6&nbsp; Designing a Study – How to Not Be Wrong About AI</title>
-<style>
-/* Default styles provided by pandoc.
-** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
-*/
-span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: 1.5em;}
-div.column{flex: auto;}
-@media screen {
-div.columns{gap: min(4vw, 1.5em);}
-div.column{overflow-x: auto;}
-}
-div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
-ul.task-list{list-style: none;}
-ul.task-list li input[type="checkbox"] {
-  width: 0.8em;
-  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
-  vertical-align: middle;
-}
-/* CSS for citations */
-div.csl-bib-body { }
-div.csl-entry {
-  clear: both;
-}
-.hanging-indent div.csl-entry {
-  margin-left:2em;
-  text-indent:-2em;
-}
-div.csl-left-margin {
-  min-width:2em;
-  float:left;
-}
-div.csl-right-inline {
-  margin-left:2em;
-  padding-left:1em;
-}
-div.csl-indent {
-  margin-left: 2em;
-}</style>
-
-
-<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../">
-<link href="../running/index.html" rel="next">
-<link href="../cheaply/index.html" rel="prev">
-<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../site_libs/quarto-html/scrollable-regions/scrollable-regions.js" type="module"></script>
-<script src="../site_libs/quarto-html/popper.min.js"></script>
-<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-63b5708e65d6cd79cd7618c58d0c21e7.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-01a495efc5497ac6e3f5457e7ed18e65.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
-<script id="quarto-search-options" type="application/json">{
-  "location": "sidebar",
-  "copy-button": false,
-  "collapse-after": 3,
-  "panel-placement": "start",
-  "type": "textbox",
-  "limit": 50,
-  "keyboard-shortcut": [
-    "f",
-    "/",
-    "s"
-  ],
-  "show-item-context": false,
-  "language": {
-    "search-no-results-text": "No results",
-    "search-matching-documents-text": "matching documents",
-    "search-copy-link-title": "Copy link to search",
-    "search-hide-matches-text": "Hide additional matches",
-    "search-more-match-text": "more match in this document",
-    "search-more-matches-text": "more matches in this document",
-    "search-clear-button-title": "Clear",
-    "search-text-placeholder": "",
-    "search-detached-cancel-button-title": "Cancel",
-    "search-submit-button-title": "Submit",
-    "search-label": "Search"
-  }
-}</script>
-
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
-
-<link rel="stylesheet" href="../mccole/book.css">
 </head>
-
-<body class="nav-sidebar floating quarto-light"><a id="quarto-skip-link" class="visually-hidden-focusable" href="#quarto-document-content">Skip to main content</a>
-
-<div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
-  <nav class="quarto-secondary-nav" aria-label="Toolbar">
-    <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
-        <i class="bi bi-layout-text-sidebar-reverse"></i>
-      </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="Breadcrumbs"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../design/index.html"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Designing a Study</span></a></li></ol></nav>
-        <a class="flex-grow-1" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
-        </a>
-      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
-        <i class="bi bi-search"></i>
-      </button>
+<body>
+<header class="topbar">
+  <nav class="topnav">
+    <a class="topnav-item" href="../index.html">Home</a>
+    <div class="topnav-dropdown">
+      <span class="topnav-item">Chapters</span>
+      <div class="topnav-menu"><ul class="topnav-list"><li><a href="../intro/index.html">Is AI Worth It?</a></li><li><a href="../productivity/index.html">What "More Productive" Means</a></li><li><a href="../wrong/index.html">How Studies Go Wrong</a></li><li><a href="../critical/index.html">Reading a Study</a></li><li><a href="../cheaply/index.html">Cheap and Fast</a></li><li><a href="../design/index.html">Designing a Study</a></li><li><a href="../running/index.html">Running a Study</a></li></ul></div>
+    </div>
+    <div class="topnav-dropdown">
+      <span class="topnav-item">Appendices</span>
+      <div class="topnav-menu"><ul class="topnav-list"><li><a href="../license/index.html">License</a></li><li><a href="../conduct/index.html">Code of Conduct</a></li><li><a href="../contributing/index.html">Contributing</a></li><li><a href="../bibliography/index.html">Bibliography</a></li><li><a href="../glossary/index.html">Glossary</a></li></ul></div>
+    </div>
+    <div class="topnav-dropdown">
+      <span class="topnav-item">Contents</span>
+      <div class="topnav-menu"><ul>
+<li><a href="#qualitative-methods-interviews-and-surveys" id="toc-qualitative-methods-interviews-and-surveys"><span class="header-section-number">6.1</span> Qualitative Methods: Interviews and Surveys</a></li>
+<li><a href="#controlled-experiments" id="toc-controlled-experiments"><span class="header-section-number">6.2</span> Controlled Experiments</a></li>
+<li><a href="#observational-and-natural-experiments" id="toc-observational-and-natural-experiments"><span class="header-section-number">6.3</span> Observational and Natural Experiments</a></li>
+<li><a href="#the-statistics-you-actually-need" id="toc-the-statistics-you-actually-need"><span class="header-section-number">6.4</span> The Statistics You Actually Need</a></li>
+<li><a href="#the-four-validity-threats" id="toc-the-four-validity-threats"><span class="header-section-number">6.5</span> The Four Validity Threats</a></li>
+<li><a href="#misconceptions" id="toc-misconceptions"><span class="header-section-number">6.6</span> Misconceptions</a></li>
+<li><a href="#check-understanding" id="toc-check-understanding"><span class="header-section-number">6.7</span> Check Understanding</a></li>
+<li><a href="#exercises" id="toc-exercises"><span class="header-section-number">6.8</span> Exercises</a></li>
+</ul></div>
     </div>
   </nav>
 </header>
-<!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
-<!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto" aria-label="Site">
-    <div class="pt-lg-2 mt-2 text-left sidebar-header">
-    <div class="sidebar-title mb-0 py-0">
-      <a href="../">How to Not Be Wrong About AI</a> 
-        <div class="sidebar-tools-main">
-    <a href="https://github.com/gvwilson/notwrong" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
-</div>
-    </div>
-      </div>
-        <div class="mt-2 flex-shrink-0 align-items-center">
-        <div class="sidebar-search">
-        <div id="quarto-search" class="" title="Search"></div>
-        </div>
-        </div>
-    <div class="sidebar-menu-container"> 
-    <ul class="list-unstyled mt-1">
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Overview</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../intro/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Is AI Worth It?</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../productivity/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">What “More Productive” Means</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../wrong/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">How Studies Go Wrong</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../critical/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Reading a Study</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../cheaply/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Cheap and Fast</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../design/index.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Designing a Study</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../running/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Running a Study</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <button type="button" class="sidebar-item-text sidebar-item-toggle sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-controls="quarto-sidebar-section-1" aria-expanded="true">
- <span class="menu-text" id="quarto-sidebar-section-1-label">Appendices</span><i class="bi bi-chevron-right" aria-hidden="true"></i></button>
-      </div>
-      <ul id="quarto-sidebar-section-1" aria-labelledby="quarto-sidebar-section-1-label" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../license/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">License</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../conduct/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">B</span>&nbsp; <span class="chapter-title">Code of Conduct</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../contributing/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">C</span>&nbsp; <span class="chapter-title">Contributing</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../bibliography/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">D</span>&nbsp; <span class="chapter-title">Bibliography</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../glossary/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">E</span>&nbsp; <span class="chapter-title">Glossary</span></span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-    </ul>
-    </div>
-</nav>
-<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
-<!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" aria-labelledby="toc-title" class="toc-active">
-    <h2 id="toc-title">Table of contents</h2>
-   
-  <ul>
-  <li><a href="#qualitative-methods-interviews-and-surveys" id="toc-qualitative-methods-interviews-and-surveys" class="nav-link active" data-scroll-target="#qualitative-methods-interviews-and-surveys"><span class="header-section-number">6.1</span> Qualitative Methods: Interviews and Surveys</a></li>
-  <li><a href="#controlled-experiments" id="toc-controlled-experiments" class="nav-link" data-scroll-target="#controlled-experiments"><span class="header-section-number">6.2</span> Controlled Experiments</a></li>
-  <li><a href="#observational-and-natural-experiments" id="toc-observational-and-natural-experiments" class="nav-link" data-scroll-target="#observational-and-natural-experiments"><span class="header-section-number">6.3</span> Observational and Natural Experiments</a></li>
-  <li><a href="#the-statistics-you-actually-need" id="toc-the-statistics-you-actually-need" class="nav-link" data-scroll-target="#the-statistics-you-actually-need"><span class="header-section-number">6.4</span> The Statistics You Actually Need</a></li>
-  <li><a href="#the-four-validity-threats" id="toc-the-four-validity-threats" class="nav-link" data-scroll-target="#the-four-validity-threats"><span class="header-section-number">6.5</span> The Four Validity Threats</a></li>
-  <li><a href="#misconceptions" id="toc-misconceptions" class="nav-link" data-scroll-target="#misconceptions"><span class="header-section-number">6.6</span> Misconceptions</a></li>
-  <li><a href="#check-understanding" id="toc-check-understanding" class="nav-link" data-scroll-target="#check-understanding"><span class="header-section-number">6.7</span> Check Understanding</a></li>
-  <li><a href="#exercises" id="toc-exercises" class="nav-link" data-scroll-target="#exercises"><span class="header-section-number">6.8</span> Exercises</a>
-  <ul class="collapse">
-  <li><a href="#power-calculation-15-minutes-solo" id="toc-power-calculation-15-minutes-solo" class="nav-link" data-scroll-target="#power-calculation-15-minutes-solo"><span class="header-section-number">6.8.1</span> Power Calculation (15 minutes, solo)</a></li>
-  <li><a href="#method-match-15-minutes-pairs" id="toc-method-match-15-minutes-pairs" class="nav-link" data-scroll-target="#method-match-15-minutes-pairs"><span class="header-section-number">6.8.2</span> Method Match (15 minutes, pairs)</a></li>
-  <li><a href="#build-your-own-20-minutes-pairs" id="toc-build-your-own-20-minutes-pairs" class="nav-link" data-scroll-target="#build-your-own-20-minutes-pairs"><span class="header-section-number">6.8.3</span> Build Your Own (20 minutes, pairs)</a></li>
-  </ul></li>
-  </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/gvwilson/notwrong/edit/main/design/index.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/gvwilson/notwrong/blob/main/design/index.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://github.com/gvwilson/notwrong/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
-    </div>
-<!-- main -->
-<main class="content" id="quarto-document-content" tabindex="-1">
-
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Designing a Study</span></h1>
-</div>
-
-
-
-<div class="quarto-title-meta">
-
-    
-  
-    
-  </div>
-  
-
-
-</header>
-
-
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Note
-</div>
-</div>
-<div class="callout-body-container callout-body">
+<main class="content"><header id="title-block-header" class="quarto-title-block"></header>
+<h1 class="title">Designing a Study</h1>
+<div>
+<blockquote>
+<p><strong>Note</strong></p>
 <ul>
 <li>Choose the right method — qualitative, controlled experiment, or observational — for a research question.</li>
 <li>Read p-values and effect sizes without overstating them.</li>
 <li>Estimate the sample size a study needs.</li>
 <li>Recognize the four kinds of validity threat.</li>
 </ul>
-</div>
+</blockquote>
 </div>
 <p>Jonas has been pushed past his comfort zone. “OK,” he says to Maya, “we can’t just watch five people and we can’t just read the vendor’s studies. So how do we <em>actually</em> find out whether this tool helps?” This chapter is the answer: the three families of method you can reach for, and the small amount of statistics you need to use them without fooling yourself.</p>
 <p>The right method follows the question, not your preference. “Is there a difference?” calls for an experiment. “Why does this happen?” calls for interviews. “What patterns exist in our codebase?” calls for an observational study. No single method answers all questions, which is why serious programs mix them.</p>
-<section id="qualitative-methods-interviews-and-surveys" class="level2" data-number="6.1">
-<h2 data-number="6.1" class="anchored" data-anchor-id="qualitative-methods-interviews-and-surveys"><span class="header-section-number">6.1</span> Qualitative Methods: Interviews and Surveys</h2>
+<h2 data-number="6.1" id="qualitative-methods-interviews-and-surveys"><span class="header-section-number">6.1</span> Qualitative Methods: Interviews and Surveys</h2>
 <p>Use qualitative methods when you don’t yet know what to measure, when the phenomenon is about meaning and context, or when you need to understand <em>why</em> rather than <em>that</em>.</p>
 <p><strong>Interviews</strong> come in three kinds. <a href="../glossary/index.html#structured_interview">Structured</a> uses a fixed script; <a href="../glossary/index.html#unstructured_interview">unstructured</a> follows the participant’s lead; <a href="../glossary/index.html#semi_structured_interview">semi-structured</a> — the workhorse — has a guide but allows follow-up. Ask open questions (“tell me about a time the suggestion was wrong in a way that surprised you”), probe what they say (“you mentioned you don’t trust it for security — can you say more?”), and avoid <a href="../glossary/index.html#leading_question">leading questions</a> (“don’t you find it faster?”) and hypotheticals (“would you use it if…”) — people are poor predictors of their own behavior.</p>
 <p><strong>Surveys</strong> trade depth for breadth. <a href="../glossary/index.html#likert_scale">Likert scales</a> (“strongly agree” to “strongly disagree”) are common but have known problems; use at least five points. Watch the <a href="../glossary/index.html#sampling_strategy">sampling strategy</a>: a <a href="../glossary/index.html#convenience_sampling">convenience sample</a> (whoever responds) is usually biased toward engaged users, and a low response rate can produce <a href="../glossary/index.html#non_response_bias">non-response bias</a> larger than sampling error. Pilot with three to five people before distributing.</p>
 <p><strong>Thematic analysis</strong> is how you turn interview data into findings. <a href="../glossary/index.html#open_coding">Open coding</a> tags segments with labels close to what people said — use <a href="../glossary/index.html#gerund_coding">gerund coding</a> (actions, not nouns): “switching off suggestions after a bad experience,” not “negative attitude.” <a href="../glossary/index.html#axial_coding">Axial coding</a> groups codes into themes that make a <em>claim</em> (“developers trust AI for syntax but not for logic”), and you keep collecting until you reach <a href="../glossary/index.html#saturation">saturation</a> — new data stops producing new codes.</p>
-</section>
-<section id="controlled-experiments" class="level2" data-number="6.2">
-<h2 data-number="6.2" class="anchored" data-anchor-id="controlled-experiments"><span class="header-section-number">6.2</span> Controlled Experiments</h2>
+<h2 data-number="6.2" id="controlled-experiments"><span class="header-section-number">6.2</span> Controlled Experiments</h2>
 <p>A <a href="../glossary/index.html#controlled_experiment">controlled experiment</a> manipulates a variable and measures the effect while holding everything else constant. The <a href="../glossary/index.html#treatment_group">treatment group</a> gets the intervention; the <a href="../glossary/index.html#control_group">control group</a> doesn’t. <a href="../glossary/index.html#randomization">Randomization</a> — assigning people to conditions by chance — is what makes causal claims defensible, because it spreads unknown confounders evenly across the groups.</p>
 <p>Two ideas carry the statistics. The <a href="../glossary/index.html#null_hypothesis">null hypothesis</a> (H₀) is “no effect.” A <a href="../glossary/index.html#p_value">p-value</a> is the probability of seeing data at least this extreme <em>if H₀ were true</em>. Crucially, it is <strong>not</strong> the probability the result is wrong, and p &lt; 0.05 is a 1920s convention, not a law of nature. You never prove an effect exists; you either reject H₀ or fail to reject it — and failing to reject doesn’t mean “no effect,” it may just mean your study was underpowered.</p>
 <p><a href="../glossary/index.html#statistical_significance">Significance</a> says whether an effect is likely real; <a href="../glossary/index.html#effect_size">effect size</a> says how big it is. <a href="../glossary/index.html#cohens_d">Cohen's d</a> measures the difference between two means in standard-deviation units — 0.2 small, 0.5 medium, 0.8 large. A huge sample can find a “significant” effect that’s too small to matter, which is why effect size should always travel with the p-value.</p>
 <p><a href="../glossary/index.html#statistical_power">Statistical power</a> is the probability of detecting an effect that’s actually there. Most software-engineering experiments are dramatically underpowered <span class="citation" data-cites="Kampenes2007">(<a href="../bibliography/index.html#ref-Kampenes2007" role="doc-biblioref">Kampenes et al. 2007</a>)</span> — a typical 20–50 participants can only reliably detect a large effect (d &gt; 0.8). The required sample size for a two-sample t-test is roughly</p>
-<p><span class="math display">\[ n = 2 (z_\alpha + z_\beta)^2 \sigma^2 / \delta^2 \]</span></p>
+<p><span class="math display"><em>n</em> = 2(<em>z</em><sub><em>α</em></sub> + <em>z</em><sub><em>β</em></sub>)<sup>2</sup><em>σ</em><sup>2</sup>/<em>δ</em><sup>2</sup></span></p>
 <p>where δ is the smallest difference you care about, σ is the population standard deviation, z_α = 1.96 (for α = 0.05), and z_β = 0.84 (for 80% power). Calculate this <em>before</em> running the study, not after.</p>
 <p><a href="../glossary/index.html#blocking_variable">Blocking</a> handles a known nuisance variable (like experience) by grouping people into strata before randomizing, so the senior developers can’t all land in one group by chance.</p>
-</section>
-<section id="observational-and-natural-experiments" class="level2" data-number="6.3">
-<h2 data-number="6.3" class="anchored" data-anchor-id="observational-and-natural-experiments"><span class="header-section-number">6.3</span> Observational and Natural Experiments</h2>
+<h2 data-number="6.3" id="observational-and-natural-experiments"><span class="header-section-number">6.3</span> Observational and Natural Experiments</h2>
 <p>An <a href="../glossary/index.html#observational_study">observational study</a> measures the world as it is, without assigning anyone to anything. <a href="../glossary/index.html#msr">Mining software repositories</a> (MSR) — extracting data from git history, issue trackers, and CI logs — is the most common form, and it’s full of traps: GitHub projects are not a representative sample, <a href="../glossary/index.html#survivorship_bias">survivorship bias</a> hides the projects that died, and confounders lurk everywhere.</p>
 <p>The trade-off is fundamental. Controlled experiments maximize internal validity but are artificial; observational studies maximize realism but can’t rule out confounders. <a href="../glossary/index.html#quasi_experimental_design">Quasi-experiments</a> sit between: <a href="../glossary/index.html#difference_in_differences">difference-in-differences</a> compares the <em>change</em> in a treated group against the change in a control group (assuming the two would have changed similarly otherwise); <a href="../glossary/index.html#interrupted_time_series">interrupted time series</a> looks for a trend change at the moment an intervention landed. A <a href="../glossary/index.html#natural_experiment">natural experiment</a> exploits real-world variation that approximates random assignment — say, a tool rolled out to some offices first because of licensing, not because they asked for it.</p>
 <p>Finally, correlation is not causation. Three rivals explain any correlation between A and B: A causes B, B causes A, or a third thing C causes both. Randomization is what lets you rule out the last two.</p>
-</section>
-<section id="the-statistics-you-actually-need" class="level2" data-number="6.4">
-<h2 data-number="6.4" class="anchored" data-anchor-id="the-statistics-you-actually-need"><span class="header-section-number">6.4</span> The Statistics You Actually Need</h2>
+<h2 data-number="6.4" id="the-statistics-you-actually-need"><span class="header-section-number">6.4</span> The Statistics You Actually Need</h2>
 <p>You don’t need a degree to decode a methods section. The essentials:</p>
 <ul>
 <li><strong>Descriptive</strong> — <a href="../glossary/index.html#mean">mean</a> is sensitive to outliers; the <a href="../glossary/index.html#median">median</a> isn’t. Software data (task times, file sizes, defect counts) is usually right-skewed, so medians and <a href="../glossary/index.html#interquartile_range">interquartile ranges</a> are usually the honest summary.</li>
@@ -353,9 +73,7 @@ Note
 <li><strong>Confidence intervals</strong> — a <a href="../glossary/index.html#confidence_interval">95% CI</a> is usually more informative than a p-value because it shows direction <em>and</em> magnitude.</li>
 </ul>
 <p><strong>Worked power example.</strong> You want to detect a 3-defect-per-release reduction, and the standard deviation across teams is 4 defects. Plug δ = 3, σ = 4 into the formula: n = 2(1.96 + 0.84)² × 16 / 9 ≈ 28 teams per condition — 56 total. If you can only recruit 10 teams per condition, you’ll likely miss a real effect. Detecting a smaller difference (δ = 1) would need about 251 teams per condition.</p>
-</section>
-<section id="the-four-validity-threats" class="level2" data-number="6.5">
-<h2 data-number="6.5" class="anchored" data-anchor-id="the-four-validity-threats"><span class="header-section-number">6.5</span> The Four Validity Threats</h2>
+<h2 data-number="6.5" id="the-four-validity-threats"><span class="header-section-number">6.5</span> The Four Validity Threats</h2>
 <p>Every threat to a study’s credibility falls into one of four buckets <span class="citation" data-cites="Campbell1963 Wohlin2000">(<a href="../bibliography/index.html#ref-Campbell1963" role="doc-biblioref">Campbell and Stanley 1963</a>; <a href="../bibliography/index.html#ref-Wohlin2000" role="doc-biblioref">Wohlin et al. 2000</a>)</span>:</p>
 <ol type="1">
 <li><strong>Conclusion validity</strong> — was the analysis right and powerful enough? (underpowering, violated test assumptions, uncorrected multiple comparisons.)</li>
@@ -364,9 +82,7 @@ Note
 <li><strong>External validity</strong> — does it generalize beyond this sample and task?</li>
 </ol>
 <p>Many software-engineering experiments have strong internal validity but weak external validity — a randomized trial on students doing a 90-minute toy task may be airtight <em>and</em> tell you almost nothing about your team.</p>
-</section>
-<section id="misconceptions" class="level2" data-number="6.6">
-<h2 data-number="6.6" class="anchored" data-anchor-id="misconceptions"><span class="header-section-number">6.6</span> Misconceptions</h2>
+<h2 data-number="6.6" id="misconceptions"><span class="header-section-number">6.6</span> Misconceptions</h2>
 <dl>
 <dt>p &lt; 0.05 means the result is probably true.</dt>
 <dd>
@@ -389,9 +105,7 @@ Rigorous qualitative work involves systematic collection, structured coding, aud
 Open-source GitHub projects are a small, self-selected slice of the software actually built. Commercial and embedded code is largely invisible to MSR.
 </dd>
 </dl>
-</section>
-<section id="check-understanding" class="level2" data-number="6.7">
-<h2 data-number="6.7" class="anchored" data-anchor-id="check-understanding"><span class="header-section-number">6.7</span> Check Understanding</h2>
+<h2 data-number="6.7" id="check-understanding"><span class="header-section-number">6.7</span> Check Understanding</h2>
 <details>
 <summary>
 A study reports p = 0.03. A colleague says “there’s a 3% chance this result is wrong.” What’s actually correct?
@@ -416,15 +130,10 @@ What’s the difference between internal and external validity, and why do they 
 </summary>
 <p>Internal validity is whether you can conclude the treatment caused the outcome; external validity is whether the finding generalizes. Randomized experiments maximize internal validity at the cost of artificiality, while observational studies are realistic but can’t rule out confounders. You rarely get both at once.</p>
 </details>
-</section>
-<section id="exercises" class="level2" data-number="6.8">
-<h2 data-number="6.8" class="anchored" data-anchor-id="exercises"><span class="header-section-number">6.8</span> Exercises</h2>
-<section id="power-calculation-15-minutes-solo" class="level3" data-number="6.8.1">
-<h3 data-number="6.8.1" class="anchored" data-anchor-id="power-calculation-15-minutes-solo"><span class="header-section-number">6.8.1</span> Power Calculation (15 minutes, solo)</h3>
+<h2 data-number="6.8" id="exercises"><span class="header-section-number">6.8</span> Exercises</h2>
+<h3 data-number="6.8.1" id="power-calculation-15-minutes-solo"><span class="header-section-number">6.8.1</span> Power Calculation (15 minutes, solo)</h3>
 <p>Use n = 2(z_α + z_β)²σ²/δ² with α = 0.05 (z = 1.96) and 80% power (z = 0.84). You want to detect a 3-defect-per-release reduction, σ = 5 defects. Compute the minimum teams per condition. Then say, in one sentence, whether your organization could actually run this study — and what that implies.</p>
-</section>
-<section id="method-match-15-minutes-pairs" class="level3" data-number="6.8.2">
-<h3 data-number="6.8.2" class="anchored" data-anchor-id="method-match-15-minutes-pairs"><span class="header-section-number">6.8.2</span> Method Match (15 minutes, pairs)</h3>
+<h3 data-number="6.8.2" id="method-match-15-minutes-pairs"><span class="header-section-number">6.8.2</span> Method Match (15 minutes, pairs)</h3>
 <p>For each question, name the method you’d use and one sentence on why:</p>
 <ul>
 <li>Why do some teams at Meridian ignore the AI tool while others use it daily?</li>
@@ -432,16 +141,13 @@ What’s the difference between internal and external validity, and why do they 
 <li>Does the tool’s generated code carry more security bugs than human code?</li>
 <li>What actually slows developers down most in their daily work?</li>
 </ul>
-</section>
-<section id="build-your-own-20-minutes-pairs" class="level3" data-number="6.8.3">
-<h3 data-number="6.8.3" class="anchored" data-anchor-id="build-your-own-20-minutes-pairs"><span class="header-section-number">6.8.3</span> Build Your Own (20 minutes, pairs)</h3>
+<h3 data-number="6.8.3" id="build-your-own-20-minutes-pairs"><span class="header-section-number">6.8.3</span> Build Your Own (20 minutes, pairs)</h3>
 <p>Design an experiment for one claim below. Specify treatment and control, how you’d assign participants, what you’d measure and how, a realistic sample size, and two threats to external validity.</p>
 <ul>
 <li>Pair programming reduces defect rates.</li>
 <li>AI-assisted code review is faster than code review without it.</li>
 <li>Developers who write tests first produce better-designed code.</li>
 </ul>
-
 
 <div id="refs" class="references csl-bib-body hanging-indent" role="list" style="display: none">
 <div id="ref-Campbell1963" class="csl-entry" role="listitem">
@@ -454,501 +160,7 @@ Kampenes, Vigdis By, Tore Dybå, Jo Erskine Hannay, and Dag I. K. Sjøberg. 2007
 Wohlin, Claes, Per Runeson, Martin Höst, Magnus C. Ohlsson, Björn Regnell, and Anders Wesslén. 2000. <em>Experimentation in Software Engineering: An Introduction</em>. Kluwer Academic Publishers. ISBN 9783662693056.
 </div>
 </div>
-</section>
-</section>
-
-</main> <!-- /main -->
-<script id="quarto-html-after-body" type="application/javascript">
-  window.document.addEventListener("DOMContentLoaded", function (event) {
-    const icon = "";
-    const anchorJS = new window.AnchorJS();
-    anchorJS.options = {
-      placement: 'right',
-      icon: icon
-    };
-    anchorJS.add('.anchored');
-    const isCodeAnnotation = (el) => {
-      for (const clz of el.classList) {
-        if (clz.startsWith('code-annotation-')) {                     
-          return true;
-        }
-      }
-      return false;
-    }
-    const onCopySuccess = function(e) {
-      // button target
-      const button = e.trigger;
-      // don't keep focus
-      button.blur();
-      // flash "checked"
-      button.classList.add('code-copy-button-checked');
-      var currentTitle = button.getAttribute("title");
-      button.setAttribute("title", "Copied!");
-      let tooltip;
-      if (window.bootstrap) {
-        button.setAttribute("data-bs-toggle", "tooltip");
-        button.setAttribute("data-bs-placement", "left");
-        button.setAttribute("data-bs-title", "Copied!");
-        tooltip = new bootstrap.Tooltip(button, 
-          { trigger: "manual", 
-            customClass: "code-copy-button-tooltip",
-            offset: [0, -8]});
-        tooltip.show();    
-      }
-      setTimeout(function() {
-        if (tooltip) {
-          tooltip.hide();
-          button.removeAttribute("data-bs-title");
-          button.removeAttribute("data-bs-toggle");
-          button.removeAttribute("data-bs-placement");
-        }
-        button.setAttribute("title", currentTitle);
-        button.classList.remove('code-copy-button-checked');
-      }, 1000);
-      // clear code selection
-      e.clearSelection();
-    }
-    const getTextToCopy = function(trigger) {
-      const outerScaffold = trigger.parentElement.cloneNode(true);
-      const codeEl = outerScaffold.querySelector('code');
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
-        }
-      }
-      return codeEl.innerText;
-    }
-    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
-      text: getTextToCopy
-    });
-    clipboard.on('success', onCopySuccess);
-    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
-      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
-        text: getTextToCopy,
-        container: window.document.getElementById('quarto-embedded-source-code-modal')
-      });
-      clipboardModal.on('success', onCopySuccess);
-    }
-      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
-      var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp('/' + window.location.host + '/');
-      var isInternal = (href) => {
-          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
-      }
-      // Inspect non-navigation links and adorn them if external
-      window.quartoDecorateExternalLinks = function (root) {
-     var links = (root || window.document).querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
-      for (var i=0; i<links.length; i++) {
-        const link = links[i];
-        if (!isInternal(link.href)) {
-          // undo the damage that might have been done by quarto-nav.js in the case of
-          // links that we want to consider external
-          if (link.dataset.originalHref !== undefined) {
-            link.href = link.dataset.originalHref;
-          }
-          if (!link.classList.contains('no-external-icon')) {
-          }
-        }
-      }
-      };
-      window.quartoDecorateExternalLinks(window.document);
-    // Esc closes the popup (WCAG 1.4.13) and focus leaving both trigger and
-    // popup closes it (WCAG 2.4.11); tippy handles neither for interactive popups.
-    const hideOnEscAndFocusOut = {
-      name: 'hideOnEscAndFocusOut',
-      defaultValue: true,
-      fn(instance) {
-        const dismiss = () => {
-          // A show scheduled by the trigger delay would otherwise reopen it
-          instance.clearDelayTimeouts();
-          instance.hide();
-        };
-        const onKeyDown = (event) => {
-          if (event.key !== 'Escape') {
-            return;
-          }
-          // Keep Esc from also reaching page handlers (e.g. reveal.js overview),
-          // except an open reveal.js slide menu, which Esc should close too.
-          // The menu handles keys only when its keyboard option is on.
-          const menuHandlesEsc = window.Reveal?.getPlugin?.('menu')?.isOpen() &&
-            window.Reveal.getConfig().menu?.keyboard !== false;
-          if (!menuHandlesEsc) {
-            event.stopPropagation();
-          }
-          if (instance.popper.contains(window.document.activeElement)) {
-            // Disabled while refocusing so the focus trigger does not reopen it
-            instance.disable();
-            instance.reference.focus();
-            instance.enable();
-          }
-          dismiss();
-        };
-        const onFocusOut = (event) => {
-          const target = event.relatedTarget;
-          if (target && !instance.reference.contains(target) &&
-              !instance.popper.contains(target)) {
-            dismiss();
-          }
-        };
-        // On the trigger too: a click trigger (code-annotations: select) has no
-        // blur handling. Attached for the instance's lifetime so leaving the
-        // trigger also cancels a show still pending on the trigger delay.
-        instance.reference.addEventListener('focusout', onFocusOut);
-        return {
-          onShow() {
-            window.document.addEventListener('keydown', onKeyDown, true);
-            instance.popper.addEventListener('focusout', onFocusOut);
-          },
-          onHide() {
-            window.document.removeEventListener('keydown', onKeyDown, true);
-            instance.popper.removeEventListener('focusout', onFocusOut);
-          },
-          onDestroy() {
-            instance.reference.removeEventListener('focusout', onFocusOut);
-          },
-        };
-      },
-    };
-    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
-      const config = {
-        allowHTML: true,
-        maxWidth: 500,
-        delay: 100,
-        arrow: false,
-        appendTo: function(el) {
-            return el.parentElement;
-        },
-        interactive: true,
-        interactiveBorder: 10,
-        theme: 'quarto',
-        placement: 'bottom-start',
-        plugins: [hideOnEscAndFocusOut],
-      };
-      if (contentFn) {
-        config.content = contentFn;
-      }
-      if (onTriggerFn) {
-        config.onTrigger = onTriggerFn;
-      }
-      if (onUntriggerFn) {
-        config.onUntrigger = onUntriggerFn;
-      }
-      window.tippy(el, config); 
-    }
-    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
-    for (var i=0; i<noterefs.length; i++) {
-      const ref = noterefs[i];
-      tippyHover(ref, function() {
-        // use id or data attribute instead here
-        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
-        try { href = new URL(href).hash; } catch {}
-        const id = href.replace(/^#\/?/, "");
-        const note = window.document.getElementById(id);
-        if (note) {
-          return note.innerHTML;
-        } else {
-          return "";
-        }
-      });
-    }
-    const xrefs = window.document.querySelectorAll('a.quarto-xref');
-    const processXRef = (id, note) => {
-      // Strip column container classes
-      const stripColumnClz = (el) => {
-        el.classList.remove("page-full", "page-columns");
-        if (el.children) {
-          for (const child of el.children) {
-            stripColumnClz(child);
-          }
-        }
-      }
-      stripColumnClz(note)
-      if (id === null || id.startsWith('sec-')) {
-        // Special case sections, only their first couple elements
-        const container = document.createElement("div");
-        if (note.children && note.children.length > 2) {
-          container.appendChild(note.children[0].cloneNode(true));
-          for (let i = 1; i < note.children.length; i++) {
-            const child = note.children[i];
-            if (child.tagName === "P" && child.innerText === "") {
-              continue;
-            } else {
-              container.appendChild(child.cloneNode(true));
-              break;
-            }
-          }
-          if (window.Quarto?.typesetMath) {
-            window.Quarto.typesetMath(container);
-          }
-          return container.innerHTML
-        } else {
-          if (window.Quarto?.typesetMath) {
-            window.Quarto.typesetMath(note);
-          }
-          return note.innerHTML;
-        }
-      } else {
-        // Remove any anchor links if they are present
-        const anchorLink = note.querySelector('a.anchorjs-link');
-        if (anchorLink) {
-          anchorLink.remove();
-        }
-        if (window.Quarto?.typesetMath) {
-          window.Quarto.typesetMath(note);
-        }
-        if (note.classList.contains("callout")) {
-          return note.outerHTML;
-        } else {
-          return note.innerHTML;
-        }
-      }
-    }
-    for (var i=0; i<xrefs.length; i++) {
-      const xref = xrefs[i];
-      tippyHover(xref, undefined, function(instance) {
-        instance.disable();
-        let url = xref.getAttribute('href');
-        let hash = undefined; 
-        if (url.startsWith('#')) {
-          hash = url;
-        } else {
-          try { hash = new URL(url).hash; } catch {}
-        }
-        if (hash) {
-          const id = hash.replace(/^#\/?/, "");
-          const note = window.document.getElementById(id);
-          if (note !== null) {
-            try {
-              const html = processXRef(id, note.cloneNode(true));
-              instance.setContent(html);
-            } finally {
-              instance.enable();
-              instance.show();
-            }
-          } else {
-            // See if we can fetch this
-            fetch(url.split('#')[0])
-            .then(res => res.text())
-            .then(html => {
-              const parser = new DOMParser();
-              const htmlDoc = parser.parseFromString(html, "text/html");
-              const note = htmlDoc.getElementById(id);
-              if (note !== null) {
-                const html = processXRef(id, note);
-                instance.setContent(html);
-              } 
-            }).finally(() => {
-              instance.enable();
-              instance.show();
-            });
-          }
-        } else {
-          // See if we can fetch a full url (with no hash to target)
-          // This is a special case and we should probably do some content thinning / targeting
-          fetch(url)
-          .then(res => res.text())
-          .then(html => {
-            const parser = new DOMParser();
-            const htmlDoc = parser.parseFromString(html, "text/html");
-            const note = htmlDoc.querySelector('main.content');
-            if (note !== null) {
-              // This should only happen for chapter cross references
-              // (since there is no id in the URL)
-              // remove the first header
-              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
-                note.children[0].remove();
-              }
-              const html = processXRef(null, note);
-              instance.setContent(html);
-            } 
-          }).finally(() => {
-            instance.enable();
-            instance.show();
-          });
-        }
-      }, function(instance) {
-      });
-    }
-        let selectedAnnoteEl;
-        const selectorForAnnotation = ( cell, annotation) => {
-          let cellAttr = 'data-code-cell="' + cell + '"';
-          let lineAttr = 'data-code-annotation="' +  annotation + '"';
-          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
-          return selector;
-        }
-        const selectCodeLines = (annoteEl) => {
-          const doc = window.document;
-          const targetCell = annoteEl.getAttribute("data-target-cell");
-          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
-          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
-          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
-          const lineIds = lines.map((line) => {
-            return targetCell + "-" + line;
-          })
-          // Each band is positioned against its own containing block, which is
-          // not the offsetParent of the lines, so place it from client rects.
-          const placeBand = (band, firstEl, lastEl, codeBlock) => {
-            const container = band.offsetParent;
-            if (container === null) {
-              return;
-            }
-            const containerRect = container.getBoundingClientRect();
-            // Reveal.js scales slides with a transform, so convert client
-            // pixels back to the CSS pixels of the container.
-            const scale = containerRect.height / container.offsetHeight || 1;
-            const firstRect = firstEl.getBoundingClientRect();
-            const lastRect = lastEl.getBoundingClientRect();
-            const top = (firstRect.top - containerRect.top) / scale - container.clientTop + container.scrollTop;
-            const height = (lastRect.bottom - firstRect.top) / scale;
-            band.style.top = top - 2 + "px";
-            band.style.height = height + 4 + "px";
-            if (codeBlock) {
-              // Without the copy button wrapper, the containing block is wider
-              // than the code block, so span the code block explicitly.
-              const blockRect = codeBlock.getBoundingClientRect();
-              band.style.left = (blockRect.left - containerRect.left) / scale - container.clientLeft + container.scrollLeft + "px";
-              band.style.width = blockRect.width / scale + "px";
-            }
-          };
-          if (lineIds.length > 0) {
-            const el = window.document.getElementById(lineIds[0]);
-            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
-            const parent = el.parentElement.parentElement;
-            // cook up a div (if necessary) and position it
-            let div = window.document.getElementById("code-annotation-line-highlight");
-            if (div === null) {
-              div = window.document.createElement("div");
-              div.setAttribute("id", "code-annotation-line-highlight");
-              div.style.position = 'absolute';
-              parent.appendChild(div);
-            }
-            placeBand(div, el, lastEl, parent.closest("div.sourceCode") || parent);
-            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
-            if (gutterDiv === null) {
-              gutterDiv = window.document.createElement("div");
-              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
-              gutterDiv.style.position = 'absolute';
-              const codeCell = window.document.getElementById(targetCell);
-              const gutter = codeCell.querySelector('.code-annotation-gutter');
-              gutter.appendChild(gutterDiv);
-            }
-            placeBand(gutterDiv, el, lastEl);
-            selectedAnnoteEl = annoteEl;
-          }
-        };
-        const unselectCodeLines = () => {
-          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
-          elementsIds.forEach((elId) => {
-            const div = window.document.getElementById(elId);
-            if (div) {
-              div.remove();
-            }
-          });
-          selectedAnnoteEl = undefined;
-        };
-          // Handle positioning of the toggle
-      window.addEventListener(
-        "resize",
-        throttle(() => {
-          elRect = undefined;
-          if (selectedAnnoteEl) {
-            selectCodeLines(selectedAnnoteEl);
-          }
-        }, 10)
-      );
-      function throttle(fn, ms) {
-      let throttle = false;
-      let timer;
-        return (...args) => {
-          if(!throttle) { // first call gets through
-              fn.apply(this, args);
-              throttle = true;
-          } else { // all the others get throttled
-              if(timer) clearTimeout(timer); // cancel #2
-              timer = setTimeout(() => {
-                fn.apply(this, args);
-                timer = throttle = false;
-              }, ms);
-          }
-        };
-      }
-        // Attach click handler to the DT
-        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
-        for (const annoteDlNode of annoteDls) {
-          annoteDlNode.addEventListener('click', (event) => {
-            const clickedEl = event.target;
-            if (clickedEl !== selectedAnnoteEl) {
-              unselectCodeLines();
-              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
-              if (activeEl) {
-                activeEl.classList.remove('code-annotation-active');
-              }
-              selectCodeLines(clickedEl);
-              clickedEl.classList.add('code-annotation-active');
-            } else {
-              // Unselect the line
-              unselectCodeLines();
-              clickedEl.classList.remove('code-annotation-active');
-            }
-          });
-        }
-    const findCites = (el) => {
-      const parentEl = el.parentElement;
-      if (parentEl) {
-        const cites = parentEl.dataset.cites;
-        if (cites) {
-          return {
-            el,
-            cites: cites.split(' ')
-          };
-        } else {
-          return findCites(el.parentElement)
-        }
-      } else {
-        return undefined;
-      }
-    };
-    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
-    for (var i=0; i<bibliorefs.length; i++) {
-      const ref = bibliorefs[i];
-      const citeInfo = findCites(ref);
-      if (citeInfo) {
-        tippyHover(citeInfo.el, function() {
-          var popup = window.document.createElement('div');
-          citeInfo.cites.forEach(function(cite) {
-            var citeDiv = window.document.createElement('div');
-            citeDiv.classList.add('hanging-indent');
-            citeDiv.classList.add('csl-entry');
-            var biblioDiv = window.document.getElementById('ref-' + cite);
-            if (biblioDiv) {
-              citeDiv.innerHTML = biblioDiv.innerHTML;
-            }
-            popup.appendChild(citeDiv);
-          });
-          return popup.innerHTML;
-        });
-      }
-    }
-  });
-  </script>
-  <script type="application/javascript">
-  window.quartoScrollableRegionsLabels = {"code":"Scrollable code","output":"Scrollable output"};
-  </script>
-<nav class="page-navigation" aria-label="Page">
-  <div class="nav-page nav-page-previous">
-      <a href="../cheaply/index.html" class="pagination-link" aria-label="Cheap and Fast">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Cheap and Fast</span></span>
-      </a>          
-  </div>
-  <div class="nav-page nav-page-next">
-      <a href="../running/index.html" class="pagination-link" aria-label="Running a Study">
-        <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Running a Study</span></span> <i class="bi bi-arrow-right-short"></i>
-      </a>
-  </div>
-</nav>
-</div> <!-- /content -->
+</main>
 
 
-
-
-<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/gvwilson/notwrong/edit/main/design/index.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/gvwilson/notwrong/blob/main/design/index.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://github.com/gvwilson/notwrong/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>
+</body></html>
