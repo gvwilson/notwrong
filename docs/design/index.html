@@ -4,6 +4,7 @@
   <title>Designing a Study</title>
   <link rel="stylesheet" href="../mccole/mccole-book.css">
 
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async=""></script>
 </head>
 <body>
 <header class="topbar">
@@ -57,7 +58,7 @@
 <p>Two ideas carry the statistics. The <a href="../glossary/index.html#null_hypothesis">null hypothesis</a> (H₀) is “no effect.” A <a href="../glossary/index.html#p_value">p-value</a> is the probability of seeing data at least this extreme <em>if H₀ were true</em>. Crucially, it is <strong>not</strong> the probability the result is wrong, and p &lt; 0.05 is a 1920s convention, not a law of nature. You never prove an effect exists; you either reject H₀ or fail to reject it — and failing to reject doesn’t mean “no effect,” it may just mean your study was underpowered.</p>
 <p><a href="../glossary/index.html#statistical_significance">Significance</a> says whether an effect is likely real; <a href="../glossary/index.html#effect_size">effect size</a> says how big it is. <a href="../glossary/index.html#cohens_d">Cohen's d</a> measures the difference between two means in standard-deviation units — 0.2 small, 0.5 medium, 0.8 large. A huge sample can find a “significant” effect that’s too small to matter, which is why effect size should always travel with the p-value.</p>
 <p><a href="../glossary/index.html#statistical_power">Statistical power</a> is the probability of detecting an effect that’s actually there. Most software-engineering experiments are dramatically underpowered <span class="citation" data-cites="Kampenes2007">(<a href="../bibliography/index.html#ref-Kampenes2007" role="doc-biblioref">Kampenes et al. 2007</a>)</span> — a typical 20–50 participants can only reliably detect a large effect (d &gt; 0.8). The required sample size for a two-sample t-test is roughly</p>
-<p><span class="math display"><em>n</em> = 2(<em>z</em><sub><em>α</em></sub> + <em>z</em><sub><em>β</em></sub>)<sup>2</sup><em>σ</em><sup>2</sup>/<em>δ</em><sup>2</sup></span></p>
+<p><span class="math display">\[ n = 2 (z_\alpha + z_\beta)^2 \sigma^2 / \delta^2 \]</span></p>
 <p>where δ is the smallest difference you care about, σ is the population standard deviation, z_α = 1.96 (for α = 0.05), and z_β = 0.84 (for 80% power). Calculate this <em>before</em> running the study, not after.</p>
 <p><a href="../glossary/index.html#blocking_variable">Blocking</a> handles a known nuisance variable (like experience) by grouping people into strata before randomizing, so the senior developers can’t all land in one group by chance.</p>
 <h2 data-number="6.3" id="observational-and-natural-experiments"><span class="header-section-number">6.3</span> Observational and Natural Experiments</h2>
