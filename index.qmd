@@ -1,4 +1,4 @@
-# Overview {.unnumbered}
+# {.unnumbered}
 
 This tutorial is a short introduction to research methods you can use
 to figure out whether AI-based programming tools are helping your team or not.
