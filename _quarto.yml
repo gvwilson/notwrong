@@ -4,7 +4,6 @@ metadata-files:
 book:
   title: "How to Not Be Wrong About AI"
   repo-url: "https://github.com/gvwilson/notwrong"
-  repo-actions: [edit, source, issue]
   chapters:
     - index.qmd
     - intro/index.qmd
