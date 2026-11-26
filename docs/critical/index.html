@@ -155,6 +155,14 @@ Prechelt, Lutz. 2000. <span>“An Empirical Comparison of Seven Programming Lang
     <a class="pager-link next" href="../cheaply/index.html">Cheap and Fast →</a>
   </nav>
 </footer>
+<script>
+document.addEventListener('click', function (e) {
+  var link = e.target.closest && e.target.closest('a');
+  document.querySelectorAll('details.topnav-dropdown[open]').forEach(function (d) {
+    if (!d.contains(e.target) || (link && d.contains(link))) d.removeAttribute('open');
+  });
+});
+</script>
 
 
 </body></html>

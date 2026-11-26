@@ -147,6 +147,14 @@ Engineering: An Introduction</em>. Kluwer Academic Publishers. ISBN
     <a class="pager-link next" href="../glossary/index.html">Glossary →</a>
   </nav>
 </footer>
+<script>
+document.addEventListener('click', function (e) {
+  var link = e.target.closest && e.target.closest('a');
+  document.querySelectorAll('details.topnav-dropdown[open]').forEach(function (d) {
+    if (!d.contains(e.target) || (link && d.contains(link))) d.removeAttribute('open');
+  });
+});
+</script>
 
 
 </body></html>

@@ -140,6 +140,14 @@ Peng, Sida, Eirini Kalliamvakou, Peter Cihon, and Mert Demirer. 2023. <em>The Im
     <a class="pager-link next" href="../productivity/index.html">What "More Productive" Means →</a>
   </nav>
 </footer>
+<script>
+document.addEventListener('click', function (e) {
+  var link = e.target.closest && e.target.closest('a');
+  document.querySelectorAll('details.topnav-dropdown[open]').forEach(function (d) {
+    if (!d.contains(e.target) || (link && d.contains(link))) d.removeAttribute('open');
+  });
+});
+</script>
 
 
 </body></html>

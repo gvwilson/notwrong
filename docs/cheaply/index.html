@@ -149,6 +149,14 @@ Nielsen, Jakob, and Thomas K. Landauer. 1993. <span>“A Mathematical Model of t
     <a class="pager-link next" href="../design/index.html">Designing a Study →</a>
   </nav>
 </footer>
+<script>
+document.addEventListener('click', function (e) {
+  var link = e.target.closest && e.target.closest('a');
+  document.querySelectorAll('details.topnav-dropdown[open]').forEach(function (d) {
+    if (!d.contains(e.target) || (link && d.contains(link))) d.removeAttribute('open');
+  });
+});
+</script>
 
 
 </body></html>
